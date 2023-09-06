@@ -19,7 +19,7 @@ jobs:
           submodules: recursive
           
       - name: Compile latex
-        uses: xu-cheng/latex-action@v2
+        uses: xu-cheng/latex-action@v3
         with:
           working_directory: docs
           root_file: thesis-main.tex
