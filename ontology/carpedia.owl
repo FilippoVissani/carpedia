@@ -1,0 +1,419 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#"
+     xml:base="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#ABS -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#ABS">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Optional"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Automatic -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Automatic">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Gear"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Body -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Body"/>
+    
+
+
+    <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#CNG -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#CNG">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Fuel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Car -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Car"/>
+    
+
+
+    <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Compact -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Compact">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Body"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Convertible -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Convertible">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Body"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Coupe -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Coupe">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Body"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Diesel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Diesel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Fuel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Electric -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Electric">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Fuel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#ElectricDiesel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#ElectricDiesel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Hybrid"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#ElectricGasoline"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#ElectricGasoline -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#ElectricGasoline">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Hybrid"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Ethanol -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Ethanol">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Fuel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Euro1 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Euro1">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#EuroEmissionClass"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Euro2 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Euro2">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#EuroEmissionClass"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Euro3 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Euro3">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#EuroEmissionClass"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Euro4 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Euro4">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#EuroEmissionClass"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Euro5 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Euro5">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#EuroEmissionClass"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Euro6 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Euro6">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#EuroEmissionClass"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Euro6c -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Euro6c">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#EuroEmissionClass"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Euro6d -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Euro6d">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#EuroEmissionClass"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Euro6dTEMP -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Euro6dTEMP">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#EuroEmissionClass"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#EuroEmissionClass -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#EuroEmissionClass"/>
+    
+
+
+    <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Fuel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Fuel"/>
+    
+
+
+    <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Gasoline -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Gasoline">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Fuel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Gear -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Gear"/>
+    
+
+
+    <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Hybrid -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Hybrid">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Fuel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Hydrogen -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Hydrogen">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Fuel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#LPG -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#LPG">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Fuel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Manual -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Manual">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Gear"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Manufacturer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Manufacturer"/>
+    
+
+
+    <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Model -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Model"/>
+    
+
+
+    <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#OffRoad -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#OffRoad">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Body"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Optional -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Optional"/>
+    
+
+
+    <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Pickup -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Pickup">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Body"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#SUV -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#SUV">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Body"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#SemiAutomatic -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#SemiAutomatic">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Gear"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Sendans -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Sendans">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Body"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#StationWagon -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#StationWagon">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Body"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Transporter -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Transporter">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Body"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Van -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Van">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Body"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Variant -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Variant"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Automatic"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Manual"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#SemiAutomatic"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Body"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#EuroEmissionClass"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Fuel"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Gear"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Manufacturer"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Model"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Optional"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Variant"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#CNG"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Diesel"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Electric"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Ethanol"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Gasoline"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Hybrid"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Hydrogen"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#LPG"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Compact"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Convertible"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Coupe"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#OffRoad"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Pickup"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#SUV"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Sendans"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#StationWagon"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Transporter"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Van"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Euro1"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Euro2"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Euro3"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Euro4"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Euro5"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Euro6"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Euro6c"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Euro6d"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Euro6dTEMP"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
