@@ -21,7 +21,8 @@ jobs:
       - name: Compile latex
         uses: xu-cheng/latex-action@v2
         with:
-          root_file: docs/thesis-main.tex
+          working_directory: docs
+          root_file: thesis-main.tex
           args: -pdf -file-line-error -halt-on-error -interaction=nonstopmode -shell-escape
         
       - name: Release
