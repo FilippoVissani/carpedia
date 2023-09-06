@@ -1,3 +1,26 @@
+## 1.0.0 (2023-09-06)
+
+
+### Features
+
+* add classes ([fcbaca3](https://github.com/FilippoVissani/carpedia/commit/fcbaca3ad464cf7b312eeeff8934df9f67a1eb5f))
+
+
+### Dependency updates
+
+* **deps:** update actions/checkout action to v4 ([337c640](https://github.com/FilippoVissani/carpedia/commit/337c640fa1b173962edeeb1da2e4261f99370a33))
+* **deps:** update xu-cheng/latex-action action to v3 ([6c8f392](https://github.com/FilippoVissani/carpedia/commit/6c8f3920544a78f35d53b76675e200c90e5ed6f0))
+
+
+### Build and continuous integration
+
+* fix ci for creating release ([fcd853b](https://github.com/FilippoVissani/carpedia/commit/fcd853beaf34c48ad066f9d02c521b2ce763739d))
+
+
+### General maintenance
+
+* move report in correct directory ([43a6761](https://github.com/FilippoVissani/carpedia/commit/43a6761e938472c5d9c9990f1aa31093d580577d))
+
 ## [0.2.0](https://github.com/FilippoVissani/latex-template/compare/0.1.2+2023-03-14-16-45...0.2.0) (2023-04-04)
 
 
