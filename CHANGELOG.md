@@ -1,3 +1,25 @@
+## [1.2.0](https://github.com/FilippoVissani/carpedia/compare/1.1.0...1.2.0) (2023-09-07)
+
+
+### Features
+
+* add graph builder utility ([73868cb](https://github.com/FilippoVissani/carpedia/commit/73868cbf61aeec571c7237c0c408ed69c6b699df))
+
+
+### Dependency updates
+
+* **deps:** update dependency rake to v13 [security] ([9ea0889](https://github.com/FilippoVissani/carpedia/commit/9ea08892f65d4a9a9d5e50d01a3299c82273d031))
+
+
+### General maintenance
+
+* remove unused files ([e7197ac](https://github.com/FilippoVissani/carpedia/commit/e7197ac44ca3c159a06f08534cf7272142814da1))
+
+
+### Refactoring
+
+* use new utility to create and write the graph ([d92afe9](https://github.com/FilippoVissani/carpedia/commit/d92afe956f537b24c9fc4c1ffd507520659fded2))
+
 ## [1.1.0](https://github.com/FilippoVissani/carpedia/compare/1.0.0...1.1.0) (2023-09-07)
 
 
