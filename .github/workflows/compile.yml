@@ -1,11 +1,10 @@
 name: compile
 on:
-  push:
-    branches:
-      - main
-      - master
+  workflow_call:
+  workflow_dispatch:
+
 jobs:
-  compile:
+  release:
     if: github.event_name == 'push'
     runs-on: ubuntu-latest
     concurrency:
