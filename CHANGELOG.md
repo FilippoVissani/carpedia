@@ -1,3 +1,17 @@
+## [1.1.0](https://github.com/FilippoVissani/carpedia/compare/1.0.0...1.1.0) (2023-09-07)
+
+
+### Features
+
+* add Ruby script for generating ontology ([f67f465](https://github.com/FilippoVissani/carpedia/commit/f67f465e4d95cbf02f0a732ff32d2a35a878665c))
+
+
+### Build and continuous integration
+
+* configure ci for generating owl ([236c425](https://github.com/FilippoVissani/carpedia/commit/236c425372653aaa84e572bb143e446f71bd910b))
+* fix ci ([03e60fb](https://github.com/FilippoVissani/carpedia/commit/03e60fb253a08e75cf933c92bb085fe12569bc65))
+* fix ci ([320dcc4](https://github.com/FilippoVissani/carpedia/commit/320dcc49dcd05c41a25d248730f61beedac5416e))
+
 ## 1.0.0 (2023-09-06)
 
 
