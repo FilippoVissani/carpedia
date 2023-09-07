@@ -30,7 +30,7 @@ jobs:
           ruby-version: '3.0'
           bundler-cache: true
       - name: Generate ontology
-        run: cd ontology_generator && bundle exec rake && cd ..
+        run: cd ontology_generator && bundle install && bundle exec rake && cd ..
         
       - name: Release
         env:
