@@ -1,9 +1,82 @@
 # frozen_string_literal: true
 require 'rdf'
 require 'rdf/rdfxml'
-require_relative 'ontology_definitions'
-require_relative 'ontology_instances'
+require_relative 'graph_builder'
 include RDF
+include GraphBuilder
 
-ontology_file = "carpedia.owl"
-RDF::Writer.open(ontology_file) { |writer| writer << Graph }
+graph = GraphBuilder::Graph.create('http://example.com/')
+
+graph
+  .with_class('Car')
+  # BODY CLASS HIERARCHY
+  .with_class('Body')
+  .with_subclass('Compact', 'Body')
+  .with_subclass('Convertible', 'Body')
+  .with_subclass('Coupe', 'Body')
+  .with_subclass('Offroad', 'Body')
+  .with_subclass('Pickup', 'Body')
+  .with_subclass('Sedans', 'Body')
+  .with_subclass('StationWagon', 'Body')
+  .with_subclass('SUV', 'Body')
+  .with_subclass('Transporter', 'Body')
+  .with_subclass('Van', 'Body')
+  # EURO EMISSION CLASS HIERARCHY
+  .with_class('EuroEmissionClass')
+  .with_subclass('Euro1', 'EuroEmissionClass')
+  .with_subclass('Euro2', 'EuroEmissionClass')
+  .with_subclass('Euro3', 'EuroEmissionClass')
+  .with_subclass('Euro4', 'EuroEmissionClass')
+  .with_subclass('Euro5', 'EuroEmissionClass')
+  .with_subclass('Euro6', 'EuroEmissionClass')
+  .with_subclass('Euro6c', 'EuroEmissionClass')
+  .with_subclass('Euro6d', 'EuroEmissionClass')
+  .with_subclass('Euro6dTemp', 'EuroEmissionClass')
+  # FUEL CLASS HIERARCHY
+  .with_class('Fuel')
+  .with_subclass('Diesel', 'Fuel')
+  .with_subclass('Gasoline', 'Fuel')
+  .with_subclass('LPG', 'Fuel')
+  .with_subclass('CNG', 'Fuel')
+  .with_subclass('Ethanol', 'Fuel')
+  .with_subclass('Electric', 'Fuel')
+  .with_subclass('Hybrid', 'Fuel')
+  .with_subclass('ElectricDiesel', 'Hybrid')
+  .with_subclass('ElectricGasoline', 'Hybrid')
+  # MANUFACTURER CLASS HIERARCHY
+  .with_class('Manufacturer')
+  # MODEL CLASS HIERARCHY
+  .with_class('Model')
+  # VARIANT CLASS HIERARCHY
+  .with_class('Variant')
+  # OPTIONAL EQUIPMENT CLASS HIERARCHY
+  .with_class('OptionalEquipment')
+  .with_subclass('AirConditioning', 'OptionalEquipment')
+  .with_subclass('AlloyWheels', 'OptionalEquipment')
+  .with_subclass('AuxiliaryHeating', 'OptionalEquipment')
+  .with_subclass('CatalyticConverter', 'OptionalEquipment')
+  .with_subclass('CentralLocking', 'OptionalEquipment')
+  .with_subclass('CruiseControl', 'OptionalEquipment')
+  .with_subclass('ElectricSideMirror', 'OptionalEquipment')
+  .with_subclass('ElectricWindows', 'OptionalEquipment')
+  .with_subclass('HeatedSeats', 'OptionalEquipment')
+  .with_subclass('HandsFreeEquipment', 'OptionalEquipment')
+  .with_subclass('NavigationSystem', 'OptionalEquipment')
+  .with_subclass('PanoramicRoof', 'OptionalEquipment')
+  .with_subclass('ParkingSensors', 'OptionalEquipment')
+  .with_subclass('PowerAssistedSteering', 'OptionalEquipment')
+  .with_subclass('TunerRadio', 'OptionalEquipment')
+  # OBJECT PROPERTIES
+  .with_object_property('hasBody')
+  .with_object_property('hasEuroEmissionClass')
+  .with_object_property('hasFuel')
+  .with_object_property('hasManufacturer')
+  .with_object_property('hasModel')
+  .with_object_property('hasOptionalEquipment')
+  .with_object_property('hasVariant')
+
+
+
+
+
+graph.dump(:owl, 'carpedia')
