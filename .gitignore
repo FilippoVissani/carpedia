@@ -247,3 +247,5 @@ TSWLatexianTemp*
 *.nt
 *.properties
 **/Gemfile.lock
+
+.idea/
