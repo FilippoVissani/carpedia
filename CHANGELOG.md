@@ -1,3 +1,26 @@
+## [1.3.0](https://github.com/FilippoVissani/carpedia/compare/1.2.0...1.3.0) (2023-09-08)
+
+
+### Features
+
+* add methods to define domains and ranges of object properties ([06983d9](https://github.com/FilippoVissani/carpedia/commit/06983d9691e02ddaf9b35a140e8ba4a505b23148))
+
+
+### Documentation
+
+* add README.md ([bc43f5a](https://github.com/FilippoVissani/carpedia/commit/bc43f5aee30a213c30988d79bbfe6cc58e024b28))
+* improve README.md ([b10f1d3](https://github.com/FilippoVissani/carpedia/commit/b10f1d3a274c560c81c2f13e8ff7f6f8ebccc272))
+
+
+### Build and continuous integration
+
+* setup ci to valide RDF ([d56384c](https://github.com/FilippoVissani/carpedia/commit/d56384ca374509719c60e0554da74c3ed4a3e247))
+
+
+### General maintenance
+
+* add .idea to gitignore ([f73e8bc](https://github.com/FilippoVissani/carpedia/commit/f73e8bc15a2d681ab91d9e5933995f6d239d7871))
+
 ## [1.2.0](https://github.com/FilippoVissani/carpedia/compare/1.1.0...1.2.0) (2023-09-07)
 
 
