@@ -1,19 +1,22 @@
 # Carpedia
 
-Automobile Ontology.
-For development, various car information and categorizations are sourced from the AutoScout website.
+An ontology about cars.
 
-## Development
-Open the terminal and navigate to the 'ontologia_generator' folder.
-To install all the requirements simply:
+## How to build
+Open the terminal and navigate to `ontology_generator`:
+
+```bash
+cd ./ontology_generator/
+```
+
+To install all the requirements simply run:
+
 ```bash
 gem install bundle
 bundle install
 ```
-Create ontology
+To generate the ontology run:
+
 ```bash
 bundle exec rake
 ```
-
-
-
