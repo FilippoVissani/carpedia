@@ -242,5 +242,8 @@ TSWLatexianTemp*
 *.spl
 
 *.owl
+*.rdfxml
+*.ttl
+*.nt
 *.properties
 **/Gemfile.lock

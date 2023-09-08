@@ -67,16 +67,14 @@ graph
   .with_subclass('PowerAssistedSteering', 'OptionalEquipment')
   .with_subclass('TunerRadio', 'OptionalEquipment')
   # OBJECT PROPERTIES
-  .with_object_property('hasBody')
-  .with_object_property('hasEuroEmissionClass')
-  .with_object_property('hasFuel')
-  .with_object_property('hasManufacturer')
-  .with_object_property('hasModel')
-  .with_object_property('hasOptionalEquipment')
-  .with_object_property('hasVariant')
+  .define_object_property('hasBody', ['Car'], ['Body'])
+  .define_object_property('hasEuroEmissionClass', ['Car'], ['EuroEmissionClass'])
+  .define_object_property('hasFuel', ['Car'], ['Fuel'])
+  .define_object_property('hasManufacturer', ['Car'], ['Manufacturer'])
+  .define_object_property('hasModel', ['Car'], ['Model'])
+  .define_object_property('hasOptionalEquipment', ['Car'], ['OptionalEquipment'])
+  .define_object_property('hasVariant', ['Model'], ['Variant'])
 
 
-
-
-
+graph.dump(:rdfxml, 'carpedia')
 graph.dump(:owl, 'carpedia')
