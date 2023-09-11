@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 require 'rdf'
 require 'rdf/rdfxml'
+require 'rdf/turtle'
 require_relative 'graph_builder'
 include RDF
 include GraphBuilder
@@ -78,3 +79,4 @@ graph
 
 graph.dump(:rdfxml, 'carpedia')
 graph.dump(:owl, 'carpedia')
+graph.dump(:ttl, 'carpedia')
