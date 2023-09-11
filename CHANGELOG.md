@@ -1,3 +1,15 @@
+## [3.1.0](https://github.com/FilippoVissani/carpedia/compare/3.0.0...3.1.0) (2023-09-11)
+
+
+### Features
+
+* define new individual ([c78f3d4](https://github.com/FilippoVissani/carpedia/commit/c78f3d4e9db75afe12cc35baa910586be171275f))
+
+
+### Bug Fixes
+
+* with_individual was not wrapping values with URI ([33e77eb](https://github.com/FilippoVissani/carpedia/commit/33e77eb8b3d1127a4a7375878ec6d8ebd55b916f))
+
 ## [3.0.0](https://github.com/FilippoVissani/carpedia/compare/2.0.0...3.0.0) (2023-09-11)
 
 
