@@ -77,7 +77,7 @@ module GraphBuilder
       @graph << [uri(individual_identifier), RDF.type, uri(class_identifier)]
 
       annotations.each do |property, value|
-        @graph << [uri(individual_identifier), uri(property), value]
+        @graph << [uri(individual_identifier), uri(property), uri(value)]
       end
 
       self
