@@ -1,3 +1,16 @@
+## [1.4.0](https://github.com/FilippoVissani/carpedia/compare/1.3.0...1.4.0) (2023-09-11)
+
+
+### Features
+
+* dump ontology into ttl also ([5d539d0](https://github.com/FilippoVissani/carpedia/commit/5d539d09ab19ba5b243596f3de043e5282a19e5c))
+
+
+### General maintenance
+
+* **build:** install dependency to rdf-turtle ([9bbbd46](https://github.com/FilippoVissani/carpedia/commit/9bbbd4642fcc39d615de87b558841192c8ec1d79))
+* remove unused file ([6d10ad3](https://github.com/FilippoVissani/carpedia/commit/6d10ad3d21d43f2b224c652d29475901b9d65dfe))
+
 ## [1.3.0](https://github.com/FilippoVissani/carpedia/compare/1.2.0...1.3.0) (2023-09-08)
 
 
