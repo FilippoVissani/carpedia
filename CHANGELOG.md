@@ -1,3 +1,14 @@
+## [2.0.0](https://github.com/FilippoVissani/carpedia/compare/1.4.0...2.0.0) (2023-09-11)
+
+
+### ⚠ BREAKING CHANGES
+
+* change euro emission classes to be individuals instead of subclasses
+
+### Refactoring
+
+* change euro emission classes to be individuals instead of subclasses ([d1f4dea](https://github.com/FilippoVissani/carpedia/commit/d1f4deab0619a3179ca2fd8c1fb5b676d42a476e))
+
 ## [1.4.0](https://github.com/FilippoVissani/carpedia/compare/1.3.0...1.4.0) (2023-09-11)
 
 
