@@ -71,11 +71,17 @@ graph
   .with_object_property('hasBody', ['Car'], ['Body'])
   .with_object_property('hasEuroEmissionClass', ['Car'], ['EuroEmissionClass'])
   .with_object_property('hasFuel', ['Car'], ['Fuel'])
-  .with_object_property('hasManufacturer', ['Car'], ['Manufacturer'])
+  .with_object_property('hasManufacturer', ['Model'], ['Manufacturer'])
   .with_object_property('hasModel', ['Car'], ['Model'])
   .with_object_property('hasOptionalEquipment', ['Car'], ['OptionalEquipment'])
   .with_object_property('hasVariant', ['Model'], ['Variant'])
-
+  # INDIVIDUALS
+  .with_individual('Audi', 'Manufacturer')
+  .with_individual('A3_8L', 'Variant')
+  .with_individual('XCL1', 'Diesel')
+  .with_individual('AudiSedans', 'Sedans')
+  .with_individual('A3', 'Model', { 'hasVariant' => 'A3_8L', 'hasManufacturer' => 'Audi' })
+  .with_individual('car#1', 'Car', { 'hasModel' => 'A3', 'hasEuroEmissionClass' => 'Euro6dTemp', 'hasFuel' => 'XCL1', 'hasBody' => 'AudiSedans' })
 
 graph.dump(:rdfxml, 'carpedia')
 graph.dump(:owl, 'carpedia')
