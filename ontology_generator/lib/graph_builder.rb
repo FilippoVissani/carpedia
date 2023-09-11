@@ -101,8 +101,13 @@ module GraphBuilder
     # @param individual_identifier [String] The identifier for the individual.
     # @param class_identifier [String] The identifier for the class to which the individual belongs.
     # @return [Graph] The updated ontology graph instance.
-    def with_individual(individual_identifier, class_identifier)
+    def with_individual(individual_identifier, class_identifier, annotations = {})
       @graph << [uri(individual_identifier), RDF.type, uri(class_identifier)]
+
+      annotations.each do |property, value|
+        @graph << [uri(individual_identifier), uri(property), value]
+      end
+
       self
     end
 
