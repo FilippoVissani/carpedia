@@ -1,3 +1,24 @@
+## [3.0.0](https://github.com/FilippoVissani/carpedia/compare/2.0.0...3.0.0) (2023-09-11)
+
+
+### ⚠ BREAKING CHANGES
+
+* add domains and ranges in with_object_property and delete useless functions
+
+### Features
+
+* add the possibility to add annotations on individuals creation ([69daff6](https://github.com/FilippoVissani/carpedia/commit/69daff641bb8f6a0477b0a9554a33a2179afaffb))
+
+
+### General maintenance
+
+* update docs for with_individual ([c569adf](https://github.com/FilippoVissani/carpedia/commit/c569adf5b11465a16d55c5d0f75ebfde5f37a6e7))
+
+
+### Refactoring
+
+* add domains and ranges in with_object_property and delete useless functions ([4250825](https://github.com/FilippoVissani/carpedia/commit/4250825e74f20031e8f6a310ba06b4b6088a0d9a))
+
 ## [2.0.0](https://github.com/FilippoVissani/carpedia/compare/1.4.0...2.0.0) (2023-09-11)
 
 
