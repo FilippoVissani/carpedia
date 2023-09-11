@@ -68,13 +68,13 @@ graph
   .with_subclass('PowerAssistedSteering', 'OptionalEquipment')
   .with_subclass('TunerRadio', 'OptionalEquipment')
   # OBJECT PROPERTIES
-  .define_object_property('hasBody', ['Car'], ['Body'])
-  .define_object_property('hasEuroEmissionClass', ['Car'], ['EuroEmissionClass'])
-  .define_object_property('hasFuel', ['Car'], ['Fuel'])
-  .define_object_property('hasManufacturer', ['Car'], ['Manufacturer'])
-  .define_object_property('hasModel', ['Car'], ['Model'])
-  .define_object_property('hasOptionalEquipment', ['Car'], ['OptionalEquipment'])
-  .define_object_property('hasVariant', ['Model'], ['Variant'])
+  .with_object_property('hasBody', ['Car'], ['Body'])
+  .with_object_property('hasEuroEmissionClass', ['Car'], ['EuroEmissionClass'])
+  .with_object_property('hasFuel', ['Car'], ['Fuel'])
+  .with_object_property('hasManufacturer', ['Car'], ['Manufacturer'])
+  .with_object_property('hasModel', ['Car'], ['Model'])
+  .with_object_property('hasOptionalEquipment', ['Car'], ['OptionalEquipment'])
+  .with_object_property('hasVariant', ['Model'], ['Variant'])
 
 
 graph.dump(:rdfxml, 'carpedia')

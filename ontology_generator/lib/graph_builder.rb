@@ -50,47 +50,18 @@ module GraphBuilder
     # Define an object property in the ontology.
     #
     # @param property_identifier [String] The identifier for the object property.
-    # @return [Graph] The updated ontology graph instance.
-    def with_object_property(property_identifier)
-      @graph << [uri(property_identifier), RDF.type, RDF::OWL.ObjectProperty]
-      self
-    end
-
-    # Define the domain of an object property in the ontology.
-    #
-    # @param property_identifier [String] The identifier for the object property.
-    # @param class_identifier [String] The identifier for the domain class.
-    # @return [Graph] The updated ontology graph instance.
-    def with_domain(property_identifier, class_identifier)
-      @graph << [uri(property_identifier), RDF::RDFS.domain, uri(class_identifier)]
-      self
-    end
-
-    # Define the range of an object property in the ontology.
-    #
-    # @param property_identifier [String] The identifier for the object property.
-    # @param class_identifier [String] The identifier for the range class.
-    # @return [Graph] The updated ontology graph instance.
-    def with_range(property_identifier, class_identifier)
-      @graph << [uri(property_identifier), RDF::RDFS.range, uri(class_identifier)]
-      self
-    end
-
-    # Define an object property in the ontology with specified domains and ranges.
-    #
-    # @param property_name [String] The identifier for the object property.
     # @param domains [Array<String>] The list of domain class identifiers.
     # @param ranges [Array<String>] The list of range class identifiers.
     # @return [Graph] The updated ontology graph instance.
-    def define_object_property(property_name, domains, ranges)
-      with_object_property(property_name)
+    def with_object_property(property_identifier, domains = {}, ranges = {})
+      @graph << [uri(property_identifier), RDF.type, RDF::OWL.ObjectProperty]
 
       Array(domains).each do |domain|
-        with_domain(property_name, domain)
+        @graph << [uri(property_identifier), RDF::RDFS.domain, uri(domain)]
       end
 
       Array(ranges).each do |range|
-        with_range(property_name, range)
+        @graph << [uri(property_identifier), RDF::RDFS.range, uri(range)]
       end
 
       self
