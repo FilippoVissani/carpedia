@@ -1,3 +1,20 @@
+## [3.2.0](https://github.com/FilippoVissani/carpedia/compare/3.1.0...3.2.0) (2023-09-12)
+
+
+### Features
+
+* add new individuals ([5db92d2](https://github.com/FilippoVissani/carpedia/commit/5db92d266b1ee9ac948f3087d24a446b4a56a7c6))
+
+
+### Dependency updates
+
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.54 ([c180497](https://github.com/FilippoVissani/carpedia/commit/c180497c517476b7694309e15a81297b1e45b11a))
+
+
+### Build and continuous integration
+
+* update renovate.json ([b46a09b](https://github.com/FilippoVissani/carpedia/commit/b46a09b15c095d28cc50fdb87e508a1cdc5117e1))
+
 ## [3.1.0](https://github.com/FilippoVissani/carpedia/compare/3.0.0...3.1.0) (2023-09-11)
 
 
