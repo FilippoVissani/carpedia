@@ -1,3 +1,10 @@
+## [4.2.0](https://github.com/FilippoVissani/carpedia/compare/4.1.0...4.2.0) (2023-09-12)
+
+
+### Features
+
+* add function to add data properties ([55c1f8f](https://github.com/FilippoVissani/carpedia/commit/55c1f8f6b0beb9c1998057e6dbcc9ca60ae2c169))
+
 ## [4.1.0](https://github.com/FilippoVissani/carpedia/compare/4.0.0...4.1.0) (2023-09-12)
 
 
