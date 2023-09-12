@@ -57,3 +57,5 @@ CarpediaGraph
     .with_subclass('ParkingSensors', 'OptionalEquipment')
     .with_subclass('PowerAssistedSteering', 'OptionalEquipment')
     .with_subclass('TunerRadio', 'OptionalEquipment')
+    # ENGINE
+    .with_class('Engine')

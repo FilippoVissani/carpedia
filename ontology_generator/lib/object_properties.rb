@@ -16,3 +16,5 @@ CarpediaGraph
     .with_object_property('hasModel', ['Car'], ['Model'])
     .with_object_property('hasOptionalEquipment', ['Car'], ['OptionalEquipment'])
     .with_object_property('hasVariant', ['Model'], ['Variant'])
+    .with_object_property('hasEngine', ['Car'], ['Engine'])
+    
