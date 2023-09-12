@@ -67,19 +67,42 @@ module GraphBuilder
       self
     end
 
+    # Define a data property in the ontology.
+    #
+    # @param property_identifier [String] The identifier for the data property.
+    # @param domains [Array<String>] The list of domain class identifiers.
+    # @param datatypes [Array<Any>] The list of range data types.
+    # @return [Graph] The updated ontology graph instance.
+    def with_data_property(property_identifier, domains = {}, datatypes = {})
+      @graph << [uri(property_identifier), RDF.type, RDF::OWL.DatatypeProperty]
+
+      Array(domains).each do |domain|
+        @graph << [uri(property_identifier), RDF::RDFS.domain, uri(domain)]
+      end
+
+      Array(datatypes).each do |datatype|
+        @graph << [uri(property_identifier), RDF::RDFS.range, datatype]
+      end
+
+      self
+    end
+
     # Define an individual in the ontology.
     #
     # @param individual_identifier [String] The identifier for the individual.
     # @param class_identifier [String] The identifier for the class to which the individual belongs.
-    # @param annotations [Hash] The list of annotations for the individual.
+    # @param obj_properties [Hash] The list of obj_properties for the individual.
     # @return [Graph] The updated ontology graph instance.
-    def with_individual(individual_identifier, class_identifier, annotations = {})
+    def with_individual(individual_identifier, class_identifier, obj_properties = {}, data_properties = {})
       @graph << [uri(individual_identifier), RDF.type, uri(class_identifier)]
 
-      annotations.each do |property, value|
+      obj_properties.each do |property, value|
         @graph << [uri(individual_identifier), uri(property), uri(value)]
       end
 
+      data_properties.each do |property, value|
+        @graph << [uri(individual_identifier), uri(property), value]
+      end
       self
     end
 
