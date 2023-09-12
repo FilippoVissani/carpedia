@@ -6,4 +6,4 @@ require_relative 'graph_builder'
 include RDF
 include GraphBuilder
 
-CarpediaGraph = GraphBuilder::Graph.create('http://example.com/')
+CarpediaGraph = GraphBuilder::Graph.create('http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia')
