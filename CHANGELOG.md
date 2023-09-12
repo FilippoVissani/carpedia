@@ -1,3 +1,10 @@
+## [4.1.0](https://github.com/FilippoVissani/carpedia/compare/4.0.0...4.1.0) (2023-09-12)
+
+
+### Features
+
+* add class and object property ([000ee99](https://github.com/FilippoVissani/carpedia/commit/000ee998dff36ab4f1d1f435ffa737b1d8aca95e))
+
 ## [4.0.0](https://github.com/FilippoVissani/carpedia/compare/3.2.0...4.0.0) (2023-09-12)
 
 
