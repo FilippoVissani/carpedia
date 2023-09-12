@@ -1,3 +1,14 @@
+## [4.0.0](https://github.com/FilippoVissani/carpedia/compare/3.2.0...4.0.0) (2023-09-12)
+
+
+### ⚠ BREAKING CHANGES
+
+* split ontology definition
+
+### Refactoring
+
+* split ontology definition ([229d051](https://github.com/FilippoVissani/carpedia/commit/229d0519c5b3cef5014a8f13e2aa606ff04eeac7))
+
 ## [3.2.0](https://github.com/FilippoVissani/carpedia/compare/3.1.0...3.2.0) (2023-09-12)
 
 
