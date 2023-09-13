@@ -249,3 +249,7 @@ TSWLatexianTemp*
 **/Gemfile.lock
 
 .idea/
+.scala-build/
+.metals/
+.bsp/
+.vscode/
