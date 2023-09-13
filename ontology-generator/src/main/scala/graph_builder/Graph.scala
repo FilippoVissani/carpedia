@@ -1,9 +1,9 @@
 package graph_builder
 
 import graph_builder.Utils.{DataProperty, Hierarchy, Individual, ObjectProperty}
-import org.apache.jena.rdf.model._
+import org.apache.jena.rdf.model.*
 import org.apache.jena.vocabulary.{OWL, RDF, RDFS}
-import java.io._
+import java.io.*
 
 trait Graph:
   def withClass(classIdentifier: String): Graph
