@@ -1,21 +1,21 @@
 package graph_builder
 
-import org.apache.jena.rdf.model.*
+import graph_builder.Utils.{DataProperty, Hierarchy, Individual, ObjectProperty}
+import org.apache.jena.rdf.model._
 import org.apache.jena.vocabulary.{OWL, RDF, RDFS}
-import java.io.*
+import java.io._
 
 trait Graph:
   def withClass(classIdentifier: String): Graph
-  def withSubclass(subclassIdentifier: String, superclassIdentifier: String): Graph
-  def withObjectProperty(propertyIdentifier: String, domains: List[String], ranges: List[String]): Graph
 
-  def withDataProperty(propertyIdentifier: String, domains: List[String], datatypes: List[Resource]): Graph
+  def withHierarchy(hierarchy: Hierarchy): Graph
 
-  def withIndividual(individualIdentifier: String,
-                     classIdentifier: String,
-                     objProperties: Map[String, String],
-                     dataProperties: Map[String, String]
-                    ): Graph
+  def withObjectProperty(objectProperty: ObjectProperty): Graph
+
+  def withDataProperty(dataProperty: DataProperty): Graph
+
+  def withIndividual(individual: Individual): Graph
+
   def dump(format: String, filename: String): Unit
 
 object Graph:
@@ -24,61 +24,49 @@ object Graph:
     private val model: Model = ModelFactory.createDefaultModel()
     private val baseResource: Resource = model.createResource(baseUri)
 
+    private def createResource(identifier: String): Resource =
+      model.createResource(s"$baseUri/$identifier")
+
+    private def createProperty(identifier: String): Property =
+      model.createProperty(s"$baseUri/$identifier")
+
     override def withClass(classIdentifier: String): Graph =
-      val classResource: Resource = model.createResource(s"$baseUri/$classIdentifier")
-      classResource.addProperty(RDF.`type`, OWL.Class)
+      createResource(classIdentifier).addProperty(RDF.`type`, OWL.Class)
       this
 
-    override def withSubclass(subclassIdentifier: String, superclassIdentifier: String): Graph =
-      val subclassResource: Resource = model.createResource(s"$baseUri/$subclassIdentifier")
-      val superclassResource: Resource = model.createResource(s"$baseUri/$superclassIdentifier")
+    override def withHierarchy(hierarchy: Hierarchy): Graph =
+      val subclassResource = createResource(hierarchy.subclass)
+      val superclassResource = createResource(hierarchy.superclass)
       subclassResource.addProperty(RDF.`type`, OWL.Class)
       subclassResource.addProperty(RDFS.subClassOf, superclassResource)
       this
 
-    override def withObjectProperty(propertyIdentifier: String, domains: List[String], ranges: List[String]): Graph =
-      val propertyResource: Resource = model.createResource(s"$baseUri/$propertyIdentifier")
+    override def withObjectProperty(objectProperty: ObjectProperty): Graph =
+      val propertyResource = createResource(objectProperty.identifier)
       propertyResource.addProperty(RDF.`type`, OWL.ObjectProperty)
-      domains.foreach { domain =>
-        val domainResource: Resource = model.createResource(s"$baseUri/$domain")
-        propertyResource.addProperty(RDFS.domain, domainResource)
-      }
-      ranges.foreach { range =>
-        val rangeResource: Resource = model.createResource(s"$baseUri/$range")
-        propertyResource.addProperty(RDFS.range, rangeResource)
-      }
+      objectProperty.domains.foreach(domain => propertyResource.addProperty(RDFS.domain, createResource(domain)))
+      objectProperty.ranges.foreach(range => propertyResource.addProperty(RDFS.range, createResource(range)))
       this
 
-    override def withDataProperty(propertyIdentifier: String, domains: List[String], datatypes: List[Resource]): Graph =
-      val propertyResource: Resource = model.createResource(s"$baseUri/$propertyIdentifier")
+    override def withDataProperty(dataProperty: DataProperty): Graph =
+      val propertyResource = createResource(dataProperty.identifier)
       propertyResource.addProperty(RDF.`type`, OWL.DatatypeProperty)
-      domains.foreach { domain =>
-        val domainResource: Resource = model.createResource(s"$baseUri/$domain")
-        propertyResource.addProperty(RDFS.domain, domainResource)
-      }
-      datatypes.foreach { datatype =>
-        propertyResource.addProperty(RDFS.range, datatype)
-      }
+      dataProperty.domains.foreach(domain => propertyResource.addProperty(RDFS.domain, createResource(domain)))
+      dataProperty.dataTypes.foreach(datatype => propertyResource.addProperty(RDFS.range, datatype))
       this
 
-    override def withIndividual(individualIdentifier: String,
-                       classIdentifier: String,
-                       objProperties: Map[String, String],
-                       dataProperties: Map[String, String]): Graph =
-      val individualResource: Resource = model.createResource(s"$baseUri/$individualIdentifier")
-      val classResource: Resource = model.createResource(s"$baseUri/$classIdentifier")
+    override def withIndividual(individual: Individual): Graph =
+      val individualResource = createResource(individual.identifier)
+      val classResource = createResource(individual.classIdentifier)
       individualResource.addProperty(RDF.`type`, classResource)
-      objProperties.foreach { case (property, value) =>
-        val propertyResource: Property = model.createProperty(s"$baseUri/$property")
-        val valueResource: Resource = model.createResource(s"$baseUri/$value")
-        individualResource.addProperty(propertyResource, valueResource)
+      individual.objProperties.foreach { case (property, value) =>
+        individualResource.addProperty(createProperty(property), createResource(value))
       }
-      dataProperties.foreach { case (property, value) =>
-        val propertyResource: Property = model.createProperty(s"$baseUri/$property")
-        individualResource.addProperty(propertyResource, value)
+      individual.dataProperties.foreach { case (property, value) =>
+        individualResource.addProperty(createProperty(property), value)
       }
       this
 
     override def dump(format: String, filename: String): Unit =
-      val outputStream: OutputStream = new FileOutputStream(s"$filename")
+      val outputStream: OutputStream = new FileOutputStream(filename)
       model.write(outputStream, format)
