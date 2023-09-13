@@ -21,7 +21,7 @@ trait Graph:
 object Graph:
   def apply(baseUri: String): Graph = GraphImpl(baseUri)
   private class GraphImpl(baseUri: String) extends Graph:
-    private val model: Model = ModelFactory.createDefaultModel()
+    private val model: Model           = ModelFactory.createDefaultModel()
     private val baseResource: Resource = model.createResource(baseUri)
 
     private def createResource(identifier: String): Resource =
@@ -35,7 +35,7 @@ object Graph:
       this
 
     override def withHierarchy(hierarchy: Hierarchy): Graph =
-      val subclassResource = createResource(hierarchy.subclass)
+      val subclassResource   = createResource(hierarchy.subclass)
       val superclassResource = createResource(hierarchy.superclass)
       subclassResource.addProperty(RDF.`type`, OWL.Class)
       subclassResource.addProperty(RDFS.subClassOf, superclassResource)
@@ -44,20 +44,26 @@ object Graph:
     override def withObjectProperty(objectProperty: ObjectProperty): Graph =
       val propertyResource = createResource(objectProperty.identifier)
       propertyResource.addProperty(RDF.`type`, OWL.ObjectProperty)
-      objectProperty.domains.foreach(domain => propertyResource.addProperty(RDFS.domain, createResource(domain)))
-      objectProperty.ranges.foreach(range => propertyResource.addProperty(RDFS.range, createResource(range)))
+      objectProperty.domains.foreach(domain =>
+        propertyResource.addProperty(RDFS.domain, createResource(domain))
+      )
+      objectProperty.ranges.foreach(range =>
+        propertyResource.addProperty(RDFS.range, createResource(range))
+      )
       this
 
     override def withDataProperty(dataProperty: DataProperty): Graph =
       val propertyResource = createResource(dataProperty.identifier)
       propertyResource.addProperty(RDF.`type`, OWL.DatatypeProperty)
-      dataProperty.domains.foreach(domain => propertyResource.addProperty(RDFS.domain, createResource(domain)))
+      dataProperty.domains.foreach(domain =>
+        propertyResource.addProperty(RDFS.domain, createResource(domain))
+      )
       dataProperty.dataTypes.foreach(datatype => propertyResource.addProperty(RDFS.range, datatype))
       this
 
     override def withIndividual(individual: Individual): Graph =
       val individualResource = createResource(individual.identifier)
-      val classResource = createResource(individual.classIdentifier)
+      val classResource      = createResource(individual.classIdentifier)
       individualResource.addProperty(RDF.`type`, classResource)
       individual.objProperties.foreach { case (property, value) =>
         individualResource.addProperty(createProperty(property), createResource(value))
