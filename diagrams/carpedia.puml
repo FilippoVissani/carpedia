@@ -211,15 +211,15 @@ class CrankshaftPositionSensor
 class FuelLevelSensor
 class FuelPressureSensor
 
-AirbagSensor --* Sensor
-ABSSensor --* Sensor
-AutomaticTransmissionSpeedSensor --* Sensor
-BrakeSensor --* Sensor
-CamshaftPositionSensor --* Sensor
-CoolantTemperatureSensor --* Sensor
-CrankshaftPositionSensor --* Sensor
-FuelLevelSensor --* Sensor
-FuelPressureSensor --* Sensor
+AirbagSensor --|> Sensor
+ABSSensor --|> Sensor
+AutomaticTransmissionSpeedSensor --|> Sensor
+BrakeSensor --|> Sensor
+CamshaftPositionSensor --|> Sensor
+CoolantTemperatureSensor --|> Sensor
+CrankshaftPositionSensor --|> Sensor
+FuelLevelSensor --|> Sensor
+FuelPressureSensor --|> Sensor
 
 ' Engine components
 class AccessoryBelt
