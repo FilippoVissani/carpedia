@@ -5,7 +5,8 @@
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:carpedia="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#">
     <owl:Ontology rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia"/>
     
 
@@ -25,16 +26,18 @@
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#hasComponent">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#System"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.w3.org/2002/07/owl#topObjectProperty -->
+    <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#partOf -->
 
-    <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#topObjectProperty">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#System"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
-    </rdf:Description>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#partOf">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#System"/>
+    </owl:ObjectProperty>
     
 
 
@@ -51,7 +54,9 @@
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#ABS -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#ABS"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#ABS">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+    </owl:Class>
     
 
 
@@ -65,43 +70,57 @@
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#AccessoryBelt -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#AccessoryBelt"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#AccessoryBelt">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+    </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#AdjustingMechanism -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#AdjustingMechanism"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#AdjustingMechanism">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+    </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#AirBlower -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#AirBlower"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#AirBlower">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+    </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#AirDuct -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#AirDuct"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#AirDuct">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+    </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#AirFilter -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#AirFilter"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#AirFilter">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+    </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#AirIntakeHose -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#AirIntakeHose"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#AirIntakeHose">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+    </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#AirSuspension -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#AirSuspension"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#AirSuspension">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+    </owl:Class>
     
 
 
@@ -115,7 +134,9 @@
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Alternator -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Alternator"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Alternator">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+    </owl:Class>
     
 
 
@@ -129,7 +150,9 @@
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Anchor -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Anchor"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Anchor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+    </owl:Class>
     
 
 
@@ -143,109 +166,164 @@
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#BallJoint -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#BallJoint"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#BallJoint">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+    </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Battery -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Battery"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Battery">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+    </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#BleedNipple -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#BleedNipple"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#BleedNipple">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+    </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Body -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Body"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Body">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#System"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#BodyComponent -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#BodyComponent">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#partOf"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Body"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+    </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#BrakeBackingPad -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#BrakeBackingPad"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#BrakeBackingPad">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+    </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#BrakeBackingPlate -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#BrakeBackingPlate"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#BrakeBackingPlate">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+    </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#BrakeCoolingDuct -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#BrakeCoolingDuct"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#BrakeCoolingDuct">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+    </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#BrakeDisc -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#BrakeDisc"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#BrakeDisc">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+    </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#BrakeDrum -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#BrakeDrum"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#BrakeDrum">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+    </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#BrakeFluid -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#BrakeFluid"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#BrakeFluid">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+    </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#BrakeLight -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#BrakeLight"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#BrakeLight">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+    </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#BrakeLining -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#BrakeLining"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#BrakeLining">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+    </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#BrakePad -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#BrakePad"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#BrakePad">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+    </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#BrakePedal -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#BrakePedal"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#BrakePedal">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+    </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#BrakePiston -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#BrakePiston"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#BrakePiston">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+    </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#BrakePump -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#BrakePump"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#BrakePump">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+    </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#BrakeRoll -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#BrakeRoll"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#BrakeRoll">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+    </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#BrakeRotor -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#BrakeRotor"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#BrakeRotor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+    </owl:Class>
     
 
 
@@ -259,49 +337,84 @@
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#BrakeServo -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#BrakeServo"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#BrakeServo">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+    </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#BrakeShoe -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#BrakeShoe"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#BrakeShoe">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+    </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#BrakeWarningLight -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#BrakeWarningLight"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#BrakeWarningLight">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+    </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#BrakingSystem -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#BrakingSystem"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#BrakingSystem">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#System"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#BrakingSystemComponent -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#BrakingSystemComponent">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#partOf"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#BrakingSystem"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+    </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Bumper -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Bumper"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Bumper">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+    </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#CalibratedFrictionBrake -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#CalibratedFrictionBrake"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#CalibratedFrictionBrake">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+    </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Caliper -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Caliper"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Caliper">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+    </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Camshaft -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Camshaft"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Camshaft">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+    </owl:Class>
     
 
 
@@ -321,25 +434,33 @@
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Carburetor -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Carburetor"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Carburetor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+    </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#CatalyticConverter -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#CatalyticConverter"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#CatalyticConverter">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+    </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#CenterLink -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#CenterLink"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#CenterLink">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+    </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#ChokeCable -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#ChokeCable"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#ChokeCable">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+    </owl:Class>
     
 
 
@@ -353,19 +474,25 @@
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Clutch -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Clutch"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Clutch">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+    </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#CoilSpring -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#CoilSpring"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#CoilSpring">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+    </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#CombinationValve -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#CombinationValve"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#CombinationValve">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+    </owl:Class>
     
 
 
@@ -377,13 +504,17 @@
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#ConnectingRod -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#ConnectingRod"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#ConnectingRod">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+    </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#CoolantHose -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#CoolantHose"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#CoolantHose">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+    </owl:Class>
     
 
 
@@ -397,25 +528,33 @@
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#CoolingFan -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#CoolingFan"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#CoolingFan">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+    </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#CrankCase -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#CrankCase"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#CrankCase">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+    </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#CrankPulley -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#CrankPulley"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#CrankPulley">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+    </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Crankshaft -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Crankshaft"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Crankshaft">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+    </owl:Class>
     
 
 
@@ -429,43 +568,57 @@
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#CylinderHead -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#CylinderHead"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#CylinderHead">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+    </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Differential -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Differential"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Differential">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+    </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Distributor -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Distributor"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Distributor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+    </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Door -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Door"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Door">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+    </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#DriveBelt -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#DriveBelt"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#DriveBelt">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+    </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#DriveShaft -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#DriveShaft"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#DriveShaft">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+    </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#DualCircuitBrakeSystem -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#DualCircuitBrakeSystem"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#DualCircuitBrakeSystem">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+    </owl:Class>
     
 
 
@@ -479,157 +632,304 @@
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#ElectricalSupplySystem -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#ElectricalSupplySystem"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#ElectricalSupplySystem">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#System"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#ElectricalSupplySystemComponent -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#ElectricalSupplySystemComponent">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#partOf"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#ElectricalSupplySystem"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+    </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Engine -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Engine"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Engine">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#System"/>
+    </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#EngineBlock -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#EngineBlock"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#EngineBlock">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#EngineComponent -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#EngineComponent">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#partOf"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Engine"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+    </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#EngineCoolingSystem -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#EngineCoolingSystem"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#EngineCoolingSystem">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#System"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#EngineCoolingSystemComponent -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#EngineCoolingSystemComponent">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#partOf"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#EngineCoolingSystem"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+    </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#EngineCradle -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#EngineCradle"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#EngineCradle">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+    </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#EngineOilSystem -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#EngineOilSystem"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#EngineOilSystem">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#System"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#EngineOilSystemComponent -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#EngineOilSystemComponent">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#partOf"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#EngineOilSystem"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+    </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#EngineValve -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#EngineValve"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#EngineValve">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+    </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#ExhaustClamp -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#ExhaustClamp"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#ExhaustClamp">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+    </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#ExhaustFlangeGasket -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#ExhaustFlangeGasket"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#ExhaustFlangeGasket">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+    </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#ExhaustGasRecirculationValve -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#ExhaustGasRecirculationValve"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#ExhaustGasRecirculationValve">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+    </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#ExhaustGasket -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#ExhaustGasket"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#ExhaustGasket">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+    </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#ExhaustManifold -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#ExhaustManifold"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#ExhaustManifold">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+    </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#ExhaustManifoldGasket -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#ExhaustManifoldGasket"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#ExhaustManifoldGasket">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+    </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#ExhaustPipe -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#ExhaustPipe"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#ExhaustPipe">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+    </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#ExhaustSystem -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#ExhaustSystem"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#ExhaustSystem">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#System"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#ExhaustSystemComponent -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#ExhaustSystemComponent">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#partOf"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#ExhaustSystem"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+    </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#FanBelt -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#FanBelt"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#FanBelt">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+    </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#FanBlade -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#FanBlade"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#FanBlade">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+    </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#FanClutch -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#FanClutch"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#FanClutch">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+    </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Fender -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Fender"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Fender">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+    </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#FogLight -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#FogLight"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#FogLight">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+    </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#FuelCap -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#FuelCap"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#FuelCap">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+    </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#FuelCell -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#FuelCell"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#FuelCell">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+    </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#FuelCooler -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#FuelCooler"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#FuelCooler">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+    </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#FuelDistributor -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#FuelDistributor"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#FuelDistributor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+    </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#FuelFilter -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#FuelFilter"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#FuelFilter">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+    </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#FuelFilterSeal -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#FuelFilterSeal"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#FuelFilterSeal">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+    </owl:Class>
     
 
 
@@ -643,13 +943,17 @@
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#FuelInjector -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#FuelInjector"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#FuelInjector">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+    </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#FuelInjectorNozzle -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#FuelInjectorNozzle"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#FuelInjectorNozzle">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+    </owl:Class>
     
 
 
@@ -663,13 +967,17 @@
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#FuelLine -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#FuelLine"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#FuelLine">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+    </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#FuelPressureRegulator -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#FuelPressureRegulator"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#FuelPressureRegulator">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+    </owl:Class>
     
 
 
@@ -683,37 +991,68 @@
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#FuelPump -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#FuelPump"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#FuelPump">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+    </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#FuelPumpGasket -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#FuelPumpGasket"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#FuelPumpGasket">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+    </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#FuelRail -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#FuelRail"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#FuelRail">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+    </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#FuelSupplySystem -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#FuelSupplySystem"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#FuelSupplySystem">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#System"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#FuelSupplySystemComponent -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#FuelSupplySystemComponent">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#partOf"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#FuelSupplySystem"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+    </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#FuelTank -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#FuelTank"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#FuelTank">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+    </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#FuelWaterSeparator -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#FuelWaterSeparator"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#FuelWaterSeparator">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+    </owl:Class>
     
 
 
@@ -725,67 +1064,89 @@
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Gear -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Gear"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Gear">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+    </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#GearBox -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#GearBox"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#GearBox">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+    </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#GlowPlug -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#GlowPlug"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#GlowPlug">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+    </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Handle -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Handle"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Handle">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+    </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Headlight -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Headlight"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Headlight">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+    </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#HeatShield -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#HeatShield"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#HeatShield">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+    </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#HeatSleeving -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#HeatSleeving"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#HeatSleeving">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+    </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#HoldDownSprings -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#HoldDownSprings"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#HoldDownSprings">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+    </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Hood -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Hood"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Hood">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+    </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Hose -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Hose"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Hose">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+    </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#HydraulicBoosterUnit -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#HydraulicBoosterUnit"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#HydraulicBoosterUnit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+    </owl:Class>
     
 
 
@@ -799,61 +1160,119 @@
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#IdlerArm -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#IdlerArm"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#IdlerArm">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+    </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#IgnitionBox -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#IgnitionBox"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#IgnitionBox">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+    </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#IgnitionCoil -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#IgnitionCoil"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#IgnitionCoil">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+    </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#IgnitionMagneto -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#IgnitionMagneto"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#IgnitionMagneto">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+    </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#IgnitionSystem -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#IgnitionSystem"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#IgnitionSystem">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#System"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#IgnitionSystemComponent -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#IgnitionSystemComponent">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#partOf"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#IgnitionSystem"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+    </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#IntakeManifold -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#IntakeManifold"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#IntakeManifold">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+    </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#IntakeManifoldGasket -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#IntakeManifoldGasket"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#IntakeManifoldGasket">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+    </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#LeafSpring -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#LeafSpring"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#LeafSpring">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+    </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#LightingSystem -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#LightingSystem"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#LightingSystem">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#System"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#LightingSystemComponent -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#LightingSystemComponent">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#partOf"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#LightingSystem"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+    </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#LoadSensingValve -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#LoadSensingValve"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#LoadSensingValve">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+    </owl:Class>
     
 
 
@@ -867,19 +1286,25 @@
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#MasterCylinder -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#MasterCylinder"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#MasterCylinder">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+    </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#MeteringValve -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#MeteringValve"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#MeteringValve">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+    </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Muffler -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Muffler"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Muffler">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+    </owl:Class>
     
 
 
@@ -893,13 +1318,17 @@
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#OilFilter -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#OilFilter"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#OilFilter">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+    </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#OilGasket -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#OilGasket"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#OilGasket">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+    </owl:Class>
     
 
 
@@ -913,79 +1342,105 @@
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#OilPump -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#OilPump"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#OilPump">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+    </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#OilStainer -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#OilStainer"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#OilStainer">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+    </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#OilTank -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#OilTank"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#OilTank">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+    </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Piston -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Piston"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Piston">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+    </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#PitmanArm -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#PitmanArm"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#PitmanArm">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+    </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#PowerSteeringPump -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#PowerSteeringPump"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#PowerSteeringPump">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+    </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#PressureDifferentialValve -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#PressureDifferentialValve"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#PressureDifferentialValve">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+    </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#ProportioningValve -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#ProportioningValve"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#ProportioningValve">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+    </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#RackAndPinion -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#RackAndPinion"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#RackAndPinion">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+    </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Radiator -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Radiator"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Radiator">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+    </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Reservoir -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Reservoir"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Reservoir">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+    </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Resonator -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Resonator"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Resonator">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+    </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Roof -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Roof"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Roof">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+    </owl:Class>
     
 
 
@@ -997,31 +1452,41 @@
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#ShockAbsorber -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#ShockAbsorber"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#ShockAbsorber">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+    </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#ShoeReturnSpring -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#ShoeReturnSpring"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#ShoeReturnSpring">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+    </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#SpacerRing -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#SpacerRing"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#SpacerRing">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+    </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#SparkPlug -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#SparkPlug"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#SparkPlug">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+    </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#SparkingCable -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#SparkingCable"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#SparkingCable">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+    </owl:Class>
     
 
 
@@ -1035,103 +1500,194 @@
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#StarterDrive -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#StarterDrive"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#StarterDrive">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+    </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#StarterMotor -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#StarterMotor"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#StarterMotor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+    </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#StarterRelay -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#StarterRelay"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#StarterRelay">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+    </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#StarterSolenoid -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#StarterSolenoid"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#StarterSolenoid">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+    </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#StartingSystem -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#StartingSystem"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#StartingSystem">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#System"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#StartingSystemComponent -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#StartingSystemComponent">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#partOf"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#StartingSystem"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+    </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#SteeringArm -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#SteeringArm"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#SteeringArm">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+    </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#SteeringBox -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#SteeringBox"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#SteeringBox">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+    </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#SteeringColumn -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#SteeringColumn"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#SteeringColumn">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+    </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#SteeringCoupler -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#SteeringCoupler"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#SteeringCoupler">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+    </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#SteeringDamper -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#SteeringDamper"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#SteeringDamper">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+    </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#SteeringKnuckle -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#SteeringKnuckle"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#SteeringKnuckle">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+    </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#SteeringRack -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#SteeringRack"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#SteeringRack">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+    </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#SteeringShaft -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#SteeringShaft"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#SteeringShaft">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+    </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#SteeringSystem -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#SteeringSystem"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#SteeringSystem">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#System"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#SteeringSystemComponent -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#SteeringSystemComponent">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#partOf"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#SteeringSystem"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+    </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Strut -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Strut"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Strut">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+    </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#SuspensionSystem -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#SuspensionSystem"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#SuspensionSystem">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#System"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#SuspensionSystemComponent -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#SuspensionSystemComponent">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#partOf"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#SuspensionSystem"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+    </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#SwayBar -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#SwayBar"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#SwayBar">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+    </owl:Class>
     
 
 
@@ -1151,7 +1707,9 @@
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#TailLight -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#TailLight"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#TailLight">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+    </owl:Class>
     
 
 
@@ -1165,127 +1723,188 @@
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#ThrottleBody -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#ThrottleBody"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#ThrottleBody">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+    </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#TieRod -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#TieRod"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#TieRod">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+    </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#TimingBelt -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#TimingBelt"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#TimingBelt">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+    </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#TorqueConverter -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#TorqueConverter"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#TorqueConverter">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+    </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#TorsionBar -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#TorsionBar"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#TorsionBar">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+    </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#TrackBar -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#TrackBar"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#TrackBar">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+    </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#TrailingArm -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#TrailingArm"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#TrailingArm">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+    </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#TransferCase -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#TransferCase"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#TransferCase">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+    </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#TransmissionControlUnit -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#TransmissionControlUnit"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#TransmissionControlUnit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+    </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#TransmissionPan -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#TransmissionPan"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#TransmissionPan">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+    </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#TransmissionSeal -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#TransmissionSeal"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#TransmissionSeal">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+    </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#TransmissionSolenoid -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#TransmissionSolenoid"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#TransmissionSolenoid">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+    </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#TransmissionSystem -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#TransmissionSystem"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#TransmissionSystem">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#System"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#TransmissionSystemComponent -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#TransmissionSystemComponent">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#partOf"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#TransmissionSystem"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+    </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Trunk -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Trunk"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Trunk">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+    </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#TurnSignalLight -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#TurnSignalLight"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#TurnSignalLight">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+    </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Tyre -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Tyre"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Tyre">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+    </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#UniversalJoint -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#UniversalJoint"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#UniversalJoint">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+    </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#VacuumBrakeBooster -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#VacuumBrakeBooster"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#VacuumBrakeBooster">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+    </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#ValveBody -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#ValveBody"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#ValveBody">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+    </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#VehicleSpeedSensor -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#VehicleSpeedSensor"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#VehicleSpeedSensor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+    </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#VoltageRegulator -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#VoltageRegulator"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#VoltageRegulator">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+    </owl:Class>
     
 
 
@@ -1299,31 +1918,41 @@
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#WaterNeck -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#WaterNeck"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#WaterNeck">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+    </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#WaterPipe -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#WaterPipe"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#WaterPipe">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+    </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#WaterPump -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#WaterPump"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#WaterPump">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+    </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#WaterPumpGasket -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#WaterPumpGasket"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#WaterPumpGasket">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+    </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#WaterTank -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#WaterTank"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#WaterTank">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+    </owl:Class>
     
 
 
@@ -1337,31 +1966,78 @@
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#WheelCylinder -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#WheelCylinder"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#WheelCylinder">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+    </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#WheelStud -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#WheelStud"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#WheelStud">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+    </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Window -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Window"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Window">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+    </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Windshield -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Windshield"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Windshield">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+    </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Yoke -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Yoke"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Yoke">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#c1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#c1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+        <partOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#s1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#s1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#s1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#LightingSystem"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#s2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#s2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#System"/>
+        <hasComponent rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#c1"/>
+    </owl:NamedIndividual>
     
 
 
@@ -1377,221 +2053,6 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
             <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#ABS"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#ABSSensor"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#AccessoryBelt"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#AdjustingMechanism"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#AirBlower"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#AirDuct"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#AirFilter"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#AirIntakeHose"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#AirSuspension"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#AirbagSensor"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Alternator"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Ammeter"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Anchor"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#AutomaticTransmissionSpeedSensor"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#BallJoint"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Battery"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#BleedNipple"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Body"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#BrakeBackingPad"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#BrakeBackingPlate"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#BrakeCoolingDuct"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#BrakeDisc"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#BrakeDrum"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#BrakeFluid"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#BrakeLight"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#BrakeLining"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#BrakePad"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#BrakePedal"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#BrakePiston"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#BrakePump"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#BrakeRoll"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#BrakeRotor"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#BrakeSensor"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#BrakeServo"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#BrakeShoe"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#BrakeWarningLight"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#BrakingSystem"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Bumper"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#CalibratedFrictionBrake"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Caliper"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Camshaft"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#CamshaftPositionSensor"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Car"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Carburetor"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#CatalyticConverter"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#CenterLink"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#ChokeCable"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Clinometer"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Clutch"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#CoilSpring"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#CombinationValve"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#ConnectingRod"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#CoolantHose"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#CoolantTemperatureSensor"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#CoolingFan"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#CrankCase"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#CrankPulley"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Crankshaft"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#CrankshaftPositionSensor"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#CylinderHead"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Differential"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Distributor"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Door"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#DriveBelt"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#DriveShaft"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#DualCircuitBrakeSystem"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Dynamometer"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#ElectricalSupplySystem"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Engine"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#EngineBlock"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#EngineCoolingSystem"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#EngineCradle"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#EngineOilSystem"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#EngineValve"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#ExhaustClamp"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#ExhaustFlangeGasket"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#ExhaustGasRecirculationValve"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#ExhaustGasket"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#ExhaustManifold"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#ExhaustManifoldGasket"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#ExhaustPipe"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#ExhaustSystem"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#FanBelt"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#FanBlade"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#FanClutch"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Fender"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#FogLight"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#FuelCap"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#FuelCell"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#FuelCooler"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#FuelDistributor"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#FuelFilter"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#FuelFilterSeal"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#FuelGauge"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#FuelInjector"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#FuelInjectorNozzle"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#FuelLevelSensor"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#FuelLine"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#FuelPressureRegulator"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#FuelPressureSensor"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#FuelPump"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#FuelPumpGasket"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#FuelRail"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#FuelSupplySystem"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#FuelTank"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#FuelWaterSeparator"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Gauge"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Gear"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#GearBox"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#GlowPlug"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Handle"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Headlight"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#HeatShield"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#HeatSleeving"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#HoldDownSprings"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Hood"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Hose"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#HydraulicBoosterUnit"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Hydrometer"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#IdlerArm"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#IgnitionBox"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#IgnitionCoil"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#IgnitionMagneto"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#IgnitionSystem"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#IntakeManifold"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#IntakeManifoldGasket"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#LeafSpring"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#LightingSystem"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#LoadSensingValve"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Manometer"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#MasterCylinder"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#MeteringValve"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Muffler"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Odometer"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#OilFilter"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#OilGasket"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#OilPressureGauge"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#OilPump"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#OilStainer"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#OilTank"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Piston"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#PitmanArm"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#PowerSteeringPump"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#PressureDifferentialValve"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#ProportioningValve"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#RackAndPinion"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Radiator"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Reservoir"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Resonator"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Roof"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Sensor"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#ShockAbsorber"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#ShoeReturnSpring"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#SpacerRing"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#SparkPlug"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#SparkingCable"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Speedometer"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#StarterDrive"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#StarterMotor"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#StarterRelay"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#StarterSolenoid"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#StartingSystem"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#SteeringArm"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#SteeringBox"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#SteeringColumn"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#SteeringCoupler"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#SteeringDamper"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#SteeringKnuckle"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#SteeringRack"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#SteeringShaft"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#SteeringSystem"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Strut"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#SuspensionSystem"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#SwayBar"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Tachometer"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#TailLight"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#TemperatureGauge"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#ThrottleBody"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#TieRod"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#TimingBelt"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#TorqueConverter"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#TorsionBar"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#TrackBar"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#TrailingArm"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#TransferCase"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#TransmissionControlUnit"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#TransmissionPan"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#TransmissionSeal"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#TransmissionSolenoid"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#TransmissionSystem"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Trunk"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#TurnSignalLight"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Tyre"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#UniversalJoint"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#VacuumBrakeBooster"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#ValveBody"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#VehicleSpeedSensor"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#VoltageRegulator"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Voltmeter"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#WaterNeck"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#WaterPipe"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#WaterPump"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#WaterPumpGasket"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#WaterTank"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#WaterTemperatureGauge"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#WheelCylinder"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#WheelStud"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Window"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Windshield"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Yoke"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#ABS"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#AccessoryBelt"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#AdjustingMechanism"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#AirBlower"/>
@@ -1604,7 +2065,6 @@
             <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#BallJoint"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Battery"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#BleedNipple"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Body"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#BrakeBackingPad"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#BrakeBackingPlate"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#BrakeCoolingDuct"/>
@@ -1622,12 +2082,10 @@
             <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#BrakeServo"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#BrakeShoe"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#BrakeWarningLight"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#BrakingSystem"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Bumper"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#CalibratedFrictionBrake"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Caliper"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Camshaft"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Car"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Carburetor"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#CatalyticConverter"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#CenterLink"/>
@@ -1635,7 +2093,6 @@
             <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Clutch"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#CoilSpring"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#CombinationValve"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#ConnectingRod"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#CoolantHose"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#CoolingFan"/>
@@ -1649,12 +2106,8 @@
             <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#DriveBelt"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#DriveShaft"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#DualCircuitBrakeSystem"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#ElectricalSupplySystem"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Engine"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#EngineBlock"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#EngineCoolingSystem"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#EngineCradle"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#EngineOilSystem"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#EngineValve"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#ExhaustClamp"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#ExhaustFlangeGasket"/>
@@ -1663,7 +2116,6 @@
             <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#ExhaustManifold"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#ExhaustManifoldGasket"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#ExhaustPipe"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#ExhaustSystem"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#FanBelt"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#FanBlade"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#FanClutch"/>
@@ -1682,10 +2134,8 @@
             <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#FuelPump"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#FuelPumpGasket"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#FuelRail"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#FuelSupplySystem"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#FuelTank"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#FuelWaterSeparator"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Gauge"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Gear"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#GearBox"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#GlowPlug"/>
@@ -1701,11 +2151,9 @@
             <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#IgnitionBox"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#IgnitionCoil"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#IgnitionMagneto"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#IgnitionSystem"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#IntakeManifold"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#IntakeManifoldGasket"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#LeafSpring"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#LightingSystem"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#LoadSensingValve"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#MasterCylinder"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#MeteringValve"/>
@@ -1725,7 +2173,6 @@
             <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Reservoir"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Resonator"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Roof"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Sensor"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#ShockAbsorber"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#ShoeReturnSpring"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#SpacerRing"/>
@@ -1735,7 +2182,6 @@
             <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#StarterMotor"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#StarterRelay"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#StarterSolenoid"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#StartingSystem"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#SteeringArm"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#SteeringBox"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#SteeringColumn"/>
@@ -1744,11 +2190,8 @@
             <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#SteeringKnuckle"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#SteeringRack"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#SteeringShaft"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#SteeringSystem"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Strut"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#SuspensionSystem"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#SwayBar"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#System"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#TailLight"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#ThrottleBody"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#TieRod"/>
@@ -1762,7 +2205,6 @@
             <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#TransmissionPan"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#TransmissionSeal"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#TransmissionSolenoid"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#TransmissionSystem"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Trunk"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#TurnSignalLight"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Tyre"/>
@@ -1813,6 +2255,25 @@
             <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#TemperatureGauge"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Voltmeter"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#WaterTemperatureGauge"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Body"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#BrakingSystem"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#ElectricalSupplySystem"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Engine"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#EngineCoolingSystem"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#EngineOilSystem"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#ExhaustSystem"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#FuelSupplySystem"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#IgnitionSystem"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#LightingSystem"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#StartingSystem"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#SteeringSystem"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#SuspensionSystem"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#TransmissionSystem"/>
         </owl:members>
     </rdf:Description>
 </rdf:RDF>
