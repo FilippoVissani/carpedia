@@ -29,7 +29,9 @@
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#ABSSensor -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#ABSSensor"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#ABSSensor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Sensor"/>
+    </owl:Class>
     
 
 
@@ -77,7 +79,9 @@
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#AirbagSensor -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#AirbagSensor"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#AirbagSensor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Sensor"/>
+    </owl:Class>
     
 
 
@@ -89,7 +93,9 @@
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Ammeter -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Ammeter"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Ammeter">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Gauge"/>
+    </owl:Class>
     
 
 
@@ -101,7 +107,9 @@
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#AutomaticTransmissionSpeedSensor -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#AutomaticTransmissionSpeedSensor"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#AutomaticTransmissionSpeedSensor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Sensor"/>
+    </owl:Class>
     
 
 
@@ -215,7 +223,9 @@
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#BrakeSensor -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#BrakeSensor"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#BrakeSensor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Sensor"/>
+    </owl:Class>
     
 
 
@@ -269,7 +279,9 @@
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#CamshaftPositionSensor -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#CamshaftPositionSensor"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#CamshaftPositionSensor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Sensor"/>
+    </owl:Class>
     
 
 
@@ -305,7 +317,9 @@
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Clinometer -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Clinometer"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Clinometer">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Gauge"/>
+    </owl:Class>
     
 
 
@@ -341,7 +355,9 @@
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#CoolantTemperatureSensor -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#CoolantTemperatureSensor"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#CoolantTemperatureSensor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Sensor"/>
+    </owl:Class>
     
 
 
@@ -371,7 +387,9 @@
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#CrankshaftPositionSensor -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#CrankshaftPositionSensor"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#CrankshaftPositionSensor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Sensor"/>
+    </owl:Class>
     
 
 
@@ -419,7 +437,9 @@
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Dynamometer -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Dynamometer"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Dynamometer">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Gauge"/>
+    </owl:Class>
     
 
 
@@ -581,7 +601,9 @@
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#FuelGauge -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#FuelGauge"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#FuelGauge">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Gauge"/>
+    </owl:Class>
     
 
 
@@ -599,7 +621,9 @@
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#FuelLevelSensor -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#FuelLevelSensor"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#FuelLevelSensor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Sensor"/>
+    </owl:Class>
     
 
 
@@ -617,7 +641,9 @@
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#FuelPressureSensor -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#FuelPressureSensor"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#FuelPressureSensor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Sensor"/>
+    </owl:Class>
     
 
 
@@ -731,7 +757,9 @@
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Hydrometer -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Hydrometer"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Hydrometer">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Gauge"/>
+    </owl:Class>
     
 
 
@@ -797,7 +825,9 @@
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Manometer -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Manometer"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Manometer">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Gauge"/>
+    </owl:Class>
     
 
 
@@ -821,7 +851,9 @@
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Odometer -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Odometer"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Odometer">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Gauge"/>
+    </owl:Class>
     
 
 
@@ -839,7 +871,9 @@
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#OilPressureGauge -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#OilPressureGauge"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#OilPressureGauge">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Gauge"/>
+    </owl:Class>
     
 
 
@@ -959,7 +993,9 @@
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Speedometer -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Speedometer"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Speedometer">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Gauge"/>
+    </owl:Class>
     
 
 
@@ -1067,7 +1103,9 @@
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Tachometer -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Tachometer"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Tachometer">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Gauge"/>
+    </owl:Class>
     
 
 
@@ -1079,7 +1117,9 @@
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#TemperatureGauge -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#TemperatureGauge"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#TemperatureGauge">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Gauge"/>
+    </owl:Class>
     
 
 
@@ -1211,7 +1251,9 @@
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Voltmeter -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Voltmeter"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Voltmeter">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Gauge"/>
+    </owl:Class>
     
 
 
@@ -1247,7 +1289,9 @@
 
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#WaterTemperatureGauge -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#WaterTemperatureGauge"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#WaterTemperatureGauge">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Gauge"/>
+    </owl:Class>
     
 
 
@@ -1502,6 +1546,38 @@
             <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Window"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Windshield"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Yoke"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#ABSSensor"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#AirbagSensor"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#AutomaticTransmissionSpeedSensor"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#BrakeSensor"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#CamshaftPositionSensor"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#CoolantTemperatureSensor"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#CrankshaftPositionSensor"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#FuelLevelSensor"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#FuelPressureSensor"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Ammeter"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Clinometer"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Dynamometer"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#FuelGauge"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Hydrometer"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Manometer"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Odometer"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#OilPressureGauge"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Speedometer"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Tachometer"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#TemperatureGauge"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Voltmeter"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#WaterTemperatureGauge"/>
         </owl:members>
     </rdf:Description>
 </rdf:RDF>
