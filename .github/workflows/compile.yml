@@ -10,19 +10,10 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Set up Ruby
-        uses: ruby/setup-ruby@v1
-        with:
-          ruby-version: '3.0'
-          bundler-cache: true
-
-      - name: Generate ontology
-        run: cd ontology_generator && bundle install && bundle exec rake && cd ..
-
       - name: Validate RDF
         uses: vemonet/jena-riot-action@v3.14
         with:
-          input: ontology_generator/carpedia.owl
+          input: carpedia.owl
 
   release:
     if: github.event_name == 'push'
@@ -45,15 +36,6 @@ jobs:
           working_directory: docs
           root_file: thesis-main.tex
           args: -pdf -file-line-error -halt-on-error -interaction=nonstopmode -shell-escape
-
-      - name: Set up Ruby
-        uses: ruby/setup-ruby@v1
-        with:
-          ruby-version: '3.0'
-          bundler-cache: true
-
-      - name: Generate ontology
-        run: cd ontology_generator && bundle install && bundle exec rake && cd ..
         
       - name: Release
         env:

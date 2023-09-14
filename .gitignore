@@ -241,10 +241,6 @@ TSWLatexianTemp*
 # generated if using elsarticle.cls
 *.spl
 
-*.owl
-*.rdfxml
-*.ttl
-*.nt
 *.properties
 **/Gemfile.lock
 

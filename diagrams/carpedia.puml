@@ -1,467 +1,214 @@
-@startuml
-
-left to right direction
-
-' Root classes
-class Car
-class Body
-class ElectricalSupplySystem
-class Gauge
-class IgnitionSystem
-class LightingSystem
-class StartingSystem
-class BrakingSystem
-class Sensor
-class Engine
-class EngineCoolingSystem
-class EngineOilSystem
-class ExhaustSystem
-class FuelSupplySystem
-class SuspensionSystem
-class SteeringSystem
-class TransmissionSystem
-
-' Body components
-class Hood
-class Bumper
-class Door
-class Window
-class Windshield
-class Roof
-class Trunk
-class Fender
-
-Hood --* Body
-Bumper --* Body
-Door --* Body
-Window --* Body
-Windshield --* Body
-Roof --* Body
-Trunk --* Body
-Fender --* Body
-
-' ElectricalSupplySystem components
-class Battery
-class Alternator
-class VoltageRegulator
-
-Battery --* ElectricalSupplySystem
-Alternator --* ElectricalSupplySystem
-VoltageRegulator --* ElectricalSupplySystem
-
-' Gauges
-class FuelGauge
-class Speedometer
-class Tachometer
-class Odometer
-class OilPressureGauge
-class TemperatureGauge
-class Ammeter
-class Voltmeter
-class Dynamometer
-class Manometer
-class Clinometer
-class Hydrometer
-class WaterTemperatureGauge
-
-FuelGauge --|> Gauge
-Speedometer --|> Gauge
-Tachometer --|> Gauge
-Odometer --|> Gauge
-OilPressureGauge --|> Gauge
-TemperatureGauge --|> Gauge
-Ammeter --|> Gauge
-Voltmeter --|> Gauge
-Dynamometer --|> Gauge
-Manometer --|> Gauge
-Clinometer --|> Gauge
-Hydrometer --|> Gauge
-WaterTemperatureGauge --|> Gauge
-
-' IgnitionSystem components
-class SparkingCable
-class Distributor
-class IgnitionCoil
-class IgnitionBox
-class IgnitionMagneto
-class SparkPlug
-class GlowPlug
-
-SparkingCable --* IgnitionSystem
-Distributor --* IgnitionSystem
-IgnitionCoil --* IgnitionSystem
-IgnitionBox --* IgnitionSystem
-IgnitionMagneto --* IgnitionSystem
-SparkPlug --* IgnitionSystem
-GlowPlug --* IgnitionSystem
-
-' LightingSystem components
-class Headlight
-class TailLight
-class FogLight
-class TurnSignalLight
-class BrakeLight
-
-Headlight --* LightingSystem
-TailLight --* LightingSystem
-FogLight --* LightingSystem
-TurnSignalLight --* LightingSystem
-BrakeLight --* LightingSystem
-
-' StartingSystem components
-class StarterMotor
-class StarterSolenoid
-class StarterDrive
-class StarterRelay
-
-StarterMotor --* StartingSystem
-StarterSolenoid --* StartingSystem
-StarterDrive --* StartingSystem
-StarterRelay --* StartingSystem
-
-' BrakingSystem components
-class ABS
-class AdjustingMechanism
-class Anchor
-class BleedNipple
-class BrakeBackingPlate
-class BrakeBackingPad
-class BrakeCoolingDuct
-class BrakeDisc
-class BrakeFluid
-class BrakeDrum
-class BrakeLining
-class BrakePad
-class BrakePedal
-class BrakePiston
-class BrakePump
-class BrakeRoll
-class BrakeRotor
-class BrakeServo
-class BrakeShoe
-class BrakeWarningLight
-class CalibratedFrictionBrake
-class Caliper
-class CombinationValve
-class DualCircuitBrakeSystem
-class HoldDownSprings
-class Hose
-class HydraulicBoosterUnit
-class LoadSensingValve
-class MasterCylinder
-class MeteringValve
-class Handle
-class PressureDifferentialValve
-class ProportioningValve
-class Reservoir
-class ShoeReturnSpring
-class Tyre
-class VacuumBrakeBooster
-class WheelCylinder
-class WheelStud
-
-ABS --* BrakingSystem
-AdjustingMechanism --* BrakingSystem
-Anchor --* BrakingSystem
-BleedNipple --* BrakingSystem
-BrakeBackingPlate --* BrakingSystem
-BrakeBackingPad --* BrakingSystem
-BrakeCoolingDuct --* BrakingSystem
-BrakeDisc --* BrakingSystem
-BrakeFluid --* BrakingSystem
-BrakeDrum --* BrakingSystem
-BrakeLining --* BrakingSystem
-BrakePad --* BrakingSystem
-BrakePedal --* BrakingSystem
-BrakePiston --* BrakingSystem
-BrakePump --* BrakingSystem
-BrakeRoll --* BrakingSystem
-BrakeRotor --* BrakingSystem
-BrakeServo --* BrakingSystem
-BrakeShoe --* BrakingSystem
-BrakeWarningLight --* BrakingSystem
-CalibratedFrictionBrake --* BrakingSystem
-Caliper --* BrakingSystem
-CombinationValve --* BrakingSystem
-DualCircuitBrakeSystem --* BrakingSystem
-HoldDownSprings --* BrakingSystem
-Hose --* BrakingSystem
-HydraulicBoosterUnit --* BrakingSystem
-LoadSensingValve --* BrakingSystem
-MasterCylinder --* BrakingSystem
-MeteringValve --* BrakingSystem
-Handle --* BrakingSystem
-PressureDifferentialValve --* BrakingSystem
-ProportioningValve --* BrakingSystem
-Reservoir --* BrakingSystem
-ShoeReturnSpring --* BrakingSystem
-Tyre --* BrakingSystem
-VacuumBrakeBooster --* BrakingSystem
-WheelCylinder --* BrakingSystem
-WheelStud --* BrakingSystem
-
-' Sensors
-class AirbagSensor
-class ABSSensor
-class AutomaticTransmissionSpeedSensor
-class BrakeSensor
-class CamshaftPositionSensor
-class CoolantTemperatureSensor
-class CrankshaftPositionSensor
-class FuelLevelSensor
-class FuelPressureSensor
-
-AirbagSensor --|> Sensor
-ABSSensor --|> Sensor
-AutomaticTransmissionSpeedSensor --|> Sensor
-BrakeSensor --|> Sensor
-CamshaftPositionSensor --|> Sensor
-CoolantTemperatureSensor --|> Sensor
-CrankshaftPositionSensor --|> Sensor
-FuelLevelSensor --|> Sensor
-FuelPressureSensor --|> Sensor
-
-' Engine components
-class AccessoryBelt
-class AirDuct
-class AirFilter
-class AirIntakeHose
-class IntakeManifold
-class Camshaft
-class ConnectingRod
-class CrankCase
-class Crankshaft
-class CrankPulley
-class CylinderHead
-class Distributor
-class DriveBelt
-class EngineBlock
-class EngineCradle
-class EngineValve
-class Piston
-class StarterMotor
-class TimingBelt
-
-AccessoryBelt --* Engine
-AirDuct --* Engine
-AirFilter --* Engine
-AirIntakeHose --* Engine
-IntakeManifold --* Engine
-Camshaft --* Engine
-ConnectingRod --* Engine
-CrankCase --* Engine
-Crankshaft --* Engine
-CrankPulley --* Engine
-CylinderHead --* Engine
-Distributor --* Engine
-DriveBelt --* Engine
-EngineBlock --* Engine
-EngineCradle --* Engine
-EngineValve --* Engine
-Piston --* Engine
-StarterMotor --* Engine
-TimingBelt --* Engine
-
-' EngineCoolingSystem components
-class AirBlower
-class CoolantHose
-class CoolingFan
-class FanBlade
-class FanBelt
-class FanClutch
-class Radiator
-class WaterNeck
-class WaterPipe
-class WaterPump
-class WaterPumpGasket
-class WaterTank
-
-AirBlower --* EngineCoolingSystem
-CoolantHose --* EngineCoolingSystem
-CoolingFan --* EngineCoolingSystem
-FanBlade --* EngineCoolingSystem
-FanBelt --* EngineCoolingSystem
-FanClutch --* EngineCoolingSystem
-Radiator --* EngineCoolingSystem
-WaterNeck --* EngineCoolingSystem
-WaterPipe --* EngineCoolingSystem
-WaterPump --* EngineCoolingSystem
-WaterPumpGasket --* EngineCoolingSystem
-WaterTank --* EngineCoolingSystem
-
-' EngineOilSystem components
-class OilFilter
-class OilPump
-class OilTank
-class OilGasket
-class OilStainer
-
-OilFilter --* EngineOilSystem
-OilPump --* EngineOilSystem
-OilTank --* EngineOilSystem
-OilGasket --* EngineOilSystem
-OilStainer --* EngineOilSystem
-
-' ExhaustSystem components
-
-class CatalyticConverter
-class ExhaustClamp
-class ExhaustFlangeGasket
-class ExhaustGasket
-class ExhaustManifold
-class ExhaustManifoldGasket
-class ExhaustPipe
-class HeatShield
-class HeatSleeving
-class Resonator
-class Muffler
-class SpacerRing
-
-CatalyticConverter --* ExhaustSystem
-ExhaustClamp --* ExhaustSystem
-ExhaustFlangeGasket --* ExhaustSystem
-ExhaustGasket --* ExhaustSystem
-ExhaustManifold --* ExhaustSystem
-ExhaustManifoldGasket --* ExhaustSystem
-ExhaustPipe --* ExhaustSystem
-HeatShield --* ExhaustSystem
-HeatSleeving --* ExhaustSystem
-Resonator --* ExhaustSystem
-Muffler --* ExhaustSystem
-SpacerRing --* ExhaustSystem
-
-' FuelSupplySystem components
-class AirFilter
-class Carburetor
-class ChokeCable
-class ExhaustGasRecirculationValve
-class FuelCap
-class FuelCell
-class FuelCooler
-class FuelDistributor
-class FuelFilter
-class FuelFilterSeal
-class FuelInjector
-class FuelInjectorNozzle
-class FuelLine
-class FuelPump
-class FuelPumpGasket
-class FuelPressureRegulator
-class FuelRail
-class FuelTank
-class FuelWaterSeparator
-class IntakeManifold
-class IntakeManifoldGasket
-class ThrottleBody
-
-AirFilter --* FuelSupplySystem
-Carburetor --* FuelSupplySystem
-ChokeCable --* FuelSupplySystem
-ExhaustGasRecirculationValve --* FuelSupplySystem
-FuelCap --* FuelSupplySystem
-FuelCell --* FuelSupplySystem
-FuelCooler --* FuelSupplySystem
-FuelDistributor --* FuelSupplySystem
-FuelFilter --* FuelSupplySystem
-FuelFilterSeal --* FuelSupplySystem
-FuelInjector --* FuelSupplySystem
-FuelInjectorNozzle --* FuelSupplySystem
-FuelLine --* FuelSupplySystem
-FuelPump --* FuelSupplySystem
-FuelPumpGasket --* FuelSupplySystem
-FuelPressureRegulator --* FuelSupplySystem
-FuelRail --* FuelSupplySystem
-FuelTank --* FuelSupplySystem
-FuelWaterSeparator --* FuelSupplySystem
-IntakeManifold --* FuelSupplySystem
-IntakeManifoldGasket --* FuelSupplySystem
-ThrottleBody --* FuelSupplySystem
-
-' SuspensionSystem components
-class AirSuspension
-class CoilSpring
-class LeafSpring
-class ShockAbsorber
-class Strut
-class SwayBar
-class TorsionBar
-class TrackBar
-class TrailingArm
-
-AirSuspension --* SuspensionSystem
-CoilSpring --* SuspensionSystem
-LeafSpring --* SuspensionSystem
-ShockAbsorber --* SuspensionSystem
-Strut --* SuspensionSystem
-SwayBar --* SuspensionSystem
-TorsionBar --* SuspensionSystem
-TrackBar --* SuspensionSystem
-TrailingArm --* SuspensionSystem
-
-' SteeringSystem components
-class BallJoint
-class CenterLink
-class IdlerArm
-class PitmanArm
-class PowerSteeringPump
-class RackAndPinion
-class SteeringArm
-class SteeringBox
-class SteeringColumn
-class SteeringCoupler
-class SteeringDamper
-class SteeringKnuckle
-class SteeringRack
-class SteeringShaft
-class TieRod
-
-BallJoint --* SteeringSystem
-CenterLink --* SteeringSystem
-IdlerArm --* SteeringSystem
-PitmanArm --* SteeringSystem
-PowerSteeringPump --* SteeringSystem
-RackAndPinion --* SteeringSystem
-SteeringArm --* SteeringSystem
-SteeringBox --* SteeringSystem
-SteeringColumn --* SteeringSystem
-SteeringCoupler --* SteeringSystem
-SteeringDamper --* SteeringSystem
-SteeringKnuckle --* SteeringSystem
-SteeringRack --* SteeringSystem
-SteeringShaft --* SteeringSystem
-TieRod --* SteeringSystem
-
-' TransmissionSystem components
-class Clutch
-class Differential
-class DriveShaft
-class Gear
-class GearBox
-class TorqueConverter
-class TransferCase
-class TransmissionControlUnit
-class TransmissionPan
-class TransmissionSeal
-class TransmissionSolenoid
-class UniversalJoint
-class ValveBody
-class VehicleSpeedSensor
-class Yoke
-
-Clutch --* TransmissionSystem
-Differential --* TransmissionSystem
-DriveShaft --* TransmissionSystem
-Gear --* TransmissionSystem
-GearBox --* TransmissionSystem
-TorqueConverter --* TransmissionSystem
-TransferCase --* TransmissionSystem
-TransmissionControlUnit --* TransmissionSystem
-TransmissionPan --* TransmissionSystem
-TransmissionSeal --* TransmissionSystem
-TransmissionSolenoid --* TransmissionSystem
-UniversalJoint --* TransmissionSystem
-ValveBody --* TransmissionSystem
-VehicleSpeedSensor --* TransmissionSystem
-Yoke --* TransmissionSystem
-
-@enduml
+Car
+Body
+ElectricalSupplySystem
+Gauge
+IgnitionSystem
+LightingSystem
+StartingSystem
+BrakingSystem
+Sensor
+Engine
+EngineCoolingSystem
+EngineOilSystem
+ExhaustSystem
+FuelSupplySystem
+SuspensionSystem
+SteeringSystem
+TransmissionSystem
+Hood
+Bumper
+Door
+Window
+Windshield
+Roof
+Trunk
+Fender
+Battery
+Alternator
+VoltageRegulator
+FuelGauge
+Speedometer
+Tachometer
+Odometer
+OilPressureGauge
+TemperatureGauge
+Ammeter
+Voltmeter
+Dynamometer
+Manometer
+Clinometer
+Hydrometer
+WaterTemperatureGauge
+SparkingCable
+Distributor
+IgnitionCoil
+IgnitionBox
+IgnitionMagneto
+SparkPlug
+GlowPlug
+Headlight
+TailLight
+FogLight
+TurnSignalLight
+BrakeLight
+StarterMotor
+StarterSolenoid
+StarterDrive
+StarterRelay
+ABS
+AdjustingMechanism
+Anchor
+BleedNipple
+BrakeBackingPlate
+BrakeBackingPad
+BrakeCoolingDuct
+BrakeDisc
+BrakeFluid
+BrakeDrum
+BrakeLining
+BrakePad
+BrakePedal
+BrakePiston
+BrakePump
+BrakeRoll
+BrakeRotor
+BrakeServo
+BrakeShoe
+BrakeWarningLight
+CalibratedFrictionBrake
+Caliper
+CombinationValve
+DualCircuitBrakeSystem
+HoldDownSprings
+Hose
+HydraulicBoosterUnit
+LoadSensingValve
+MasterCylinder
+MeteringValve
+Handle
+PressureDifferentialValve
+ProportioningValve
+Reservoir
+ShoeReturnSpring
+Tyre
+VacuumBrakeBooster
+WheelCylinder
+WheelStud
+AirbagSensor
+ABSSensor
+AutomaticTransmissionSpeedSensor
+BrakeSensor
+CamshaftPositionSensor
+CoolantTemperatureSensor
+CrankshaftPositionSensor
+FuelLevelSensor
+FuelPressureSensor
+AccessoryBelt
+AirDuct
+AirFilter
+AirIntakeHose
+IntakeManifold
+Camshaft
+ConnectingRod
+CrankCase
+Crankshaft
+CrankPulley
+CylinderHead
+Distributor
+DriveBelt
+EngineBlock
+EngineCradle
+EngineValve
+Piston
+StarterMotor
+TimingBelt
+AirBlower
+CoolantHose
+CoolingFan
+FanBlade
+FanBelt
+FanClutch
+Radiator
+WaterNeck
+WaterPipe
+WaterPump
+WaterPumpGasket
+WaterTank
+OilFilter
+OilPump
+OilTank
+OilGasket
+OilStainer
+CatalyticConverter
+ExhaustClamp
+ExhaustFlangeGasket
+ExhaustGasket
+ExhaustManifold
+ExhaustManifoldGasket
+ExhaustPipe
+HeatShield
+HeatSleeving
+Resonator
+Muffler
+SpacerRing
+AirFilter
+Carburetor
+ChokeCable
+ExhaustGasRecirculationValve
+FuelCap
+FuelCell
+FuelCooler
+FuelDistributor
+FuelFilter
+FuelFilterSeal
+FuelInjector
+FuelInjectorNozzle
+FuelLine
+FuelPump
+FuelPumpGasket
+FuelPressureRegulator
+FuelRail
+FuelTank
+FuelWaterSeparator
+IntakeManifold
+IntakeManifoldGasket
+ThrottleBody
+AirSuspension
+CoilSpring
+LeafSpring
+ShockAbsorber
+Strut
+SwayBar
+TorsionBar
+TrackBar
+TrailingArm
+BallJoint
+CenterLink
+IdlerArm
+PitmanArm
+PowerSteeringPump
+RackAndPinion
+SteeringArm
+SteeringBox
+SteeringColumn
+SteeringCoupler
+SteeringDamper
+SteeringKnuckle
+SteeringRack
+SteeringShaft
+TieRod
+Clutch
+Differential
+DriveShaft
+Gear
+GearBox
+TorqueConverter
+TransferCase
+TransmissionControlUnit
+TransmissionPan
+TransmissionSeal
+TransmissionSolenoid
+UniversalJoint
+ValveBody
+VehicleSpeedSensor
+Yoke

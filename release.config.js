@@ -9,9 +9,9 @@ config.plugins.push(
         "assets": [
             // Change this path if your pdf has another name.
             { "path": "docs/thesis-main.pdf" },
-            { "path": "ontology_generator/*.owl"},
-            { "path": "ontology_generator/*.ttl"},
-            { "path": "ontology_generator/*.rdfxml"},
+            { "path": "*.owl"},
+            { "path": "*.ttl"},
+            { "path": "*.rdfxml"},
         ]
     }],
     ["@semantic-release/git", {
