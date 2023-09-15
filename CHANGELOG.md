@@ -1,3 +1,56 @@
+## [5.0.0](https://github.com/FilippoVissani/carpedia/compare/4.2.0...5.0.0) (2023-09-15)
+
+
+### ⚠ BREAKING CHANGES
+
+* remove ontology generator
+* add classes
+* add new classes
+* remove unused classes
+
+### Features
+
+* add classes and object property ([ac793b3](https://github.com/FilippoVissani/carpedia/commit/ac793b3987e51d5b1a75e0a09910e3f275cd5210))
+* add new classes ([bfe0520](https://github.com/FilippoVissani/carpedia/commit/bfe0520f0638c9ae262e57057f25fff0b1578c07))
+* add new Graph builder written in Scala ([375a150](https://github.com/FilippoVissani/carpedia/commit/375a1504976618ac773fe49d1798bb918d322690))
+* add ontology URI ([e3f5fd4](https://github.com/FilippoVissani/carpedia/commit/e3f5fd482ec5413a2437b9297380fa645ae172fc))
+* add subclasses ([4887a25](https://github.com/FilippoVissani/carpedia/commit/4887a255205a7cdb6ea6b14cd6ad54a62e5167e4))
+* define new properties ([0103a71](https://github.com/FilippoVissani/carpedia/commit/0103a71f116d09931e936ad6cd003a0803d761ab))
+* introduce new entities ([1e6b52c](https://github.com/FilippoVissani/carpedia/commit/1e6b52c2e2de1c5feb1e36df5a5102499ba78234))
+* remove ontology generator ([8e237ed](https://github.com/FilippoVissani/carpedia/commit/8e237ed2d454fdbcd8ee8bcffb69c73f41a23f73))
+
+
+### Bug Fixes
+
+* fix diagram ([07e4d69](https://github.com/FilippoVissani/carpedia/commit/07e4d69df04fb9a4c037375439cdc6beaa8e5714))
+
+
+### Documentation
+
+* add class diagram ([b76e47b](https://github.com/FilippoVissani/carpedia/commit/b76e47b2a4190d932230f0519a46eeb22c81c1d9))
+* fix diagram ([a36de8f](https://github.com/FilippoVissani/carpedia/commit/a36de8f02233fe885a23ef7bbcb6275900e1526c))
+* update README ([cd0ecaf](https://github.com/FilippoVissani/carpedia/commit/cd0ecaf06908200421cc7d3ae24f66a8e46d1589))
+
+
+### Build and continuous integration
+
+* **Mergify:** configuration update ([bf71875](https://github.com/FilippoVissani/carpedia/commit/bf71875a8d121c3bdf9590baee43bff1e8bd865e))
+
+
+### General maintenance
+
+* add scalafmt ([20247bf](https://github.com/FilippoVissani/carpedia/commit/20247bf1441e9d15e6a1464d7e42f3ca4f583e09))
+* fix imports ([fb5b1ce](https://github.com/FilippoVissani/carpedia/commit/fb5b1ce535e65ef422afbbdadffc75b6a78296b8))
+* format code ([9221f4c](https://github.com/FilippoVissani/carpedia/commit/9221f4c4c70f7a0c879e34c24e51136d6d95550e))
+
+
+### Refactoring
+
+* add classes ([4ab56b1](https://github.com/FilippoVissani/carpedia/commit/4ab56b1a198789d8363c6d376f1346f8d62dfe50))
+* add Scala 3 syntax ([f98a02f](https://github.com/FilippoVissani/carpedia/commit/f98a02f10f29d785e2608b88fd9d0bcd27e37529))
+* remove SBT project ([99926d8](https://github.com/FilippoVissani/carpedia/commit/99926d84639368861ee4e44514ba9a14d91540d5))
+* remove unused classes ([fa6312f](https://github.com/FilippoVissani/carpedia/commit/fa6312f0e92095c763a48181bef50180bc7cf39f))
+
 ## [4.2.0](https://github.com/FilippoVissani/carpedia/compare/4.1.0...4.2.0) (2023-09-12)
 
 
