@@ -1,3 +1,18 @@
+## [5.1.0](https://github.com/FilippoVissani/carpedia/compare/5.0.0...5.1.0) (2023-09-15)
+
+
+### Features
+
+* add classes and object properties ([61d5b48](https://github.com/FilippoVissani/carpedia/commit/61d5b485cbb63b7df3cd5026aab00bfcc5ace83b))
+* add data properties ([53f13b6](https://github.com/FilippoVissani/carpedia/commit/53f13b6f9f111b8f2431e6c83e97f0d0493ade74))
+* add object properties ([19b2e73](https://github.com/FilippoVissani/carpedia/commit/19b2e734ec8395522711f5a8c9748764c21b9865))
+* restructure classes ([b0820c5](https://github.com/FilippoVissani/carpedia/commit/b0820c5035e4ffd1df9f36b0aef9f6013089ed30))
+
+
+### Bug Fixes
+
+* fix object properties ([53afd7e](https://github.com/FilippoVissani/carpedia/commit/53afd7e6856e3172d8ead2b1400b8d64c1e43218))
+
 ## [5.0.0](https://github.com/FilippoVissani/carpedia/compare/4.2.0...5.0.0) (2023-09-15)
 
 
