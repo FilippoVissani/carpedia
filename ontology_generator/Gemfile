@@ -1,5 +1,0 @@
-source 'https://rubygems.org'
-gem 'rake', '~> 13.0', '>= 13.0.6'
-gem 'rdf', '~> 3.3'
-gem 'rdf-turtle', '~> 3.3'
-gem 'rdf-rdfxml', '~> 3.3'
