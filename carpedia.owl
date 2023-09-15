@@ -220,7 +220,7 @@
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#MechanicalComponent"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#componentOf"/>
                         <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Body"/>
@@ -228,7 +228,7 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#MechanicalComponent"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
     </owl:Class>
     
 
@@ -391,7 +391,7 @@
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#MechanicalComponent"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#componentOf"/>
                         <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#BrakingSystem"/>
@@ -399,7 +399,7 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#MechanicalComponent"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
     </owl:Class>
     
 
@@ -662,7 +662,7 @@
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#MechanicalComponent"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#componentOf"/>
                         <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#ElectricalSupplySystem"/>
@@ -670,7 +670,7 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#MechanicalComponent"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
     </owl:Class>
     
 
@@ -697,7 +697,7 @@
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#MechanicalComponent"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#componentOf"/>
                         <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Engine"/>
@@ -705,7 +705,7 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#MechanicalComponent"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
     </owl:Class>
     
 
@@ -724,7 +724,7 @@
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#MechanicalComponent"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#componentOf"/>
                         <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#EngineCoolingSystem"/>
@@ -732,7 +732,7 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#MechanicalComponent"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
     </owl:Class>
     
 
@@ -759,7 +759,7 @@
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#MechanicalComponent"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#componentOf"/>
                         <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#EngineOilSystem"/>
@@ -767,7 +767,7 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#MechanicalComponent"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
     </owl:Class>
     
 
@@ -850,7 +850,7 @@
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#MechanicalComponent"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#componentOf"/>
                         <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#ExhaustSystem"/>
@@ -858,7 +858,7 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#MechanicalComponent"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
     </owl:Class>
     
 
@@ -1045,7 +1045,7 @@
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#MechanicalComponent"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#componentOf"/>
                         <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#FuelSupplySystem"/>
@@ -1053,7 +1053,7 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#MechanicalComponent"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
     </owl:Class>
     
 
@@ -1224,7 +1224,7 @@
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#MechanicalComponent"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#componentOf"/>
                         <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#IgnitionSystem"/>
@@ -1232,7 +1232,7 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#MechanicalComponent"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
     </owl:Class>
     
 
@@ -1275,7 +1275,7 @@
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#MechanicalComponent"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#componentOf"/>
                         <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#LightingSystem"/>
@@ -1283,7 +1283,7 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#MechanicalComponent"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
     </owl:Class>
     
 
@@ -1574,7 +1574,7 @@
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#MechanicalComponent"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#componentOf"/>
                         <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#StartingSystem"/>
@@ -1582,7 +1582,7 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#MechanicalComponent"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
     </owl:Class>
     
 
@@ -1665,7 +1665,7 @@
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#MechanicalComponent"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#componentOf"/>
                         <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#SteeringSystem"/>
@@ -1673,7 +1673,7 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#MechanicalComponent"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
     </owl:Class>
     
 
@@ -1700,7 +1700,7 @@
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#MechanicalComponent"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#componentOf"/>
                         <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#SuspensionSystem"/>
@@ -1708,7 +1708,7 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#MechanicalComponent"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
     </owl:Class>
     
 
@@ -1861,7 +1861,7 @@
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#MechanicalComponent"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#componentOf"/>
                         <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#TransmissionSystem"/>
@@ -1869,7 +1869,7 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#MechanicalComponent"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
     </owl:Class>
     
 
