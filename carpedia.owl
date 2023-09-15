@@ -42,6 +42,36 @@
     
 
 
+    <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#hasGauge -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#hasGauge">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#hasComponent"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#System"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Gauge"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#hasMechanicalComponent -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#hasMechanicalComponent">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#hasComponent"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#System"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#MechanicalComponent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#hasSensor -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#hasSensor">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#hasComponent"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#System"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Sensor"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#hasSystem -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#hasSystem">
