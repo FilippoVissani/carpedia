@@ -352,7 +352,6 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
     </owl:Class>
     
 
@@ -523,7 +522,6 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
     </owl:Class>
     
 
@@ -794,7 +792,6 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
     </owl:Class>
     
 
@@ -829,7 +826,6 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
     </owl:Class>
     
 
@@ -856,7 +852,6 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
     </owl:Class>
     
 
@@ -891,7 +886,6 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
     </owl:Class>
     
 
@@ -982,7 +976,6 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
     </owl:Class>
     
 
@@ -1177,7 +1170,6 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
     </owl:Class>
     
 
@@ -1356,7 +1348,6 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
     </owl:Class>
     
 
@@ -1407,7 +1398,6 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
     </owl:Class>
     
 
@@ -1443,7 +1433,6 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Car"/>
     </owl:Class>
     
 
@@ -1734,7 +1723,6 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
     </owl:Class>
     
 
@@ -1825,7 +1813,6 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
     </owl:Class>
     
 
@@ -1860,7 +1847,6 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
     </owl:Class>
     
 
@@ -2021,7 +2007,6 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
     </owl:Class>
     
 
@@ -2479,27 +2464,16 @@
         </owl:members>
     </rdf:Description>
     <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Body"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#BrakingSystem"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#ElectricalSupplySystem"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Engine"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#EngineCoolingSystem"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#EngineOilSystem"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#ExhaustSystem"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#FuelSupplySystem"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#IgnitionSystem"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#LightingSystem"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#StartingSystem"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#SteeringSystem"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#SuspensionSystem"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#TransmissionSystem"/>
-        </owl:members>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Door-1"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Door-2"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Door-3"/>
+        </owl:distinctMembers>
     </rdf:Description>
 </rdf:RDF>
 
 
 
-<!-- Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
 
