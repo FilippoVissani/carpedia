@@ -164,6 +164,15 @@
     
 
 
+    <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#hasPrice -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#hasPrice">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Car"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#hasSerialNumber -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#hasSerialNumber">
@@ -1411,6 +1420,34 @@
     
 
 
+    <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#LuxuryCar -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#LuxuryCar">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Car"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#hasPrice"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50000</xsd:minExclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Car"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Manometer -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Manometer">
@@ -2149,6 +2186,26 @@
     
 
 
+    <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#3DoorsBody -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#3DoorsBody">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Body"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#hasMechanicalComponent"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">3</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Door"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Body"/>
+    </owl:Class>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -2160,28 +2217,47 @@
     
 
 
-    <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#c1 -->
+    <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Door-1 -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#c1">
-        <rdf:type rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#MechanicalComponent"/>
-        <componentOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#s1"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Door-1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Door"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#s1 -->
+    <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Door-2 -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#s1">
-        <rdf:type rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#LightingSystem"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Door-2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Door"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#s2 -->
+    <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Door-3 -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#s2">
-        <rdf:type rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#System"/>
-        <hasComponent rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#c1"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Door-3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Door"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#I-Car -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#I-Car">
+        <rdf:type rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Car"/>
+        <hasSystem rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#I-DoorSystem"/>
+        <hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">60000</hasPrice>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#I-DoorSystem -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#I-DoorSystem">
+        <rdf:type rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Body"/>
+        <hasMechanicalComponent rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Door-1"/>
+        <hasMechanicalComponent rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Door-2"/>
+        <hasMechanicalComponent rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Door-3"/>
     </owl:NamedIndividual>
     
 
@@ -2425,5 +2501,5 @@
 
 
 
-<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi -->
 
