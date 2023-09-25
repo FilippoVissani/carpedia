@@ -210,6 +210,15 @@
     
 
 
+    <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#hasMaxSpeedKmph -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#hasMaxSpeedKmph">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Car"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#hasPlate -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#hasPlate">
@@ -1904,6 +1913,14 @@
     
 
 
+    <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Supercar -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Supercar">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Car"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#SuspensionSystem -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#SuspensionSystem">
@@ -2328,7 +2345,9 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#I-Car">
         <rdf:type rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Car"/>
+        <hasEngine rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#V12"/>
         <hasSystem rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#I-DoorSystem"/>
+        <hasMaxSpeedKmph rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">400</hasMaxSpeedKmph>
         <hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">60000</hasPrice>
     </owl:NamedIndividual>
     
@@ -2350,6 +2369,15 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#I-Engine">
         <rdf:type rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Engine"/>
         <hasDisplacement rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6000</hasDisplacement>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#V12 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#V12">
+        <rdf:type rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Engine"/>
+        <hasKilowatts rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">350</hasKilowatts>
     </owl:NamedIndividual>
     
 
@@ -2428,6 +2456,9 @@
     <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#c">
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
     </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#m">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
     <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#e">
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
     </rdf:Description>
@@ -2436,6 +2467,125 @@
     </rdf:Description>
     <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#w">
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Supercar</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Car"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#c"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#hasMaxSpeedKmph"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#c"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#m"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#greaterThan"/>
+                                        <swrl:arguments>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#m"/>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">290</rdf:first>
+                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </swrl:arguments>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#hasEngine"/>
+                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#c"/>
+                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#e"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#hasKilowatts"/>
+                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#e"/>
+                                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#k"/>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                        <rdf:first>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                                                <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#greaterThan"/>
+                                                                <swrl:arguments>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                        <rdf:first rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#k"/>
+                                                                        <rdf:rest>
+                                                                            <rdf:Description>
+                                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">297</rdf:first>
+                                                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                                            </rdf:Description>
+                                                                        </rdf:rest>
+                                                                    </rdf:Description>
+                                                                </swrl:arguments>
+                                                            </rdf:Description>
+                                                        </rdf:first>
+                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Supercar"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#c"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
     </rdf:Description>
     <rdf:Description>
         <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
