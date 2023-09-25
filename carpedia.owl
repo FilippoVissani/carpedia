@@ -2569,6 +2569,21 @@
     
 
 
+    <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#XCX-Diesel -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#XCX-Diesel">
+        <rdf:type>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Diesel"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Electric"/>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -2789,17 +2804,6 @@
             <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#TemperatureGauge"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Voltmeter"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#WaterTemperatureGauge"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#CNG"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Diesel"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Electric"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Gasoline"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Hydrogen"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#LPG"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
