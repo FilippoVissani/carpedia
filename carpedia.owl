@@ -1085,6 +1085,14 @@
     
 
 
+    <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Euro0 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Euro0">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#EuroEmissionClass"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Euro1 -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Euro1">
