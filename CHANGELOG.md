@@ -1,3 +1,26 @@
+## [5.3.0](https://github.com/FilippoVissani/carpedia/compare/5.2.0...5.3.0) (2023-09-26)
+
+
+### Features
+
+* add class ([0e74bd3](https://github.com/FilippoVissani/carpedia/commit/0e74bd3d0006b17ade27d6dd7388de1da7a74feb))
+* add data property ([0fedc25](https://github.com/FilippoVissani/carpedia/commit/0fedc25c4338293730798c9a79aa45395c057ea9))
+* add new features ([37dccb6](https://github.com/FilippoVissani/carpedia/commit/37dccb68be23b78a30ff03b7afb083e1561761cd))
+* add new features ([0cc57b4](https://github.com/FilippoVissani/carpedia/commit/0cc57b439b0a5383c88b53f29c68adc281d5a475))
+* add query ([df06f3e](https://github.com/FilippoVissani/carpedia/commit/df06f3eb2edb928d94b1264b36853026295d9d38))
+* add query ([38a9fbb](https://github.com/FilippoVissani/carpedia/commit/38a9fbbb0facca678574d4f644a80f2a22bd783b))
+* improve object properties ([2f9f1d7](https://github.com/FilippoVissani/carpedia/commit/2f9f1d7e28ef32d59c3aa82fe6fd103945450a12))
+
+
+### Dependency updates
+
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.61 ([c1b8e15](https://github.com/FilippoVissani/carpedia/commit/c1b8e154918cf1db5a328059b93e63bb1f87dcc3))
+
+
+### Refactoring
+
+* move diagrams in docs ([4ec8607](https://github.com/FilippoVissani/carpedia/commit/4ec860754f3ee6d3baec36bf44cdca4fea21e982))
+
 ## [5.2.0](https://github.com/FilippoVissani/carpedia/compare/5.1.0...5.2.0) (2023-09-26)
 
 
