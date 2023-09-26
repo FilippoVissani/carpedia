@@ -27,3 +27,18 @@ WHERE {
  	?car carpedia:hasEuroEmissionClass ?euroEmissionClass .
  	FILTER (?euroEmissionClass IN (carpedia:Euro0, carpedia:Euro1, carpedia:Euro2, carpedia:Euro3)) .
 }
+
+# Cars suitable for families
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX carpedia: <http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#>
+
+SELECT ?car
+WHERE {
+ 	?car rdf:type carpedia:Car .
+ 	?car carpedia:hasSeats ?seats .
+ 	FILTER (?seats >= 5) .
+}
