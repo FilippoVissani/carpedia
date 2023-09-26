@@ -4,4 +4,44 @@
 Sono state utilizzate regole SWRL per consentire al reasoner di inferire ulteriori informazioni sull'ontologia.
 
 \section{SPARQL}\label{sec:sparql}
-Nella seguente sezione verranno mostrate le query SPARQL e relativi risultati applicati agli individui creati nell'ontologia.
+
+In questa sezione, esamineremo tre query SPARQL implementate nell'ontologia delle automobili,
+sviluppata per ottenere informazioni significative sulla base di criteri specifici.
+Queste interrogazioni sono state create per esplorare diverse caratteristiche delle automobili all'interno
+dell'ontologia e recuperare dati rilevanti in base a determinati requisiti.
+
+\subsection{Query 1: Automobili adatte alla guida nei centri urbani}
+
+Mettere foto o codice query 1
+
+Questa query è stata creata per identificare le automobili che sono adatte a circolare nei centri urbani,
+dove spesso vengono introdotte restrizioni sulle emissioni.
+Abbiamo selezionato tutte le automobili (?car) che sono istanze della classe carpedia:Car e che hanno una
+classe di emissione Euro 4, 5 o 6 (?euroEmissionClass).
+Questo ci permette di ottenere un elenco di automobili conformi alle normative Euro emission, che sono generalmente
+considerate idonee per la guida in aree urbane.
+
+\subsection{Query 2: Automobili non adatte alla guida nei centri urbani}
+
+Mettere foto o codice query 2
+
+Questa query è stata progettata per individuare le automobili che non sono adatte alla guida nei centri urbani,
+poiché le loro emissioni possono superare i limiti consentiti.
+Abbiamo selezionato tutte le automobili (?car) che sono istanze della classe carpedia:Car e che hanno una
+classe di emissione Euro 0, 1, 2 o 3 (?euroEmissionClass).
+Queste classi di emissione rappresentano automobili con standard di emissione meno stringenti,
+che potrebbero non essere autorizzate nelle zone urbane più pulite.
+
+\subsection{Query 3: Automobili adatte alle famiglie}
+
+Mettere foto o codice query 2
+
+Questa query è stata formulata per identificare le automobili che sono adatte alle famiglie, in base al numero
+di posti a sedere. Abbiamo selezionato tutte le automobili (?car) che sono istanze della classe carpedia:Car e
+che hanno almeno 5 posti a sedere (?seats >= 5). Questo ci permette di individuare le automobili che possono
+ospitare comodamente famiglie numerose o gruppi di persone.
+
+\subsection{Considerazioni}
+Queste query SPARQL consentono di ottenere informazioni significative e rilevanti dalle ontologie delle automobili,
+offrendo un'ampia gamma di informazioni utili per diversi scopi, come la ricerca di automobili adatte all'ambiente
+urbano o alle esigenze delle famiglie.
