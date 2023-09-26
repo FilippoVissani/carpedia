@@ -42,3 +42,4 @@ WHERE {
  	?car carpedia:hasSeats ?seats .
  	FILTER (?seats >= 5) .
 }
+
