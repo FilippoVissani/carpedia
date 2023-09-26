@@ -83,6 +83,15 @@
     
 
 
+    <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#hasEuroEmissionClass -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#hasEuroEmissionClass">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Car"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#EuroEmissionClass"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#hasFuel -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#hasFuel">
@@ -1073,6 +1082,60 @@
     <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#EngineValve">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#MechanicalComponent"/>
     </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Euro1 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Euro1">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#EuroEmissionClass"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Euro2 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Euro2">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#EuroEmissionClass"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Euro3 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Euro3">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#EuroEmissionClass"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Euro4 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Euro4">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#EuroEmissionClass"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Euro5 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Euro5">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#EuroEmissionClass"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Euro6 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Euro6">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#EuroEmissionClass"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#EuroEmissionClass -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#EuroEmissionClass"/>
     
 
 
@@ -2519,6 +2582,14 @@
     
 
 
+    <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Euro6 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Euro6">
+        <rdf:type rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Euro6"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Fiat-500cc -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Fiat-500cc">
@@ -2533,6 +2604,7 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#I-Car">
         <rdf:type rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Car"/>
         <hasEngine rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#V12"/>
+        <hasEuroEmissionClass rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Euro6"/>
         <hasSystem rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#I-DoorSystem"/>
         <hasMaxSpeedKmph rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">400</hasMaxSpeedKmph>
         <hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">60000</hasPrice>
@@ -2804,6 +2876,27 @@
             <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#TemperatureGauge"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Voltmeter"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#WaterTemperatureGauge"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Car"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#EuroEmissionClass"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Fuel"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Manufacturer"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#System"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Euro1"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Euro2"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Euro3"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Euro4"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Euro5"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Euro6"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
