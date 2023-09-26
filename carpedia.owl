@@ -2589,6 +2589,60 @@
     
 
 
+    <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#3DoorsBody -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#3DoorsBody">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Body"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#3DoorsCar -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#3DoorsCar">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Car"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#hasSystem"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#3DoorsBody"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Car"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#5DoorsBody -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#5DoorsBody">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Body"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#5DoorsCar -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#5DoorsCar">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Car"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#hasSystem"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#5DoorsBody"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Car"/>
+    </owl:Class>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -2971,6 +3025,24 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#body">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#door1">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#door2">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#door3">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#door4">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#door5">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
     <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#c">
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
     </rdf:Description>
@@ -2988,6 +3060,330 @@
     </rdf:Description>
     <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#x">
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">5DoorsBody</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Body"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#body"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#hasMechanicalComponent"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#body"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#door1"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#hasMechanicalComponent"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#body"/>
+                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#door2"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#hasMechanicalComponent"/>
+                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#body"/>
+                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#door3"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#hasMechanicalComponent"/>
+                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#body"/>
+                                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#door4"/>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                        <rdf:first>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#hasMechanicalComponent"/>
+                                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#body"/>
+                                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#door5"/>
+                                                            </rdf:Description>
+                                                        </rdf:first>
+                                                        <rdf:rest>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                <rdf:first>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DifferentIndividualsAtom"/>
+                                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#door1"/>
+                                                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#door2"/>
+                                                                    </rdf:Description>
+                                                                </rdf:first>
+                                                                <rdf:rest>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                        <rdf:first>
+                                                                            <rdf:Description>
+                                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DifferentIndividualsAtom"/>
+                                                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#door2"/>
+                                                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#door3"/>
+                                                                            </rdf:Description>
+                                                                        </rdf:first>
+                                                                        <rdf:rest>
+                                                                            <rdf:Description>
+                                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                                <rdf:first>
+                                                                                    <rdf:Description>
+                                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DifferentIndividualsAtom"/>
+                                                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#door1"/>
+                                                                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#door3"/>
+                                                                                    </rdf:Description>
+                                                                                </rdf:first>
+                                                                                <rdf:rest>
+                                                                                    <rdf:Description>
+                                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                                        <rdf:first>
+                                                                                            <rdf:Description>
+                                                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DifferentIndividualsAtom"/>
+                                                                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#door1"/>
+                                                                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#door4"/>
+                                                                                            </rdf:Description>
+                                                                                        </rdf:first>
+                                                                                        <rdf:rest>
+                                                                                            <rdf:Description>
+                                                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                                                <rdf:first>
+                                                                                                    <rdf:Description>
+                                                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DifferentIndividualsAtom"/>
+                                                                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#door1"/>
+                                                                                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#door5"/>
+                                                                                                    </rdf:Description>
+                                                                                                </rdf:first>
+                                                                                                <rdf:rest>
+                                                                                                    <rdf:Description>
+                                                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                                                        <rdf:first>
+                                                                                                            <rdf:Description>
+                                                                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DifferentIndividualsAtom"/>
+                                                                                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#door2"/>
+                                                                                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#door4"/>
+                                                                                                            </rdf:Description>
+                                                                                                        </rdf:first>
+                                                                                                        <rdf:rest>
+                                                                                                            <rdf:Description>
+                                                                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                                                                <rdf:first>
+                                                                                                                    <rdf:Description>
+                                                                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DifferentIndividualsAtom"/>
+                                                                                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#door2"/>
+                                                                                                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#door5"/>
+                                                                                                                    </rdf:Description>
+                                                                                                                </rdf:first>
+                                                                                                                <rdf:rest>
+                                                                                                                    <rdf:Description>
+                                                                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                                                                        <rdf:first>
+                                                                                                                            <rdf:Description>
+                                                                                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DifferentIndividualsAtom"/>
+                                                                                                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#door3"/>
+                                                                                                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#door4"/>
+                                                                                                                            </rdf:Description>
+                                                                                                                        </rdf:first>
+                                                                                                                        <rdf:rest>
+                                                                                                                            <rdf:Description>
+                                                                                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                                                                                <rdf:first>
+                                                                                                                                    <rdf:Description>
+                                                                                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DifferentIndividualsAtom"/>
+                                                                                                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#door3"/>
+                                                                                                                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#door5"/>
+                                                                                                                                    </rdf:Description>
+                                                                                                                                </rdf:first>
+                                                                                                                                <rdf:rest>
+                                                                                                                                    <rdf:Description>
+                                                                                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                                                                                        <rdf:first>
+                                                                                                                                            <rdf:Description>
+                                                                                                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DifferentIndividualsAtom"/>
+                                                                                                                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#door4"/>
+                                                                                                                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#door5"/>
+                                                                                                                                            </rdf:Description>
+                                                                                                                                        </rdf:first>
+                                                                                                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                                                                                                    </rdf:Description>
+                                                                                                                                </rdf:rest>
+                                                                                                                            </rdf:Description>
+                                                                                                                        </rdf:rest>
+                                                                                                                    </rdf:Description>
+                                                                                                                </rdf:rest>
+                                                                                                            </rdf:Description>
+                                                                                                        </rdf:rest>
+                                                                                                    </rdf:Description>
+                                                                                                </rdf:rest>
+                                                                                            </rdf:Description>
+                                                                                        </rdf:rest>
+                                                                                    </rdf:Description>
+                                                                                </rdf:rest>
+                                                                            </rdf:Description>
+                                                                        </rdf:rest>
+                                                                    </rdf:Description>
+                                                                </rdf:rest>
+                                                            </rdf:Description>
+                                                        </rdf:rest>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#5DoorsBody"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#body"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3DoorsBody</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Body"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#body"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#hasMechanicalComponent"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#body"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#door1"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#hasMechanicalComponent"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#body"/>
+                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#door2"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#hasMechanicalComponent"/>
+                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#body"/>
+                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#door3"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DifferentIndividualsAtom"/>
+                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#door1"/>
+                                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#door2"/>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                        <rdf:first>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DifferentIndividualsAtom"/>
+                                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#door2"/>
+                                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#door3"/>
+                                                            </rdf:Description>
+                                                        </rdf:first>
+                                                        <rdf:rest>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                <rdf:first>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DifferentIndividualsAtom"/>
+                                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#door1"/>
+                                                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#door3"/>
+                                                                    </rdf:Description>
+                                                                </rdf:first>
+                                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                            </rdf:Description>
+                                                        </rdf:rest>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#3DoorsBody"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#body"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
     </rdf:Description>
     <rdf:Description>
         <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
