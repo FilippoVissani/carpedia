@@ -1,3 +1,31 @@
+## [5.2.0](https://github.com/FilippoVissani/carpedia/compare/5.1.0...5.2.0) (2023-09-26)
+
+
+### Features
+
+* add hybrid cars ([7fdc672](https://github.com/FilippoVissani/carpedia/commit/7fdc67218f545fdbee4e496155ec4586fe04dc92))
+* add new features ([a9ace1f](https://github.com/FilippoVissani/carpedia/commit/a9ace1ffa1be9874ae3dd06377141b4bcf3e0b4e))
+* add new features ([62d30db](https://github.com/FilippoVissani/carpedia/commit/62d30db8fcf4ea101e4d1af62182f5942aaa4dcc))
+* add new individuals ([cff5736](https://github.com/FilippoVissani/carpedia/commit/cff5736f1621c559243c1cdf1f0fc42171a3f071))
+* add new SWRL rule ([1dc51d5](https://github.com/FilippoVissani/carpedia/commit/1dc51d58ce4ddf937fc126db891cb5238dc1e817))
+* add SPARQL query ([b4531fc](https://github.com/FilippoVissani/carpedia/commit/b4531fcb218653ab37960db13f4af1d8ffb10f15))
+* add swrl rule ([994e355](https://github.com/FilippoVissani/carpedia/commit/994e355edd1b53d4dce2fbefeed97f8f9adfe8c6))
+* remove unused assertions ([296f028](https://github.com/FilippoVissani/carpedia/commit/296f02824b0df0371d96a0f88c97c8b25ff3b656))
+
+
+### Dependency updates
+
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.55 ([f5fe7cf](https://github.com/FilippoVissani/carpedia/commit/f5fe7cfbefa4ad9dfed44bbe16045f5ae1aa4b6a))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.56 ([f4175cc](https://github.com/FilippoVissani/carpedia/commit/f4175cc57c3f4d44f928f6cf02ed56d8af06b25e))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.60 ([ba32338](https://github.com/FilippoVissani/carpedia/commit/ba32338fa078d30d723580e47d039471377f411e))
+* **deps:** update node.js to 18.18 ([5c16470](https://github.com/FilippoVissani/carpedia/commit/5c1647025b90e60c547bb8b4726dae9784a942bc))
+
+
+### Refactoring
+
+* change rule name ([3589fff](https://github.com/FilippoVissani/carpedia/commit/3589fffdfdc6efd799b07cff15c47b4234420567))
+* remove ontology generator ([2bbf14e](https://github.com/FilippoVissani/carpedia/commit/2bbf14e6c0580a0653ef71effaa1ad690d3f7e42))
+
 ## [5.1.0](https://github.com/FilippoVissani/carpedia/compare/5.0.0...5.1.0) (2023-09-15)
 
 
