@@ -2715,6 +2715,7 @@
         <hasSystem rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#I-DoorSystem"/>
         <hasMaxSpeedKmph rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">400</hasMaxSpeedKmph>
         <hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">60000</hasPrice>
+        <hasSeats rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</hasSeats>
     </owl:NamedIndividual>
     
 
