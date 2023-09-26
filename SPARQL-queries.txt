@@ -38,7 +38,7 @@ PREFIX carpedia: <http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#
 
 SELECT ?car
 WHERE {
- 	?car rdf:type carpedia:Car .
+ 	?car rdf:type carpedia:5DoorsCar .
  	?car carpedia:hasSeats ?seats .
  	FILTER (?seats >= 5) .
 }
