@@ -265,6 +265,15 @@
     
 
 
+    <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#hasSeats -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#hasSeats">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Car"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#hasSerialNumber -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#hasSerialNumber">
