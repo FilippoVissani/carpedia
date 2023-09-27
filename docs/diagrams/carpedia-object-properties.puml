@@ -1,0 +1,25 @@
+@startuml
+left to right direction
+
+Component --> System : componentOf
+Gauge --> System : gaugeOf
+MechanicalComponent --> System : mechanicalComponentOf
+Sensor --> System : sensorOf
+System --> Component : hasComponent
+System --> Gauge : hasGauge
+System --> MechanicalComponent : hasMechanicalComponent
+System --> Sensor : hasSensor
+Car --> EuroEmissionClass : hasEuroEmissionClass
+FuelSupplySystem --> Fuel : hasFuel
+Car --> Manufacturer : hasManufacturer
+Component --> Manufacturer : hasManufacturer
+Car --> System : hasSystem
+Car --> Engine : hasEngine
+
+Component <|-- Gauge
+Component <|-- MechanicalComponent
+Component <|-- Sensor
+System <|-- FuelSupplySystem
+System <|-- Engine
+
+@enduml

@@ -1,0 +1,24 @@
+@startuml
+skinparam groupInheritance 2
+left to right direction
+
+class Fuel
+class CNG
+class Diesel
+class HybridElectricDiesel
+class Electric
+class HybridElectricGasoline
+class Gasoline
+class Hydrogen
+class LPG
+
+Fuel <|-- CNG
+Fuel <|-- Diesel
+Fuel <|-- HybridElectricDiesel
+Fuel <|-- Electric
+Fuel <|-- HybridElectricGasoline
+Fuel <|-- Gasoline
+Fuel <|-- Hydrogen
+Fuel <|-- LPG
+
+@enduml

@@ -1,0 +1,22 @@
+@startuml
+skinparam groupInheritance 2
+left to right direction
+
+class EuroEmissionClass
+class Euro0
+class Euro1
+class Euro2
+class Euro3
+class Euro4
+class Euro5
+class Euro6
+
+EuroEmissionClass <|-- Euro0
+EuroEmissionClass <|-- Euro1
+EuroEmissionClass <|-- Euro2
+EuroEmissionClass <|-- Euro3
+EuroEmissionClass <|-- Euro4
+EuroEmissionClass <|-- Euro5
+EuroEmissionClass <|-- Euro6
+
+@enduml

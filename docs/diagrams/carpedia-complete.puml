@@ -1,0 +1,332 @@
+@startuml
+
+class Car {
+    + hasKilometers: positiveInteger
+    + hasMaxSpeedKmph: positiveInteger
+    + hasModel: string
+    + hasPlate: string
+    + hasPrice: positiveInteger
+    + hasSeats: positiveInteger
+    + hasVariant: string
+    + hasWeight: positiveInteger
+}
+' class LuxuryCar
+' class NewlyLicensedCar
+' class Supercar
+' class 3DoorsCar
+' class 5DoorsCar
+class Component {
+    + hasSerialNumer: string
+}
+class BatteryManagementSystemComponent
+class BodyComponent {
+    + hasColor: hex
+}
+class BrakingSystemComponent
+class ElectricalSupplySystemComponent
+class EngineComponent
+class EngineCoolingSystemComponent
+class EngineOilSystemComponent
+class ExhaustSystemComponent
+class FuelSupplySystemComponent
+class Gauge
+' class Ammeter
+' class Clinometer
+' class Dynamometer
+' class FuelGauge
+' class Hydrometer
+' class Manometer
+' class Odometer
+' class OilPressureGauge
+' class Speedometer
+' class Tachometer
+' class TemperatureGauge
+' class Voltmeter
+' class WaterTemperatureGauge
+class IgnitionSystemComponent
+class LightingSystemComponent
+class MechanicalComponent
+' class ABS
+' class AccessoryBelt
+' class AdjustingMechanism
+' class AirBlower
+' class AirDuct
+' class AirFilter
+' class AirIntakeHose
+' class AirSuspension
+' class Alternator
+' class Anchor
+' class BallJoint
+' class Battery
+' class BleedNipple
+' class BrakeBackingPad
+' class BrakeBackingPlate
+' class BrakeCoolingDuct
+' class BrakeDisc
+' class BrakeDrum
+' class BrakeFluid
+' class BrakeLight
+' class BrakeLining
+' class BrakePad
+' class BrakePedal
+' class BrakePiston
+' class BrakePump
+' class BrakeRoll
+' class BrakeRotor
+' class BrakeServo
+' class BrakeShoe
+' class BrakeWarningLight
+' class Bumper
+' class CalibratedFrictionBrake
+' class Caliper
+' class Camshaft
+' class Carburetor
+' class CatalyticConverter
+' class CenterLink
+' class ChargePort
+' class Charger
+' class ChokeCable
+' class Clutch
+' class CoilSpring
+' class CombinationValve
+' class ConnectingRod
+' class CoolantHose
+' class CoolingFan
+' class CrankCase
+' class CrankPulley
+' class Crankshaft
+' class CylinderHead
+' class DCDC-Converter
+' class Differential
+' class Distributor
+' class Door
+' class DriveBelt
+' class DriveShaft
+' class DualCircuitBrakeSystem
+' class EngineBlock
+' class EngineCradle
+' class EngineValve
+' class ExhaustClamp
+' class ExhaustFlangeGasket
+' class ExhaustGasRecirculationValve
+' class ExhaustGasket
+' class ExhaustManifold
+' class ExhaustManifoldGasket
+' class ExhaustPipe
+' class FanBelt
+' class FanBlade
+' class FanClutch
+' class Fender
+' class FogLight
+' class FuelCap
+' class FuelCell
+' class FuelCooler
+' class FuelDistributor
+' class FuelFilter
+' class FuelFilterSeal
+' class FuelInjector
+' class FuelInjectorNozzle
+' class FuelLine
+' class FuelPressureRegulator
+' class FuelPump
+' class FuelPumpGasket
+' class FuelRail
+' class FuelTank
+' class FuelWaterSeparator
+' class Gear
+' class GearBox
+' class GlowPlug
+' class Handle
+' class Headlight
+' class HeatShield
+' class HeatSleeving
+' class HighVoltageBatteryPack
+' class LithiumIonBattery
+' class NickelMetalHydrideBattery
+' class HoldDownSprings
+' class Hood
+' class Hose
+' class HydraulicBoosterUnit
+' class HydrogenTank
+' class IdlerArm
+' class IgnitionBox
+' class IgnitionCoil
+' class IgnitionMagneto
+' class IntakeManifold
+' class IntakeManifoldGasket
+' class Inverter
+' class LeafSpring
+' class LoadSensingValve
+' class MasterCylinder
+' class MeteringValve
+' class Muffler
+' class OilFilter
+' class OilGasket
+' class OilPump
+' class OilStainer
+' class OilTank
+' class Piston
+' class PitmanArm
+' class PowerSteeringPump
+' class PressureDifferentialValve
+' class ProportioningValve
+' class RackAndPinion
+' class Radiator
+' class Reservoir
+' class Resonator
+' class Roof
+' class ShockAbsorber
+' class ShoeReturnSpring
+' class SpacerRing
+' class SparkPlug
+' class SparkingCable
+' class StarterDrive
+' class StarterMotor
+' class StarterRelay
+' class StarterSolenoid
+' class SteeringArm
+' class SteeringBox
+' class SteeringColumn
+' class SteeringCoupler
+' class SteeringDamper
+' class SteeringKnuckle
+' class SteeringRack
+' class SteeringShaft
+' class Strut
+' class SwayBar
+' class TailLight
+' class ThrottleBody
+' class TieRod
+' class TimingBelt
+' class TorqueConverter
+' class TorsionBar
+' class TrackBar
+' class TrailingArm
+' class TransferCase
+' class TransmissionControlUnit
+' class TransmissionPan
+' class TransmissionSeal
+' class TransmissionSolenoid
+' class Trunk
+' class TurnSignalLight
+' class Tyre
+' class UniversalJoint
+' class VacuumBrakeBooster
+' class ValveBody
+' class VehicleSpeedSensor
+' class VoltageRegulator
+' class WaterNeck
+' class WaterPipe
+' class WaterPump
+' class WaterPumpGasket
+' class WaterTank
+' class WheelCylinder
+' class WheelStud
+' class Window
+' class Windshield
+' class Yoke
+class Sensor
+' class ABSSensor
+' class AirbagSensor
+' class AutomaticTransmissionSpeedSensor
+' class BrakeSensor
+' class CamshaftPositionSensor
+' class CoolantTemperatureSensor
+' class CrankshaftPositionSensor
+' class FuelLevelSensor
+' class FuelPressureSensor
+class StartingSystemComponent
+class SteeringSystemComponent
+class SuspensionSystemComponent
+class TransmissionSystemComponent
+class EuroEmissionClass
+' class Euro0
+' class Euro1
+' class Euro2
+' class Euro3
+' class Euro4
+' class Euro5
+' class Euro6
+class Fuel
+' class CNG
+' class Diesel
+' class HybridElectricDiesel
+' class Electric
+' class HybridElectricGasoline
+' class Gasoline
+' class Hydrogen
+' class LPG
+class Manufacturer
+class System
+class BatteryManagementSystem
+class Body
+' class 3DoorsBody
+' class 5DoorsBody
+class BrakingSystem
+class ElectricalSupplySystem
+class Engine {
+    + hasDisplacement: positiveInteger
+    + hasKilowatts: positiveInteger
+}
+class EngineCoolingSystem
+class EngineOilSystem
+class ExhaustSystem
+class FuelSupplySystem
+class IgnitionSystem
+class LightingSystem
+class StartingSystem
+class SteeringSystem
+class SuspensionSystem
+class TransmissionSystem
+
+Component <|-- BatteryManagementSystemComponent
+Component <|-- BodyComponent
+Component <|-- BrakingSystemComponent
+Component <|-- ElectricalSupplySystemComponent
+Component <|-- EngineComponent
+Component <|-- EngineCoolingSystemComponent
+Component <|-- EngineOilSystemComponent
+Component <|-- ExhaustSystemComponent
+Component <|-- FuelSupplySystemComponent
+Component <|-- Gauge
+Component <|-- IgnitionSystemComponent
+Component <|-- LightingSystemComponent
+Component <|-- MechanicalComponent
+Component <|-- Sensor
+Component <|-- StartingSystemComponent
+Component <|-- SteeringSystemComponent
+Component <|-- SuspensionSystemComponent
+Component <|-- TransmissionSystemComponent
+
+System <|-- BatteryManagementSystem
+System <|-- Body
+System <|-- BrakingSystem
+System <|-- ElectricalSupplySystem
+System <|-- Engine
+System <|-- EngineCoolingSystem
+System <|-- EngineOilSystem
+System <|-- ExhaustSystem
+System <|-- FuelSupplySystem
+System <|-- IgnitionSystem
+System <|-- LightingSystem
+System <|-- StartingSystem
+System <|-- SteeringSystem
+System <|-- SuspensionSystem
+System <|-- TransmissionSystem
+
+Component --> System : componentOf
+Gauge --> System : gaugeOf
+MechanicalComponent --> System : mechanicalComponentOf
+Sensor --> System : sensorOf
+System --> Component : hasComponent
+System --> Gauge : hasGauge
+System --> MechanicalComponent : hasMechanicalComponent
+System --> Sensor : hasSensor
+Car --> EuroEmissionClass : hasEuroEmissionClass
+FuelSupplySystem --> Fuel : hasFuel
+Car --> Manufacturer : hasManufacturer
+Component --> Manufacturer : hasManufacturer
+Car --> System : hasSystem
+Car --> Engine : hasEngine
+
+@enduml

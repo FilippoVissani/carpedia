@@ -1,0 +1,27 @@
+@startuml
+skinparam groupInheritance 2
+
+class Car {
+    + hasKilometers: positiveInteger
+    + hasMaxSpeedKmph: positiveInteger
+    + hasModel: string
+    + hasPlate: string
+    + hasPrice: positiveInteger
+    + hasSeats: positiveInteger
+    + hasVariant: string
+    + hasWeight: positiveInteger
+}
+
+class 3DoorsCar
+class 5DoorsCar
+class LuxuryCar
+class NewlyLicensedCar
+class Supercar
+
+Car <|-- 3DoorsCar
+Car <|-- 5DoorsCar
+Car <|-- LuxuryCar
+Car <|-- NewlyLicensedCar
+Car <|-- Supercar
+
+@enduml

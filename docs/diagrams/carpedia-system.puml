@@ -1,0 +1,41 @@
+@startuml
+skinparam groupInheritance 2
+left to right direction
+
+class System
+class BatteryManagementSystem
+class Body
+class BrakingSystem
+class ElectricalSupplySystem
+class Engine {
+    + hasDisplacement: positiveInteger
+    + hasKilowatts: positiveInteger
+}
+class EngineCoolingSystem
+class EngineOilSystem
+class ExhaustSystem
+class FuelSupplySystem
+class IgnitionSystem
+class LightingSystem
+class StartingSystem
+class SteeringSystem
+class SuspensionSystem
+class TransmissionSystem
+
+System <|-- BatteryManagementSystem
+System <|-- Body
+System <|-- BrakingSystem
+System <|-- ElectricalSupplySystem
+System <|-- Engine
+System <|-- EngineCoolingSystem
+System <|-- EngineOilSystem
+System <|-- ExhaustSystem
+System <|-- FuelSupplySystem
+System <|-- IgnitionSystem
+System <|-- LightingSystem
+System <|-- StartingSystem
+System <|-- SteeringSystem
+System <|-- SuspensionSystem
+System <|-- TransmissionSystem
+
+@enduml
