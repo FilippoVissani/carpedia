@@ -1,0 +1,48 @@
+@startuml
+skinparam groupInheritance 2
+left to right direction
+
+class Component {
+    + hasSerialNumer: string
+}
+class BatteryManagementSystemComponent
+class BodyComponent {
+    + hasColor: hex
+}
+class BrakingSystemComponent
+class ElectricalSupplySystemComponent
+class EngineComponent
+class EngineCoolingSystemComponent
+class EngineOilSystemComponent
+class ExhaustSystemComponent
+class FuelSupplySystemComponent
+class Gauge
+class IgnitionSystemComponent
+class LightingSystemComponent
+class MechanicalComponent
+class Sensor
+class StartingSystemComponent
+class SteeringSystemComponent
+class SuspensionSystemComponent
+class TransmissionSystemComponent
+
+Component <|-- BatteryManagementSystemComponent
+Component <|-- BodyComponent
+Component <|-- BrakingSystemComponent
+Component <|-- ElectricalSupplySystemComponent
+Component <|-- EngineComponent
+Component <|-- EngineCoolingSystemComponent
+Component <|-- EngineOilSystemComponent
+Component <|-- ExhaustSystemComponent
+Component <|-- FuelSupplySystemComponent
+Component <|-- Gauge
+Component <|-- IgnitionSystemComponent
+Component <|-- LightingSystemComponent
+Component <|-- MechanicalComponent
+Component <|-- Sensor
+Component <|-- StartingSystemComponent
+Component <|-- SteeringSystemComponent
+Component <|-- SuspensionSystemComponent
+Component <|-- TransmissionSystemComponent
+
+@enduml
