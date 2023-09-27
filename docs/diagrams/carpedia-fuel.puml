@@ -1,6 +1,5 @@
 @startuml
 skinparam groupInheritance 2
-left to right direction
 
 class Fuel
 class CNG
