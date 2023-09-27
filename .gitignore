@@ -249,3 +249,6 @@ TSWLatexianTemp*
 .metals/
 .bsp/
 .vscode/
+
+*.DS_Store
+
