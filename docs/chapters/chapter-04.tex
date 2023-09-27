@@ -1,12 +1,60 @@
 \chapter{Interrogazione dell'Ontologia}
 
 \section{SWRL}\label{sec:swrl}
-Sono state utilizzate regole SWRL per consentire al reasoner di inferire ulteriori informazioni sull'ontologia.
+In questa sezione, esamineremo quattro regole SWRL implementate nell'ontologia carpedia.
+Queste regole sono state create per derivare nuove informazioni o classificare istanze in base a determinate
+condizioni o vincoli specifici all'interno dell'ontologia.
+Ognuna di queste regole svolge un ruolo specifico nel processo di arricchimento delle conoscenze nell'ontologia.
+
+\subsection{Regola 1: 3DoorsBody}
+
+Mettere foto o codice regola 1
+
+Questa regola e' stata creata per classificare una struttura del corpo dell'automobile come "DoorsBody" quando
+soddisfa le seguenti condizioni: ha esattamente 3 componenti meccanici distinti che rappresentano porte e ognuna
+di queste porte e' diversa dalle altre due.
+L'obiettivo e' quello di identificare correttamente il tipo di carrozzeria delle automobili con una
+specifica configurazione di porte, che potrebbe avere implicazioni su aspetti come la sicurezza o l'aerodinamica.
+
+\subsection{Regola 2: 5DoorsBody}
+
+Mettere foto o codice regola 2
+
+Questa regola e simile a "3DoorsBody", ma e' stata creata per classificare una struttura del corpo dell'automobile
+come "DoorsBody" quando ha esattamente 5 componenti meccanici distinti che rappresentano porte.
+Questa regola può essere utile per distinguere tra automobili con configurazioni di porte diverse,
+come ad esempio quelle con 3 o 5 porte, influenzando il design e l'usabilita'.
+
+\subsection{Regola 3: NewlyLicensedCar}
+
+Mettere foto o codice regola 3
+
+Questa regola e' stata creata per classificare un'automobile come "NewlyLicensedCar" quando soddisfa
+determinati criteri, tra cui una potenza dell'unita' motrice inferiore a 70 kW e un rapporto potenza/peso
+inferiore a 0,055.
+Questo potrebbe essere utile per identificare le automobili che potrebbero essere di interesse per i conducenti
+neo patentati o per chi e' alla ricerca di veicoli con prestazioni piu' moderate.
+
+\subsection{Regola 4: Supercar}
+
+Mettere foto o codice regola 3
+
+Questa regola e' stata creata per classificare un'automobile come "Supercar" quando soddisfa condizioni
+specifiche, tra cui una velocita' massima superiore a 290 km/h e una potenza dell'unita' motrice superiore a 297 kW.
+Questa regola puo' essere utile per identificare le automobili ad alte prestazioni all'interno dell'ontologia,
+distinguendole dalle automobili tradizionali.
+
+\subsection{Considerazioni}
+Queste regole SWRL sono state sviluppate per arricchire l'ontologia delle automobili con informazioni
+aggiuntive e per consentire la classificazione o la derivazione di nuove conoscenze in base a criteri specifici.
+Ogni regola ha uno scopo specifico e contribuisce alla comprensione delle automobili all'interno del contesto
+dell'ontologia.
+
 
 \section{SPARQL}\label{sec:sparql}
 
-In questa sezione, esamineremo tre query SPARQL implementate nell'ontologia delle automobili,
-sviluppata per ottenere informazioni significative sulla base di criteri specifici.
+In questa sezione, esamineremo tre query SPARQL implementate nell'ontologia carpedia,
+sviluppate per ottenere informazioni significative sulla base di criteri specifici.
 Queste interrogazioni sono state create per esplorare diverse caratteristiche delle automobili all'interno
 dell'ontologia e recuperare dati rilevanti in base a determinati requisiti.
 
@@ -14,7 +62,7 @@ dell'ontologia e recuperare dati rilevanti in base a determinati requisiti.
 
 Mettere foto o codice query 1
 
-Questa query è stata creata per identificare le automobili che sono adatte a circolare nei centri urbani,
+Questa query e' stata creata per identificare le automobili che sono adatte a circolare nei centri urbani,
 dove spesso vengono introdotte restrizioni sulle emissioni.
 Abbiamo selezionato tutte le automobili (?car) che sono istanze della classe carpedia:Car e che hanno una
 classe di emissione Euro 4, 5 o 6 (?euroEmissionClass).
@@ -25,18 +73,18 @@ considerate idonee per la guida in aree urbane.
 
 Mettere foto o codice query 2
 
-Questa query è stata progettata per individuare le automobili che non sono adatte alla guida nei centri urbani,
-poiché le loro emissioni possono superare i limiti consentiti.
+Questa query e' stata progettata per individuare le automobili che non sono adatte alla guida nei centri urbani,
+poiche' le loro emissioni possono superare i limiti consentiti.
 Abbiamo selezionato tutte le automobili (?car) che sono istanze della classe carpedia:Car e che hanno una
 classe di emissione Euro 0, 1, 2 o 3 (?euroEmissionClass).
 Queste classi di emissione rappresentano automobili con standard di emissione meno stringenti,
-che potrebbero non essere autorizzate nelle zone urbane più pulite.
+che potrebbero non essere autorizzate nelle zone urbane piu' pulite.
 
 \subsection{Query 3: Automobili adatte alle famiglie}
 
 Mettere foto o codice query 2
 
-Questa query è stata formulata per identificare le automobili che sono adatte alle famiglie, in base al numero
+Questa query e' stata formulata per identificare le automobili che sono adatte alle famiglie, in base al numero
 di posti a sedere. Abbiamo selezionato tutte le automobili (?car) che sono istanze della classe carpedia:Car e
 che hanno almeno 5 posti a sedere (?seats >= 5). Questo ci permette di individuare le automobili che possono
 ospitare comodamente famiglie numerose o gruppi di persone.
