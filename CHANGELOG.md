@@ -1,3 +1,16 @@
+## [5.4.0](https://github.com/FilippoVissani/carpedia/compare/5.3.0...5.4.0) (2023-09-27)
+
+
+### Features
+
+* improve query ([3445669](https://github.com/FilippoVissani/carpedia/commit/34456692deb56ef91aed42117c11f3028ae46e4b))
+
+
+### Dependency updates
+
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.63 ([db81f22](https://github.com/FilippoVissani/carpedia/commit/db81f225379adc55817dab2887c3190c67f155bf))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.64 ([61596fb](https://github.com/FilippoVissani/carpedia/commit/61596fb45347bfe748a1a179604ab3e4bab7cc3c))
+
 ## [5.3.0](https://github.com/FilippoVissani/carpedia/compare/5.2.0...5.3.0) (2023-09-26)
 
 
