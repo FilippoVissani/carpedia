@@ -1,10 +1,45 @@
 \chapter{Design dell'Ontologia}
 
+\section{Classificazione delle Automobili}
+
+In Carpedia, la gerarchia delle automobili (Figura \ref*{fig:carpedia-car}) svolge il ruolo di una tassonomia fondamentale per classificare e organizzare vari tipi di veicoli. La gerarchia delle automobili è essenziale per rappresentare e categorizzare i veicoli in base alle loro caratteristiche e ai loro attributi.
+
+Alla radice della gerarchia si trova la classe \texttt{Car}. Questa classe racchiude attributi e proprietà essenziali comuni a tutti i tipi di automobili. Queste proprietà includono:
+
+\begin{itemize}
+    \item \texttt{hasKilometers}: Un numero intero positivo che rappresenta il numero di chilometri percorsi da un'auto.
+    \item \texttt{hasMaxSpeedKmph}: Un numero intero positivo che indica la velocità massima dell'auto in chilometri all'ora.
+    \item \texttt{hasModel}: Una stringa che rappresenta il modello dell'auto.
+    \item hasPlate: Una stringa che indica la targa dell'auto.
+    \item \texttt{hasPrice}: Un numero intero positivo che indica il prezzo dell'auto.
+    \item \texttt{hasSeats}: Un numero intero positivo che rappresenta il numero di posti nell'auto.
+    \item \texttt{hasVariant}: Una stringa che descrive la variante o il livello di allestimento dell'auto.
+    \item \texttt{hasWeight}: Un numero intero positivo che indica il peso dell'auto.
+\end{itemize}
+
+La gerarchia si estende ulteriormente per includere diverse sottoclassi, ognuna delle quali rappresenta un tipo o una categoria specifica di auto. Queste sottoclassi ereditano le proprietà della classe base \texttt{Car} e possono aggiungere eventualmente attributi unici. Le sottoclassi nella nostra ontologia includono:
+
+\begin{itemize}
+    \item \texttt{3DoorsCar}: Rappresenta le auto a tre porte.
+    \item \texttt{5DoorsCar}: Rappresenta le auto a cinque porte.
+    \item \texttt{LuxuryCar}: Rappresenta automobili di lusso di alta gamma.
+    \item \texttt{NewlyLicensedCar}: Rappresenta auto adatte a neopatentati.
+    \item \texttt{Supercar}: Rappresenta supercar ad alte prestazioni.
+\end{itemize}
+
 \begin{figure}[H]
     \caption{Caption: TODO}
     \includegraphics[width=\textwidth]{figures/carpedia-car.png}
     \label{fig:carpedia-car}
 \end{figure}
+
+\section{Classificazione dei Componenti}
+
+La gerarchia dei componenti (Figura \ref*{fig:carpedia-component}), all'interno di Carpedia, svolge un ruolo centrale nell'organizzazione e nella categorizzazione dei vari componenti e sottosistemi presenti nei sistemi automobilistici. Questa struttura gerarchica consente di rappresentare le intricate relazioni e dipendenze tra diverse parti di un veicolo.
+
+Al centro della nostra gerarchia dei componenti si trova la classe base \texttt{Component}. Questa classe funge da entità fondamentale per tutti i componenti all'interno dell'ontologia. La classe \texttt{Component} definisce una sola proprietà condivisa: Una stringa che rappresenta il numero seriale o l'identificatore associato al componente.
+
+La gerarchia dei componenti si estende per includere diverse sottoclassi, ognuna delle quali rappresenta un tipo o una categoria specifica di componente automobilistico. Queste sottoclassi ereditano la proprietà comune \texttt{hasSerialNumber} dalla classe base \texttt{Component} e possono introdurre attributi aggiuntivi unici per i rispettivi tipi di componente.
 
 \begin{figure}[H]
     \caption{Caption: TODO}
@@ -12,11 +47,19 @@
     \label{fig:carpedia-component}
 \end{figure}
 
+\section{Classificazione dei Sistemi}
+
+La gerarchia dei sistemi (Figura \ref*{fig:carpedia-system}) è una struttura fondamentale che consente la rappresentazione completa e la classificazione di vari sistemi presenti nei veicoli automobilistici. Questa disposizione gerarchica permette di modellare le relazioni e le dipendenze tra i diversi sistemi e il veicolo.
+
+Al centro della gerarchia dei sistemi si trova la classe base \texttt{System}. Questa classe funge da entità fondamentale per la rappresentazione e la categorizzazione dei vari sistemi all'interno di un veicolo automobilistico. La classe \texttt{System} non definisce attributi specifici, ma invece costituisce la classe genitore per una serie di sottoclassi, ognuna specializzata nella rappresentazione di sistemi automobilistici distinti.
+
 \begin{figure}[H]
     \caption{Caption: TODO}
     \includegraphics[height=\textheight]{figures/carpedia-system.png}
     \label{fig:carpedia-system}
 \end{figure}
+
+\section{Classificazione dei Carburanti}
 
 \begin{figure}[H]
     \caption{Caption: TODO}
@@ -24,11 +67,19 @@
     \label{fig:carpedia-fuel}
 \end{figure}
 
+\section{Classificazione delle Classi di Emissioni}
+
+La gerarchia delle emissioni è un sistema di classificazione cruciale che  consente di rappresentare e categorizzare diverse normative sulle emissioni dei veicoli, concentrandosi in particolare sulle normative sulle emissioni dell'Unione Europea. Questa gerarchia aiuta a modellare l'impatto ambientale e la conformità dei veicoli rispetto alle loro emissioni.
+
+Al radice della gerarchia si trova la classe base \texttt{EuroEmissionClass}. Questa classe funge da fondamento per la rappresentazione delle diverse normative sulle emissioni. Sebbene possa non definire attributi specifici, costituisce la classe principale per una serie di sottoclassi, ognuna delle quali rappresenta una specifica normativa sulle emissioni.
+
 \begin{figure}[H]
     \caption{Caption: TODO}
     \includegraphics[width=\textwidth]{figures/carpedia-euro-emission.png}
     \label{fig:carpedia-euro-emission}
 \end{figure}
+
+\section{Proprietà delle Classi}
 
 \begin{figure}[H]
     \caption{Caption: TODO}
