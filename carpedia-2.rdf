@@ -1,0 +1,242 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/user/ontologies/2023/8/carpedia-2/"
+     xml:base="http://www.semanticweb.org/user/ontologies/2023/8/carpedia-2/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:untitled-ontology-31="http://www.semanticweb.org/user/ontologies/2023/8/untitled-ontology-31#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/user/ontologies/2023/8/carpedia-2">
+        <owl:imports rdf:resource="http://www.semanticweb.org/user/ontologies/2023/8/PWO"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2023/8/carpedia-2#BatteryManagementSystem -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2023/8/carpedia-2#BatteryManagementSystem">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2023/8/carpedia-2#System"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2023/8/carpedia-2#Body -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2023/8/carpedia-2#Body">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2023/8/carpedia-2#System"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2023/8/carpedia-2#BodyComponent -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2023/8/carpedia-2#BodyComponent">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/user/ontologies/2023/8/untitled-ontology-31#directPartOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/user/ontologies/2023/8/carpedia-2#Body"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2023/8/carpedia-2#Component"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2023/8/carpedia-2#BrakingSystem -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2023/8/carpedia-2#BrakingSystem">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2023/8/carpedia-2#System"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2023/8/carpedia-2#Car -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2023/8/carpedia-2#Car"/>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2023/8/carpedia-2#CarPart -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2023/8/carpedia-2#CarPart">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/user/ontologies/2023/8/untitled-ontology-31#partOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/user/ontologies/2023/8/carpedia-2#Car"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2023/8/carpedia-2#Component -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2023/8/carpedia-2#Component">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/user/ontologies/2023/8/untitled-ontology-31#directPartOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/user/ontologies/2023/8/carpedia-2#System"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2023/8/carpedia-2#Door -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2023/8/carpedia-2#Door"/>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2023/8/carpedia-2#Engine -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2023/8/carpedia-2#Engine">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2023/8/carpedia-2#System"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2023/8/carpedia-2#EngineComponent -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2023/8/carpedia-2#EngineComponent">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/user/ontologies/2023/8/untitled-ontology-31#directPartOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/user/ontologies/2023/8/carpedia-2#Engine"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2023/8/carpedia-2#Component"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2023/8/carpedia-2#LightingSystem -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2023/8/carpedia-2#LightingSystem">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2023/8/carpedia-2#System"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2023/8/carpedia-2#SteeringSystem -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2023/8/carpedia-2#SteeringSystem">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2023/8/carpedia-2#System"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2023/8/carpedia-2#System -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2023/8/carpedia-2#System">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/user/ontologies/2023/8/untitled-ontology-31#directPartOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/user/ontologies/2023/8/carpedia-2#Car"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2023/8/carpedia-2#I-Body-1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2023/8/carpedia-2#I-Body-1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2023/8/carpedia-2#Body"/>
+        <untitled-ontology-31:directPartOf rdf:resource="http://www.semanticweb.org/user/ontologies/2023/8/carpedia-2#I-Car-1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2023/8/carpedia-2#I-Car-1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2023/8/carpedia-2#I-Car-1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2023/8/carpedia-2#Car"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2023/8/carpedia-2#I-Door-1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2023/8/carpedia-2#I-Door-1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2023/8/carpedia-2#Door"/>
+        <untitled-ontology-31:directPartOf rdf:resource="http://www.semanticweb.org/user/ontologies/2023/8/carpedia-2#I-Body-1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2023/8/carpedia-2#I-Door-2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2023/8/carpedia-2#I-Door-2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2023/8/carpedia-2#Door"/>
+        <untitled-ontology-31:directPartOf rdf:resource="http://www.semanticweb.org/user/ontologies/2023/8/carpedia-2#I-Body-1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2023/8/carpedia-2#I-Door-3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2023/8/carpedia-2#I-Door-3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2023/8/carpedia-2#Door"/>
+        <untitled-ontology-31:directPartOf rdf:resource="http://www.semanticweb.org/user/ontologies/2023/8/carpedia-2#I-Body-1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2023/8/carpedia-2#I-Engine-1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2023/8/carpedia-2#I-Engine-1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2023/8/carpedia-2#Engine"/>
+        <untitled-ontology-31:directPartOf rdf:resource="http://www.semanticweb.org/user/ontologies/2023/8/carpedia-2#I-Car-1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2023/8/carpedia-2#BatteryManagementSystem"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2023/8/carpedia-2#Body"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2023/8/carpedia-2#BrakingSystem"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2023/8/carpedia-2#Engine"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2023/8/carpedia-2#LightingSystem"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2023/8/carpedia-2#SteeringSystem"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi -->
+
