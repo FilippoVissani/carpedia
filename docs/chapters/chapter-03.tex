@@ -79,10 +79,31 @@ Al radice della gerarchia si trova la classe base \texttt{EuroEmissionClass}. Qu
     \label{fig:carpedia-euro-emission}
 \end{figure}
 
-\section{Proprietà delle Classi}
+\section{Object Properties}
+
+In Carpedia, le \textit{object properties} svolgono un ruolo centrale nell'instaurare relazioni tra le diverse classi. Queste proprietà definiscono come diversi elementi all'interno dell'ontologia sono correlati tra loro, consentendo di modellare associazioni complesse e dipendenze. Il diagramma in Figura \ref{fig:carpedia-object-properties} illustra le principali \textit{object properties} nell'ontologia:
 
 \begin{figure}[H]
     \caption{Caption: TODO}
     \includegraphics[width=\textwidth]{figures/carpedia-object-properties.png}
     \label{fig:carpedia-object-properties}
 \end{figure}
+
+Le \textit{object properties} associate a \texttt{Component} e \texttt{System} sono fondamentali per comprendere come diverse parti di un veicolo automobilistico interagiscono. Queste relazioni sono cruciali per modellare la composizione e la struttura dei veicoli. Di seguito vengono dettagliate queste \textit{object properties}:
+
+\begin{itemize}
+    \item \texttt{componentOf}: Questa proprietà stabilisce una connessione tra un \texttt{Component} e un \texttt{System}, indicando che un \texttt{Component} fa parte di un \texttt{System}. Al contrario, la classe \texttt{System} ha la proprietà inversa, \texttt{hasComponent}, che indica che un \texttt{System} può avere più \texttt{Component}. Questa relazione ci consente di rappresentare la struttura gerarchica dei sistemi automobilistici.
+    \item \texttt{gaugeOf}: La classe \texttt{Gauge} è correlata a un \texttt{System} mediante questa proprietà, indicando che uno strumento è associato a un particolare sistema. La proprietà inversa, \texttt{hasGauge}, è definita all'interno della classe \texttt{System}, permettendoci di associare strumenti ai sistemi e viceversa.
+    \item \texttt{mechanicalComponentOf}: Simile a \texttt{componentOf}, questa proprietà collega \texttt{MechanicalComponent} a \texttt{System} rappresentando la presenza di componenti meccanici all'interno di un sistema. La proprietà inversa, \texttt{hasMechanicalComponent}, è utilizzata all'interno della classe \texttt{System} per denotare l'inclusione di componenti meccanici.
+    \item \texttt{sensorOf}: Questa proprietà stabilisce una connessione tra un \texttt{Sensor} e \texttt{System}, indicando che i sensori fanno parte di un sistema. La classe \texttt{System} ha la corrispondente proprietà inversa, \texttt{hasSensor}, per rappresentare l'associazione dei sensori con i sistemi.
+\end{itemize}
+
+Oltre alle relazioni legate ai componenti, Carpedia definisce diverse altre \textit{object properties} che catturano vari aspetti del dominio automobilistico:
+
+\begin{itemize}
+    \item \texttt{hasEuroEmissionClass}: Questa proprietà collega una macchina alla sua corrispondente classe di emissioni, consentendo di specificare la normativa sulle Emissioni Euro a cui una macchina aderisce. Aiuta a tenere traccia e categorizzare i veicoli in base alle normative sulle emissioni.
+    \item \texttt{hasFuel}: La classe \texttt{FuelSupplySystem} è correlata alla classe \texttt{Fuel} utilizzando questa proprietà. Rappresenta il tipo di carburante associato a un sistema di alimentazione, aiutando a caratterizzare il meccanismo di alimentazione del veicolo.
+    \item \texttt{hasManufacturer}: Sia le classi \texttt{Car} che \texttt{Component} hanno una relazione con la classe \texttt{Manufacturer} attraverso questa proprietà. Permette di attribuire veicoli e componenti ai rispettivi produttori, facilitando la rintracciabilità e il recupero delle informazioni sul prodotto.
+    \item \texttt{hasSystem}: Questa proprietà collega una macchina ai suoi vari sistemi, come il motore, il sistema di frenata e altro ancora.
+    \item \texttt{hasEngine}: Specificamente per le automobili, questa proprietà collega una macchina al suo motore.
+\end{itemize}
