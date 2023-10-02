@@ -61,6 +61,23 @@ Al centro della gerarchia dei sistemi si trova la classe base \texttt{System}. Q
 
 \section{Classificazione dei Carburanti}
 
+La gerarchia dei carburanti (Figura: \ref{fig:carpedia-fuel}) viene utilizzata per rappresentare i diversi tipi di carburanti comunemente utilizzati nei veicoli automobilistici. Questo sistema di classificazione consente la categorizzazione e l'organizzazione dei carburanti in base alle loro caratteristiche e proprietà.
+
+Alla base della si trova la classe \texttt{Fuel}. Questa classe racchiude proprietà e attributi fondamentali condivisi da tutti i tipi di carburanti. Serve come entità comune per rappresentare il concetto generale di carburante.
+
+Di seguito vengono elencate le sottoclassi della classe \texttt{Fuel}:
+
+\begin{itemize}
+    \item \texttt{CNG} (Gas Naturale Compresso): Rappresenta un tipo di carburante in stato gassoso e conservato sotto alta pressione.
+    \item \texttt{Diesel}: Rappresenta il carburante diesel convenzionale comunemente usato nei motori diesel.
+    \item \texttt{HybridElectricDiesel}: Rappresenta un tipo di carburante usato nei veicoli ibridi che combinano energia elettrica e carburante diesel.
+    \item \texttt{Electric}: Rappresenta l'energia elettrica come fonte di carburante, tipicamente usata nei veicoli elettrici.
+    \item \texttt{HybridElectricGasoline}: Rappresenta un tipo di carburante usato nei veicoli ibridi che combinano energia elettrica e benzina convenzionale.
+    \item \texttt{Gasoline}: Rappresenta il carburante benzina convenzionale comunemente usato nei motori a combustione interna.
+    \item \texttt{Hydrogen}: Rappresenta il gas idrogeno come fonte di carburante, spesso usato nei veicoli a celle a combustibile.
+    \item \texttt{LPG} (Gas di Petrolio Liquefatto): Rappresenta un tipo di carburante in stato liquido sotto pressione moderata, comunemente usato in alcuni veicoli.
+\end{itemize}
+
 \begin{figure}[H]
     \caption{Gerarchia dei carburanti}
     \includegraphics[width=\textwidth]{figures/carpedia-fuel.png}
