@@ -10,6 +10,7 @@ class Car {
     + hasSeats: positiveInteger
     + hasVariant: string
     + hasWeight: positiveInteger
+    + hasProductionYear: positiveInteger
 }
 
 class 3DoorsCar
