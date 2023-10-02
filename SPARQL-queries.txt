@@ -10,7 +10,7 @@ SELECT ?car
 WHERE {
  	?car rdf:type carpedia:Car .
  	?car carpedia:hasEuroEmissionClass ?euroEmissionClass .
- 	FILTER (?euroEmissionClass IN (carpedia:Euro4, carpedia:Euro5, carpedia:Euro6)) .
+ 	FILTER (?euroEmissionClass IN (carpedia:Euro4, carpedia:Euro5, carpedia:Euro6))
 }
 
 # Cars that can not drive around urban centres
@@ -25,7 +25,7 @@ SELECT ?car
 WHERE {
  	?car rdf:type carpedia:Car .
  	?car carpedia:hasEuroEmissionClass ?euroEmissionClass .
- 	FILTER (?euroEmissionClass IN (carpedia:Euro0, carpedia:Euro1, carpedia:Euro2, carpedia:Euro3)) .
+ 	FILTER (?euroEmissionClass IN (carpedia:Euro0, carpedia:Euro1, carpedia:Euro2, carpedia:Euro3))
 }
 
 # Cars suitable for families
@@ -40,6 +40,82 @@ SELECT ?car
 WHERE {
  	?car rdf:type carpedia:5DoorsCar .
  	?car carpedia:hasSeats ?seats .
- 	FILTER (?seats >= 5) .
+ 	FILTER (?seats >= 5)
 }
 
+# Cars that have gasoline as fuel
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX carpedia: <http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#>
+
+SELECT ?car
+WHERE {
+ 	?car rdf:type carpedia:Car .
+ 	?car carpedia:hasSystem ?system .
+	?system rdf:type carpedia:FuelSupplySystem .
+	?system carpedia:hasFuel ?fuel .
+	?fuel rdf:type carpedia:Gasoline
+}
+
+# Cars under X price
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX carpedia: <http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#>
+
+SELECT ?car
+WHERE {
+ 	?car rdf:type carpedia:Car .
+ 	?car carpedia:hasPrice ?price .
+	FILTER(?price < 20000)
+}
+
+# Cars that have under X kilometers
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX carpedia: <http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#>
+
+SELECT ?car
+WHERE {
+ 	?car rdf:type carpedia:Car .
+ 	?car carpedia:hasKilometers ?kilometers .
+	FILTER(?kilometers < 100000)
+}
+
+# Cars produced by X manufacturer
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX carpedia: <http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#>
+
+SELECT ?car
+WHERE {
+ 	?car rdf:type carpedia:Car .
+ 	?car carpedia:hasManufacturer ?manufacturer .
+	FILTER(?manufacturer = carpedia:Audi)
+}
+
+# Cars produced from 2000
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX carpedia: <http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#>
+
+SELECT ?car
+WHERE {
+ 	?car rdf:type carpedia:Car .
+ 	?car carpedia:hasProductionYear ?year .
+	FILTER(?year > 2000)
+}
