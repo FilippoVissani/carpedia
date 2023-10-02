@@ -300,6 +300,22 @@
     
 
 
+    <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#hasProductionYear -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#hasProductionYear">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Car"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Component"/>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#hasSeats -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#hasSeats">
@@ -2654,11 +2670,31 @@
     
 
 
+    <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Audi -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Audi">
+        <rdf:type rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Manufacturer"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#BMW -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#BMW">
+        <rdf:type rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Manufacturer"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Car-2 -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Car-2">
         <rdf:type rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Car"/>
         <hasEngine rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Fiat-500cc"/>
+        <hasManufacturer rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Audi"/>
+        <hasKilometers rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50000</hasKilometers>
+        <hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15000</hasPrice>
+        <hasProductionYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2015</hasProductionYear>
         <hasSeats rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</hasSeats>
         <hasWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1600</hasWeight>
     </owl:NamedIndividual>
@@ -2712,7 +2748,10 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Car"/>
         <hasEngine rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#V12"/>
         <hasEuroEmissionClass rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Euro6"/>
+        <hasManufacturer rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#BMW"/>
         <hasSystem rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#I-DoorSystem"/>
+        <hasSystem rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#I-Fuel-Supply-System"/>
+        <hasKilometers rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">200000</hasKilometers>
         <hasMaxSpeedKmph rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">400</hasMaxSpeedKmph>
         <hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">60000</hasPrice>
         <hasSeats rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</hasSeats>
@@ -2736,6 +2775,23 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#I-Engine">
         <rdf:type rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Engine"/>
         <hasDisplacement rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6000</hasDisplacement>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#I-Fuel-Supply-System -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#I-Fuel-Supply-System">
+        <rdf:type rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#FuelSupplySystem"/>
+        <hasFuel rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#I-Gasoline"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#I-Gasoline -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#I-Gasoline">
+        <rdf:type rdf:resource="http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#Gasoline"/>
     </owl:NamedIndividual>
     
 
