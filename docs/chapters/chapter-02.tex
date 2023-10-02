@@ -1,58 +1,43 @@
-\chapter{Panoramica del Dominio}
-In questa sezione verrà riportata una panoramica del dominio di Carpedia. In seguito, verrà descritta nel dettaglio la modellazione strutturale dell'ontologia, che esprime gli elementi di dominio attraverso i concetti
-appartenenti al web semantico, come \textit{Classi}, \textit{Object Properties} e \textit{Data Properties}.
-
-\section{Il dominio di Carpedia}
-Il macro dominio in cui si colloca l'ontologia Carpedia è quello dell'\textit{automobile}. In particolare, con automobile si intende un veicolo a motore, con quattro ruote, progettato per il trasporto di persone
-e destinato ad uso privato del cittadino. Saranno pertanto esclusi dall'analisi i concetti relativi a mezzi di trasporto pubblico, commerciali o di lavoro.\\
+\chapter{Analisi dei requisiti}
+Il macro dominio in cui si colloca l'ontologia Carpedia è quello dell'\textit{automobile}. In particolare, con automobile si intende un veicolo a motore, con quattro ruote,
+progettato per il trasporto di persone e destinato ad uso privato del cittadino.
+Saranno pertanto esclusi dall'analisi i concetti relativi a mezzi di trasporto pubblico, commerciali o di lavoro.
 
 In questo enorme contesto, l'ontologia si focalizza sui concetti prettamente relativi alle \textit{componenti} di un'automobile, siano esse sensoristiche o meccaniche, e dei \textit{sistemi} che
-esse compongono.\\
-
-Un'automobile (\textit{Car}) è dunque vista come un insieme di sistemi (\textit{System}), i quali sono composti da vari tipi di componente (\textit{Component}).
+esse compongono.
 
 Di un'automobile si vogliono modellare i principali sistemi, come ad esempio:
 
 \begin{itemize}
-    \item \textbf{BrakingSystem}: rappresenta il sistema frenante di un'automobile.
-    \item \textbf{Engine}: rappresenta il motore di un'automobile.
-    \item \textbf{SteeringSystem}: rappresenta il sistema di sterzo di un'automobile.
+    \item sistema frenante;
+    \item motore di un'automobile: di questo sistema si vogliono modellare anche cilindrata e potenza;
+    \item sistema di sterzo;
 \end{itemize}
 
 Ogni sistema è composto da una serie di componenti, che possono essere di tre tipi:
 \begin{itemize}
-    \item \textbf{Sensor}: rappresenta un sensore di un'automobile.
-    \item \textbf{Gauge}: rappresenta un indicatore di un'automobile, vale a dire un'interfaccia human-readable di una particolare misura rilevata da un sensore.
-    \item \textbf{MechanicalComponent}: rappresenta un componente meccanico di un sistema dell'automobile.
+    \item sensore;
+    \item indicatore: vale a dire un'interfaccia human-readable di una particolare misura rilevata da un sensore;
+    \item componente meccanico di un sistema dell'automobile;
 \end{itemize}
 
-Inoltre, si vuole anche modellare:\\
+Dei componenti si vuole modellare anche il produttore ed il numero di serie.
+
+Inoltre, si vuole anche modellare:
 
 \begin{itemize}
-    \item \textbf{Manufacturer}: rappresenta un produttore di un'automobile o di un componente.
-    \item \textbf{Fuel}: rappresenta il tipo di carburante utilizzato da un'automobile.
-    \item \textbf{EuroEmissionClass}: rappresenta la classe di emissioni di un'automobile.
+    \item produttore di un'automobile o di un componente;
+    \item il tipo di carburante utilizzato da un'automobile;
+    \item la classe di emissioni di un'automobile;
 \end{itemize}
 
-Infine, si vuole caratterizzare ulteriormente alcuni concetti con delle proprietà, come ad esempio:
+Infine, si vogliono modellare ulteriori elementi dell'automobile, come ad esempio:
 
 \begin{itemize}
-    \item \textbf{Car}:
-          \begin{itemize}
-              \item \textbf{Kilometri percorsi}: rappresenta i kilometri percorsi dall'automobile, utile in ambito di ricerca di auto usate nel mercato secondario automobilistico.
-              \item \textbf{MaxSpeedKmph}: rappresenta la velocità massima dell'automobile in kilometri orari.
-              \item \textbf{Price}: rappresenta il prezzo dell'automobile.
-              \item \textbf{Seats}: rappresenta il numero di posti dell'automobile.
-              \item \textbf{Weight}: rappresenta il peso dell'automobile.
-              \item \textbf{Model}: rappresenta il modello dell'automobile.
-          \end{itemize}
-    \item \textbf{Component}:
-          \begin{itemize}
-              \item \textbf{SerialNumber}: rappresenta il numero di serie del componente.
-          \end{itemize}
-    \item \textbf{Engine}:
-          \begin{itemize}
-              \item \textbf{Displacement}: rappresenta la cilindrata del motore.
-              \item \textbf{Kilowatts}: rappresenta la potenza del motore in kilowatt.
-          \end{itemize}
+    \item kilometri percorsi;
+    \item velocità massima dell'automobile espressa in kilometri orari;
+    \item prezzo;
+    \item numero di posti;
+    \item peso;
+    \item modello dell'automobile.
 \end{itemize}
