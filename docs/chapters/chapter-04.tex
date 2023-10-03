@@ -6,7 +6,7 @@ Queste regole sono state create per derivare nuove informazioni o classificare i
 condizioni o vincoli specifici all'interno dell'ontologia.
 Ognuna di queste regole svolge un ruolo specifico nel processo di arricchimento delle conoscenze nell'ontologia.
 
-\subsection{Regola 1: 3DoorsBody}
+\subsection{3DoorsBody}
 
 \begin{lstlisting}[language=Prolog]
 carpedia:Body(?body) ^
@@ -26,7 +26,7 @@ di queste porte e' diversa dalle altre due.
 L'obiettivo e' quello di identificare correttamente il tipo di carrozzeria delle automobili con una
 specifica configurazione di porte, che potrebbe avere implicazioni su aspetti come la sicurezza o l'aerodinamica.
 
-\subsection{Regola 2: 5DoorsBody}
+\subsection{5DoorsBody}
 
 \begin{lstlisting}[language=Prolog]
 carpedia:Body(?body) ^
@@ -54,7 +54,7 @@ come "DoorsBody" quando ha esattamente 5 componenti meccanici distinti che rappr
 Questa regola puo' essere utile per distinguere tra automobili con configurazioni di porte diverse,
 come ad esempio quelle con 3 o 5 porte, influenzando il design e l'usabilita'.
 
-\subsection{Regola 3: NewlyLicensedCar}
+\subsection{NewlyLicensedCar}
 
 \begin{lstlisting}[language=Prolog]
 carpedia:Car(?c) ^
@@ -74,7 +74,7 @@ inferiore a 0,055.
 Questo potrebbe essere utile per identificare le automobili che potrebbero essere di interesse per i conducenti
 neo patentati o per chi e' alla ricerca di veicoli con prestazioni piu' moderate.
 
-\subsection{Regola 4: Supercar}
+\subsection{Supercar}
 
 \begin{lstlisting}[language=Prolog]
 carpedia:Car(?c) ^
@@ -106,7 +106,7 @@ sviluppate per ottenere informazioni significative sulla base di criteri specifi
 Queste interrogazioni sono state create per esplorare diverse caratteristiche delle automobili all'interno
 dell'ontologia e recuperare dati rilevanti in base a determinati requisiti.
 
-\subsection{Query 1: Automobili adatte alla guida nei centri urbani}
+\subsection{Automobili adatte alla guida nei centri urbani}
 
 \begin{lstlisting}[language=SPARQL]
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
@@ -128,7 +128,7 @@ classe di emissione Euro 4, 5 o 6 (?euroEmissionClass).
 Questo ci permette di ottenere un elenco di automobili conformi alle normative Euro emission, che sono generalmente
 considerate idonee per la guida in aree urbane.
 
-\subsection{Query 2: Automobili non adatte alla guida nei centri urbani}
+\subsection{Automobili non adatte alla guida nei centri urbani}
 
 \begin{lstlisting}[language=SPARQL]
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
@@ -149,7 +149,7 @@ classe di emissione Euro 0, 1, 2 o 3 (?euroEmissionClass).
 Queste classi di emissione rappresentano automobili con standard di emissione meno stringenti,
 che potrebbero non essere autorizzate nelle zone urbane piu' pulite.
 
-\subsection{Query 3: Automobili adatte alle famiglie}
+\subsection{Automobili adatte alle famiglie}
 
 \begin{lstlisting}[language=SPARQL]
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
@@ -169,7 +169,7 @@ di posti a sedere. Abbiamo selezionato tutte le automobili (?car) che sono istan
 che hanno almeno 5 posti a sedere (?seats >= 5). Questo ci permette di individuare le automobili che possono
 ospitare comodamente famiglie numerose o gruppi di persone.
 
-\subsection{Query 4: Automobili con Benzina come Carburante}
+\subsection{Automobili a Benzina}
 
 \begin{lstlisting}[language=SPARQL]
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
@@ -192,7 +192,7 @@ dove il tipo di carburante (carpedia:Gasoline) di quel sistema e' benzina.
 Questa query puo' essere utile per ottenere un elenco di automobili che utilizzano specificamente la benzina
 come carburante.
 
-\subsection{Query 5: Automobili sotto X Prezzo}
+\subsection{Automobili che costano meno di 20000 euro}
 
 \begin{lstlisting}[language=SPARQL]
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
@@ -211,7 +211,7 @@ soglia (in questo caso, 20000). Estrae le istanze della classe carpedia:Car che 
 (carpedia:hasPrice) inferiore alla soglia specificata. Puo' essere utilizzata per filtrare automobili in base
 al prezzo, consentendo agli utenti di trovare veicoli che rientrano nel loro budget.
 
-\subsection{Query 6: Automobili con Meno di X Chilometri}
+\subsection{Automobili con meno di 100000 Chilometri percorsi}
 
 \begin{lstlisting}[language=SPARQL]
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
@@ -231,7 +231,7 @@ Questa query mira a individuare le automobili che hanno percorso meno di un cert
 (carpedia:hasKilometers) inferiore alla soglia specificata.
 Puo' essere utilizzata per trovare automobili con una bassa usura o con un minor chilometraggio.
 
-\subsection{Query 7: Automobili Prodotte da X Produttore}
+\subsection{Automobili prodotte da Audi}
 
 \begin{lstlisting}[language=SPARQL]
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
@@ -251,7 +251,7 @@ Questa query e' stata progettata per identificare le automobili prodotte da un p
 (carpedia:hasManufacturer) uguale al produttore specificato. Puo' essere utilizzata per ottenere un elenco
 di automobili prodotte da un marchio specifico.
 
-\subsection{Query 8: Automobili Prodotta Dopo il 2000}
+\subsection{Query 8: Automobili prodotte dopo il 2000}
 
 \begin{lstlisting}[language=SPARQL]
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
