@@ -8,7 +8,17 @@ Ognuna di queste regole svolge un ruolo specifico nel processo di arricchimento 
 
 \subsection{Regola 1: 3DoorsBody}
 
-Mettere foto o codice regola 1
+\begin{verbatim}
+carpedia:Body(?body) ^
+carpedia:hasMechanicalComponent(?body, ?door1) ^
+carpedia:hasMechanicalComponent(?body, ?door2) ^
+carpedia:hasMechanicalComponent(?body, ?door3) ^
+differentFrom(?door1, ?door2) ^
+differentFrom(?door2, ?door3) ^
+differentFrom(?door1, ?door3) ->
+autogen0:DoorsBody(?body)
+\end{verbatim}
+
 
 Questa regola e' stata creata per classificare una struttura del corpo dell'automobile come "DoorsBody" quando
 soddisfa le seguenti condizioni: ha esattamente 3 componenti meccanici distinti che rappresentano porte e ognuna
@@ -18,16 +28,45 @@ specifica configurazione di porte, che potrebbe avere implicazioni su aspetti co
 
 \subsection{Regola 2: 5DoorsBody}
 
-Mettere foto o codice regola 2
+\begin{verbatim}
+carpedia:Body(?body) ^
+carpedia:hasMechanicalComponent(?body, ?door1) ^
+carpedia:hasMechanicalComponent(?body, ?door2) ^
+carpedia:hasMechanicalComponent(?body, ?door3) ^
+carpedia:hasMechanicalComponent(?body, ?door4) ^
+carpedia:hasMechanicalComponent(?body, ?door5) ^
+differentFrom(?door1, ?door2) ^
+differentFrom(?door2, ?door3) ^
+differentFrom(?door1, ?door3) ^
+differentFrom(?door1, ?door4) ^
+differentFrom(?door1, ?door5) ^
+differentFrom(?door2, ?door4) ^
+differentFrom(?door2, ?door5) ^
+differentFrom(?door3, ?door4) ^
+differentFrom(?door3, ?door5) ^
+differentFrom(?door4, ?door5) ->
+autogen1:DoorsBody(?body)
+\end{verbatim}
+
 
 Questa regola e simile a "3DoorsBody", ma e' stata creata per classificare una struttura del corpo dell'automobile
 come "DoorsBody" quando ha esattamente 5 componenti meccanici distinti che rappresentano porte.
-Questa regola può essere utile per distinguere tra automobili con configurazioni di porte diverse,
+Questa regola puo' essere utile per distinguere tra automobili con configurazioni di porte diverse,
 come ad esempio quelle con 3 o 5 porte, influenzando il design e l'usabilita'.
 
 \subsection{Regola 3: NewlyLicensedCar}
 
-Mettere foto o codice regola 3
+\begin{verbatim}
+carpedia:Car(?c) ^
+carpedia:hasEngine(?c, ?e) ^
+carpedia:hasKilowatts(?e, ?k) ^
+swrlb:lessThan(?k, 70) ^
+carpedia:hasWeight(?c, ?w) ^
+swrlb:divide(?x, ?k, ?w) ^
+swrlb:lessThan(?x, 0.055) ->
+carpedia:NewlyLicensedCar(?c)
+\end{verbatim}
+
 
 Questa regola e' stata creata per classificare un'automobile come "NewlyLicensedCar" quando soddisfa
 determinati criteri, tra cui una potenza dell'unita' motrice inferiore a 70 kW e un rapporto potenza/peso
@@ -37,7 +76,16 @@ neo patentati o per chi e' alla ricerca di veicoli con prestazioni piu' moderate
 
 \subsection{Regola 4: Supercar}
 
-Mettere foto o codice regola 3
+\begin{verbatim}
+carpedia:Car(?c) ^
+carpedia:hasMaxSpeedKmph(?c, ?m) ^
+swrlb:greaterThan(?m, 290) ^
+carpedia:hasEngine(?c, ?e) ^
+carpedia:hasKilowatts(?e, ?k) ^
+swrlb:greaterThan(?k, 297) ->
+carpedia:Supercar(?c)
+\end{verbatim}
+
 
 Questa regola e' stata creata per classificare un'automobile come "Supercar" quando soddisfa condizioni
 specifiche, tra cui una velocita' massima superiore a 290 km/h e una potenza dell'unita' motrice superiore a 297 kW.
@@ -60,7 +108,18 @@ dell'ontologia e recuperare dati rilevanti in base a determinati requisiti.
 
 \subsection{Query 1: Automobili adatte alla guida nei centri urbani}
 
-Mettere foto o codice query 1
+\begin{verbatim}
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX carpedia: <http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#>
+
+SELECT ?car
+WHERE {
+  ?car rdf:type carpedia:Car .
+  ?car carpedia:hasEuroEmissionClass ?euroEmissionClass .
+  FILTER (?euroEmissionClass IN (carpedia:Euro4, carpedia:Euro5, carpedia:Euro6)) .
+}
+\end{verbatim}
+
 
 Questa query e' stata creata per identificare le automobili che sono adatte a circolare nei centri urbani,
 dove spesso vengono introdotte restrizioni sulle emissioni.
@@ -71,7 +130,17 @@ considerate idonee per la guida in aree urbane.
 
 \subsection{Query 2: Automobili non adatte alla guida nei centri urbani}
 
-Mettere foto o codice query 2
+\begin{verbatim}
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX carpedia: <http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#>
+
+SELECT ?car
+WHERE {
+  ?car rdf:type carpedia:Car .
+  ?car carpedia:hasEuroEmissionClass ?euroEmissionClass .
+  FILTER (?euroEmissionClass IN (carpedia:Euro0, carpedia:Euro1, carpedia:Euro2, carpedia:Euro3)) .
+}
+\end{verbatim}
 
 Questa query e' stata progettata per individuare le automobili che non sono adatte alla guida nei centri urbani,
 poiche' le loro emissioni possono superare i limiti consentiti.
@@ -82,12 +151,126 @@ che potrebbero non essere autorizzate nelle zone urbane piu' pulite.
 
 \subsection{Query 3: Automobili adatte alle famiglie}
 
-Mettere foto o codice query 2
+\begin{verbatim}
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX carpedia: <http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#>
+
+SELECT ?car
+WHERE {
+  ?car rdf:type carpedia:Car .
+  ?car carpedia:hasSeats ?seats .
+  FILTER (?seats >= 5) .
+}
+\end{verbatim}
+
 
 Questa query e' stata formulata per identificare le automobili che sono adatte alle famiglie, in base al numero
 di posti a sedere. Abbiamo selezionato tutte le automobili (?car) che sono istanze della classe carpedia:Car e
 che hanno almeno 5 posti a sedere (?seats >= 5). Questo ci permette di individuare le automobili che possono
 ospitare comodamente famiglie numerose o gruppi di persone.
+
+\subsection{Query 4: Automobili con Benzina come Carburante}
+
+\begin{verbatim}
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX carpedia: <http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#>
+
+SELECT ?car
+WHERE {
+  ?car rdf:type carpedia:Car .
+  ?car carpedia:hasSystem ?system .
+  ?system rdf:type carpedia:FuelSupplySystem .
+  ?system carpedia:hasFuel ?fuel .
+  ?fuel rdf:type carpedia:Gasoline
+}
+\end{verbatim}
+
+
+Questa query e' stata progettata per identificare tutte le automobili che utilizzano la benzina come carburante.
+Estrae le istanze della classe carpedia:Car che hanno un sistema di alimentazione (carpedia:hasSystem) associato,
+dove il tipo di carburante (carpedia:Gasoline) di quel sistema e' benzina.
+Questa query puo' essere utile per ottenere un elenco di automobili che utilizzano specificamente la benzina
+come carburante.
+
+\subsection{Query 5: Automobili sotto X Prezzo}
+
+\begin{verbatim}
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX carpedia: <http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#>
+
+SELECT ?car
+WHERE {
+  ?car rdf:type carpedia:Car .
+  ?car carpedia:hasPrice ?price .
+  FILTER(?price < 20000)
+}
+\end{verbatim}
+
+Questa query e' stata sviluppata per individuare le automobili che hanno un prezzo inferiore a una certa
+soglia (in questo caso, 20000). Estrae le istanze della classe carpedia:Car che hanno un attributo di prezzo
+(carpedia:hasPrice) inferiore alla soglia specificata. Puo' essere utilizzata per filtrare automobili in base
+al prezzo, consentendo agli utenti di trovare veicoli che rientrano nel loro budget.
+
+\subsection{Query 6: Automobili con Meno di X Chilometri}
+
+\begin{verbatim}
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX carpedia: <http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#>
+
+SELECT ?car
+WHERE {
+  ?car rdf:type carpedia:Car .
+  ?car carpedia:hasKilometers ?kilometers .
+  FILTER(?kilometers < 100000)
+}
+\end{verbatim}
+
+
+Questa query mira a individuare le automobili che hanno percorso meno di un certo numero di chilometri
+(in questo caso, 100000). Estrae le istanze della classe carpedia:Car che hanno un attributo di chilometraggio
+(carpedia:hasKilometers) inferiore alla soglia specificata.
+Puo' essere utilizzata per trovare automobili con una bassa usura o con un minor chilometraggio.
+
+\subsection{Query 7: Automobili Prodotte da X Produttore}
+
+\begin{verbatim}
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX carpedia: <http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#>
+
+SELECT ?car
+WHERE {
+  ?car rdf:type carpedia:Car .
+  ?car carpedia:hasManufacturer ?manufacturer .
+  FILTER(?manufacturer = carpedia:Audi)
+}
+\end{verbatim}
+
+
+Questa query e' stata progettata per identificare le automobili prodotte da un produttore specifico
+(in questo caso, carpedia:Audi). Estrae le istanze della classe carpedia:Car che hanno un attributo di produttore
+(carpedia:hasManufacturer) uguale al produttore specificato. Puo' essere utilizzata per ottenere un elenco
+di automobili prodotte da un marchio specifico.
+
+\subsection{Query 8: Automobili Prodotta Dopo il 2000}
+
+\begin{verbatim}
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX carpedia: <http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#>
+
+SELECT ?car
+WHERE {
+  ?car rdf:type carpedia:Car .
+  ?car carpedia:hasProductionYear ?year .
+  FILTER(?year > 2000)
+}
+\end{verbatim}
+
+
+Questa query estrae le automobili prodotte dopo un certo anno (in questo caso, il 2000).
+Estrae le istanze della classe carpedia:Car che hanno un attributo di anno di produzione (carpedia:hasProductionYear)
+superiore all'anno specificato.
+Puo' essere utilizzata per ottenere un elenco di automobili prodotte nel XXI secolo.
+
 
 \subsection{Considerazioni}
 Queste query SPARQL consentono di ottenere informazioni significative e rilevanti dalle ontologie delle automobili,
