@@ -8,7 +8,7 @@ Ognuna di queste regole svolge un ruolo specifico nel processo di arricchimento 
 
 \subsection{Regola 1: 3DoorsBody}
 
-\begin{verbatim}
+\begin{lstlisting}[language=Prolog]
 carpedia:Body(?body) ^
 carpedia:hasMechanicalComponent(?body, ?door1) ^
 carpedia:hasMechanicalComponent(?body, ?door2) ^
@@ -17,7 +17,7 @@ differentFrom(?door1, ?door2) ^
 differentFrom(?door2, ?door3) ^
 differentFrom(?door1, ?door3) ->
 autogen0:DoorsBody(?body)
-\end{verbatim}
+\end{lstlisting}
 
 
 Questa regola e' stata creata per classificare una struttura del corpo dell'automobile come "DoorsBody" quando
@@ -28,7 +28,7 @@ specifica configurazione di porte, che potrebbe avere implicazioni su aspetti co
 
 \subsection{Regola 2: 5DoorsBody}
 
-\begin{verbatim}
+\begin{lstlisting}[language=Prolog]
 carpedia:Body(?body) ^
 carpedia:hasMechanicalComponent(?body, ?door1) ^
 carpedia:hasMechanicalComponent(?body, ?door2) ^
@@ -46,7 +46,7 @@ differentFrom(?door3, ?door4) ^
 differentFrom(?door3, ?door5) ^
 differentFrom(?door4, ?door5) ->
 autogen1:DoorsBody(?body)
-\end{verbatim}
+\end{lstlisting}
 
 
 Questa regola e simile a "3DoorsBody", ma e' stata creata per classificare una struttura del corpo dell'automobile
@@ -56,7 +56,7 @@ come ad esempio quelle con 3 o 5 porte, influenzando il design e l'usabilita'.
 
 \subsection{Regola 3: NewlyLicensedCar}
 
-\begin{verbatim}
+\begin{lstlisting}[language=Prolog]
 carpedia:Car(?c) ^
 carpedia:hasEngine(?c, ?e) ^
 carpedia:hasKilowatts(?e, ?k) ^
@@ -65,7 +65,7 @@ carpedia:hasWeight(?c, ?w) ^
 swrlb:divide(?x, ?k, ?w) ^
 swrlb:lessThan(?x, 0.055) ->
 carpedia:NewlyLicensedCar(?c)
-\end{verbatim}
+\end{lstlisting}
 
 
 Questa regola e' stata creata per classificare un'automobile come "NewlyLicensedCar" quando soddisfa
@@ -76,7 +76,7 @@ neo patentati o per chi e' alla ricerca di veicoli con prestazioni piu' moderate
 
 \subsection{Regola 4: Supercar}
 
-\begin{verbatim}
+\begin{lstlisting}[language=Prolog]
 carpedia:Car(?c) ^
 carpedia:hasMaxSpeedKmph(?c, ?m) ^
 swrlb:greaterThan(?m, 290) ^
@@ -84,7 +84,7 @@ carpedia:hasEngine(?c, ?e) ^
 carpedia:hasKilowatts(?e, ?k) ^
 swrlb:greaterThan(?k, 297) ->
 carpedia:Supercar(?c)
-\end{verbatim}
+\end{lstlisting}
 
 
 Questa regola e' stata creata per classificare un'automobile come "Supercar" quando soddisfa condizioni
@@ -108,7 +108,7 @@ dell'ontologia e recuperare dati rilevanti in base a determinati requisiti.
 
 \subsection{Query 1: Automobili adatte alla guida nei centri urbani}
 
-\begin{verbatim}
+\begin{lstlisting}[language=SPARQL]
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX carpedia: <http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#>
 
@@ -118,7 +118,7 @@ WHERE {
   ?car carpedia:hasEuroEmissionClass ?euroEmissionClass .
   FILTER (?euroEmissionClass IN (carpedia:Euro4, carpedia:Euro5, carpedia:Euro6)) .
 }
-\end{verbatim}
+\end{lstlisting}
 
 
 Questa query e' stata creata per identificare le automobili che sono adatte a circolare nei centri urbani,
@@ -130,7 +130,7 @@ considerate idonee per la guida in aree urbane.
 
 \subsection{Query 2: Automobili non adatte alla guida nei centri urbani}
 
-\begin{verbatim}
+\begin{lstlisting}[language=SPARQL]
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX carpedia: <http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#>
 
@@ -140,7 +140,7 @@ WHERE {
   ?car carpedia:hasEuroEmissionClass ?euroEmissionClass .
   FILTER (?euroEmissionClass IN (carpedia:Euro0, carpedia:Euro1, carpedia:Euro2, carpedia:Euro3)) .
 }
-\end{verbatim}
+\end{lstlisting}
 
 Questa query e' stata progettata per individuare le automobili che non sono adatte alla guida nei centri urbani,
 poiche' le loro emissioni possono superare i limiti consentiti.
@@ -151,7 +151,7 @@ che potrebbero non essere autorizzate nelle zone urbane piu' pulite.
 
 \subsection{Query 3: Automobili adatte alle famiglie}
 
-\begin{verbatim}
+\begin{lstlisting}[language=SPARQL]
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX carpedia: <http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#>
 
@@ -161,7 +161,7 @@ WHERE {
   ?car carpedia:hasSeats ?seats .
   FILTER (?seats >= 5) .
 }
-\end{verbatim}
+\end{lstlisting}
 
 
 Questa query e' stata formulata per identificare le automobili che sono adatte alle famiglie, in base al numero
@@ -171,7 +171,7 @@ ospitare comodamente famiglie numerose o gruppi di persone.
 
 \subsection{Query 4: Automobili con Benzina come Carburante}
 
-\begin{verbatim}
+\begin{lstlisting}[language=SPARQL]
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX carpedia: <http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#>
 
@@ -183,7 +183,7 @@ WHERE {
   ?system carpedia:hasFuel ?fuel .
   ?fuel rdf:type carpedia:Gasoline
 }
-\end{verbatim}
+\end{lstlisting}
 
 
 Questa query e' stata progettata per identificare tutte le automobili che utilizzano la benzina come carburante.
@@ -194,7 +194,7 @@ come carburante.
 
 \subsection{Query 5: Automobili sotto X Prezzo}
 
-\begin{verbatim}
+\begin{lstlisting}[language=SPARQL]
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX carpedia: <http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#>
 
@@ -204,7 +204,7 @@ WHERE {
   ?car carpedia:hasPrice ?price .
   FILTER(?price < 20000)
 }
-\end{verbatim}
+\end{lstlisting}
 
 Questa query e' stata sviluppata per individuare le automobili che hanno un prezzo inferiore a una certa
 soglia (in questo caso, 20000). Estrae le istanze della classe carpedia:Car che hanno un attributo di prezzo
@@ -213,7 +213,7 @@ al prezzo, consentendo agli utenti di trovare veicoli che rientrano nel loro bud
 
 \subsection{Query 6: Automobili con Meno di X Chilometri}
 
-\begin{verbatim}
+\begin{lstlisting}[language=SPARQL]
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX carpedia: <http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#>
 
@@ -223,7 +223,7 @@ WHERE {
   ?car carpedia:hasKilometers ?kilometers .
   FILTER(?kilometers < 100000)
 }
-\end{verbatim}
+\end{lstlisting}
 
 
 Questa query mira a individuare le automobili che hanno percorso meno di un certo numero di chilometri
@@ -233,7 +233,7 @@ Puo' essere utilizzata per trovare automobili con una bassa usura o con un minor
 
 \subsection{Query 7: Automobili Prodotte da X Produttore}
 
-\begin{verbatim}
+\begin{lstlisting}[language=SPARQL]
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX carpedia: <http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#>
 
@@ -243,7 +243,7 @@ WHERE {
   ?car carpedia:hasManufacturer ?manufacturer .
   FILTER(?manufacturer = carpedia:Audi)
 }
-\end{verbatim}
+\end{lstlisting}
 
 
 Questa query e' stata progettata per identificare le automobili prodotte da un produttore specifico
@@ -253,7 +253,7 @@ di automobili prodotte da un marchio specifico.
 
 \subsection{Query 8: Automobili Prodotta Dopo il 2000}
 
-\begin{verbatim}
+\begin{lstlisting}[language=SPARQL]
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX carpedia: <http://www.semanticweb.org/filippo/ontologies/2023/8/carpedia#>
 
@@ -263,7 +263,7 @@ WHERE {
   ?car carpedia:hasProductionYear ?year .
   FILTER(?year > 2000)
 }
-\end{verbatim}
+\end{lstlisting}
 
 
 Questa query estrae le automobili prodotte dopo un certo anno (in questo caso, il 2000).
