@@ -1,3 +1,65 @@
+## [5.5.1](https://github.com/FilippoVissani/carpedia/compare/5.5.0...5.5.1) (2023-10-03)
+
+
+### Dependency updates
+
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.66 ([e320cb9](https://github.com/FilippoVissani/carpedia/commit/e320cb98751ddb83662c9513b5fd383245db6d2c))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.67 ([0cc34e3](https://github.com/FilippoVissani/carpedia/commit/0cc34e32d7083098370a1dc3e8e2cc8335337d97))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.68 ([a255a3d](https://github.com/FilippoVissani/carpedia/commit/a255a3db46cfc79c995ada31ae06414563eab0f3))
+
+
+### Bug Fixes
+
+* add correct formatting ([7f2be18](https://github.com/FilippoVissani/carpedia/commit/7f2be182a48f5352657ebaf2f888cce2865f7f89))
+* fix Figure references in Chapter 3 ([512b146](https://github.com/FilippoVissani/carpedia/commit/512b146bc5c8ba9758b64711b9e7c8227a226b49))
+
+
+### Documentation
+
+* add bibliography ([53fde9e](https://github.com/FilippoVissani/carpedia/commit/53fde9e944c61f476f4c18f3a5d48c299ecbdb4e))
+* add captions ([3b18a33](https://github.com/FilippoVissani/carpedia/commit/3b18a33a4a9998085148e203a8806a9873fd5243))
+* add chapter 01 ([36c43c2](https://github.com/FilippoVissani/carpedia/commit/36c43c21b5064760d684d5c372307067d7283ebc))
+* add diagrams ([55ac50c](https://github.com/FilippoVissani/carpedia/commit/55ac50c6ee330b84ec3c7dcdf74b4b169a7d166d))
+* add figures in chapter 03 ([65ab086](https://github.com/FilippoVissani/carpedia/commit/65ab086b2a4869148ddc5bc326172edf38d4e27d))
+* add initial paragraph in chapter 03 ([733a733](https://github.com/FilippoVissani/carpedia/commit/733a733622fef212c2d056effbce53c861cecb1f))
+* add more systems ([640b3ac](https://github.com/FilippoVissani/carpedia/commit/640b3ac88b8b2b0e3981e84d1ce928edd237feda))
+* add new data property ([e4a0975](https://github.com/FilippoVissani/carpedia/commit/e4a0975494038730282edb331a05d986ff9f5ca2))
+* add paragraph in chapter 03 ([c924eba](https://github.com/FilippoVissani/carpedia/commit/c924ebab302bad8244b86e9d578b5b715f2e6398))
+* add paragraph in chapter 05 ([17c7667](https://github.com/FilippoVissani/carpedia/commit/17c76678ae27a0a03d2ca70601bafefda2876cf0))
+* add paragraphs in Chapter 03 ([f417ca0](https://github.com/FilippoVissani/carpedia/commit/f417ca0ab08aca9ebcba9b40081da77298ac4cf8))
+* add pbject properties ([a679ae0](https://github.com/FilippoVissani/carpedia/commit/a679ae03973f5ecc0ae1da75e6db86fb61ea474f))
+* add report front ([b56777d](https://github.com/FilippoVissani/carpedia/commit/b56777daa387c8af0821a36cc3e402aafe57d9d8))
+* add section in chapter 02 ([9fb9f88](https://github.com/FilippoVissani/carpedia/commit/9fb9f885cd17e6962f1eb9cff4bdafd26d3f5332))
+* add Sparql queries and verbatim ([989ea58](https://github.com/FilippoVissani/carpedia/commit/989ea5833468070fa7540f18083121f49ecc66b8))
+* add SWRL and SPARQL sections ([566f24a](https://github.com/FilippoVissani/carpedia/commit/566f24a6cf87a60ab596af6fa6d3d2d12b52cdc4))
+* change verbatim with listings ([f69a9a2](https://github.com/FilippoVissani/carpedia/commit/f69a9a2f54cc8365055aa185f554e48ed780aa70))
+* define report structure ([6b02c4c](https://github.com/FilippoVissani/carpedia/commit/6b02c4cffee95dd73b3c94c475aa5782a307c628))
+* finish chapter 02 ([7271faa](https://github.com/FilippoVissani/carpedia/commit/7271faa79939e619d7e319f2b71e97aeb6de93a1))
+* improve diagrams ([e103b8e](https://github.com/FilippoVissani/carpedia/commit/e103b8e85b9b28c9ab941c4c2a32cc58aef85d85))
+* improve title ([aade822](https://github.com/FilippoVissani/carpedia/commit/aade822f0483161b30753cb7942390ac5803228a))
+* modify subsections title ([a496df1](https://github.com/FilippoVissani/carpedia/commit/a496df1e8610119e9ff655a68b5d5b1a92da9029))
+* remove unused diagram ([0a4265e](https://github.com/FilippoVissani/carpedia/commit/0a4265e064a91cd9ca299d2ee9e7ae6b0cde4c74))
+* remove unused figures ([d036f93](https://github.com/FilippoVissani/carpedia/commit/d036f9395a5ff4bf9b12955a3d3aa62777eb851a))
+* start domain analysis ([f2d71c4](https://github.com/FilippoVissani/carpedia/commit/f2d71c4bd839518083cfd88b2a1273fd9c83339d))
+* tell the reader that systems compose cars ([6053e26](https://github.com/FilippoVissani/carpedia/commit/6053e2688ed1bdb08de21d999b43cbfef2f18892))
+* update requirements ([6556efe](https://github.com/FilippoVissani/carpedia/commit/6556efec5f2a66d76537c7b4c9ffe83a7267705c))
+* write SWRL section ([a5eaa44](https://github.com/FilippoVissani/carpedia/commit/a5eaa44e2231652e069c862347020b5bc7c9b259))
+* written SPARQL sections ([8136c68](https://github.com/FilippoVissani/carpedia/commit/8136c686aa2e214a3119662a536b83f9ed64bfc4))
+
+
+### General maintenance
+
+* add *.DS_Store into gitignore ([2ada467](https://github.com/FilippoVissani/carpedia/commit/2ada4672b02a64811af9e47047ddd9bf81baa0c8))
+* add latex package ([60b06de](https://github.com/FilippoVissani/carpedia/commit/60b06def42cf6426ac4c1b303e71cd427059ece2))
+* add out to .gitignore ([9a71f6a](https://github.com/FilippoVissani/carpedia/commit/9a71f6a33e07cdbf82647b13e9d0d3b4de8a1881))
+* remove unused listing ([8ce5e47](https://github.com/FilippoVissani/carpedia/commit/8ce5e477b3f80afed89dfc9fd76db5e509ea504e))
+
+
+### Refactoring
+
+* **docs:** refactor chapter 2 ([ce850c6](https://github.com/FilippoVissani/carpedia/commit/ce850c63423379c60ad3fd6711fb2948a1833a07))
+* **docs:** remove design details ([b82aa54](https://github.com/FilippoVissani/carpedia/commit/b82aa541e13b1f1c1f07586ba2df40532f313684))
+
 ## [5.5.0](https://github.com/FilippoVissani/carpedia/compare/5.4.0...5.5.0) (2023-10-02)
 
 
