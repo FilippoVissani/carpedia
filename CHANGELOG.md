@@ -1,3 +1,13 @@
+## [5.5.2](https://github.com/FilippoVissani/carpedia/compare/5.5.1...5.5.2) (2023-10-04)
+
+
+### Documentation
+
+* improve chapter 01 ([a0151cb](https://github.com/FilippoVissani/carpedia/commit/a0151cb7d2d7cb55fb4beb3c0080a521154108e0))
+* improve chapter 02 ([fc5c740](https://github.com/FilippoVissani/carpedia/commit/fc5c74088e264cfbb14f072a32690410c66a35b5))
+* improve chapter 03 ([3bdd4df](https://github.com/FilippoVissani/carpedia/commit/3bdd4df7780792ae2839fd546a67479384086130))
+* improve chapter 04 ([6d76fde](https://github.com/FilippoVissani/carpedia/commit/6d76fde2d9aa4b977d42df3e979143e4ac217c0d))
+
 ## [5.5.1](https://github.com/FilippoVissani/carpedia/compare/5.5.0...5.5.1) (2023-10-03)
 
 
