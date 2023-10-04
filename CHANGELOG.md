@@ -1,3 +1,11 @@
+## [5.5.3](https://github.com/FilippoVissani/carpedia/compare/5.5.2...5.5.3) (2023-10-04)
+
+
+### Documentation
+
+* change title ([dd5d864](https://github.com/FilippoVissani/carpedia/commit/dd5d86410ecb1a5919c0a052c4828c9477ec629a))
+* improve pagination ([fb140b5](https://github.com/FilippoVissani/carpedia/commit/fb140b575484074065e797c91b6d7d583589c302))
+
 ## [5.5.2](https://github.com/FilippoVissani/carpedia/compare/5.5.1...5.5.2) (2023-10-04)
 
 
