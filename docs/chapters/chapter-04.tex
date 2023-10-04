@@ -102,6 +102,8 @@ In questa sezione, esamineremo le query SPARQL implementate in Carpedia, svilupp
 Queste interrogazioni sono state create per esplorare diverse caratteristiche delle automobili all'interno
 dell'ontologia e recuperare dati rilevanti in base a determinati requisiti.
 
+\break
+
 \subsection{Automobili adatte alla guida nei centri urbani}
 
 \begin{lstlisting}[language=SPARQL]
@@ -157,6 +159,8 @@ WHERE {
 Questa query è stata formulata per identificare le automobili che sono adatte alle famiglie, in base al numero
 di posti. Vengono selezionate tutte le automobili \texttt{?car} che sono istanze della classe \texttt{carpedia:Car} e
 che hanno almeno cinque posti a sedere (\texttt{?seats >= 5}). Questo permette di individuare le automobili che possono ospitare comodamente famiglie numerose o gruppi di persone.
+
+\break
 
 \subsection{Automobili a Benzina}
 
@@ -234,6 +238,8 @@ Questa query è stata progettata per identificare le automobili prodotte da un p
 (in questo caso, \texttt{carpedia:Audi}). Estrae le istanze della classe \texttt{carpedia:Car} che hanno un produttore
 (\texttt{carpedia:hasManufacturer}) uguale al produttore specificato. Può essere utilizzata per ottenere un elenco
 di automobili prodotte da un marchio specifico.
+
+\break
 
 \subsection{Query 8: Automobili prodotte dopo il 2000}
 
