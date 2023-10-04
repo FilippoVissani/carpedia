@@ -1,6 +1,6 @@
 \chapter{Design dell'Ontologia}
 
-Il design di Carpedia è un fondamento critico che comporta la rappresentazione sistematica e l'organizzazione della conoscenza nel dominio dell'ingegneria automobilistica. L'ontologia è meticolosamente elaborata per catturare le intricate relazioni, classificazioni e dipendenze che esistono tra varie entità nell'ecosistema automobilistico. Al cuore della filosofia di progettazione c'è l'obiettivo di fornire un quadro completo e strutturato per modellare diverse sfaccettature dei sistemi automobilistici, dei componenti e delle entità correlate. Questo capitolo approfondisce i principi di progettazione chiave, le scelte e le considerazioni che hanno plasmato l'architettura della nostra ontologia. Dalla creazione di classi fondamentali alla definizione delle object properties e delle gerarchie.
+Il design di Carpedia comporta la rappresentazione sistematica e l'organizzazione della conoscenza nel dominio dell'ingegneria automobilistica. L'ontologia è meticolosamente elaborata per catturare le intricate relazioni, classificazioni e dipendenze che esistono tra varie entità nell'ecosistema automobilistico. Al cuore della filosofia di progettazione c'è l'obiettivo di fornire un quadro completo e strutturato per modellare diverse sfaccettature dei sistemi automobilistici, dei componenti e delle entità correlate. Questo capitolo approfondisce i principi di progettazione chiave, le scelte e le considerazioni che hanno plasmato l'architettura della nostra ontologia. Dalla creazione di classi fondamentali alla definizione delle object properties e delle gerarchie.
 
 \section{Classificazione delle Automobili}
 
@@ -38,9 +38,9 @@ La gerarchia si estende ulteriormente per includere diverse sottoclassi, ognuna 
 
 \section{Classificazione dei Componenti}
 
-La gerarchia dei componenti (Figura \ref{fig:carpedia-component}), all'interno di Carpedia, svolge un ruolo centrale nell'organizzazione e nella categorizzazione dei vari componenti e sottosistemi presenti nei sistemi automobilistici. Questa struttura gerarchica consente di rappresentare le intricate relazioni e dipendenze tra diverse parti di un veicolo.
+La gerarchia dei componenti (Figura \ref{fig:carpedia-component}), all'interno di Carpedia, svolge un ruolo centrale nell'organizzazione e nella categorizzazione dei vari componenti e sottosistemi presenti nei sistemi automobilistici. Questa struttura gerarchica consente di rappresentare le relazioni e le dipendenze tra diverse parti di un veicolo.
 
-Al centro della nostra gerarchia dei componenti si trova la classe base \texttt{Component}. Questa classe funge da entità fondamentale per tutti i componenti all'interno dell'ontologia. La classe \texttt{Component} definisce una sola proprietà condivisa: Una stringa che rappresenta il numero seriale o l'identificatore associato al componente.
+Al centro della gerarchia dei componenti si trova la classe base \texttt{Component}. Questa classe funge da entità fondamentale per tutti i componenti all'interno dell'ontologia. La classe \texttt{Component} definisce una sola proprietà condivisa: Una stringa che rappresenta il numero seriale o l'identificatore associato al componente.
 
 La gerarchia dei componenti si estende per includere diverse sottoclassi, ognuna delle quali rappresenta un tipo o una categoria specifica di componente automobilistico. Queste sottoclassi ereditano la proprietà comune \texttt{hasSerialNumber} dalla classe base \texttt{Component} e possono introdurre attributi aggiuntivi unici per i rispettivi tipi di componente.
 
@@ -52,9 +52,9 @@ La gerarchia dei componenti si estende per includere diverse sottoclassi, ognuna
 
 \section{Classificazione dei Sistemi}
 
-La gerarchia dei sistemi (Figura \ref{fig:carpedia-system}) è una struttura fondamentale che consente la rappresentazione completa e la classificazione di vari sistemi presenti nei veicoli automobilistici. Questa disposizione gerarchica permette di modellare le relazioni e le dipendenze tra i diversi sistemi e il veicolo.
+La gerarchia dei sistemi (Figura \ref{fig:carpedia-system}) è una struttura che consente la rappresentazione completa e la classificazione di vari sistemi presenti nei veicoli automobilistici. Questa disposizione gerarchica permette di modellare le relazioni e le dipendenze tra i diversi sistemi e il veicolo.
 
-Al centro della gerarchia dei sistemi si trova la classe base \texttt{System}. Questa classe funge da entità fondamentale per la rappresentazione e la categorizzazione dei vari sistemi all'interno di un veicolo automobilistico. La classe \texttt{System} non definisce attributi specifici, ma invece costituisce la classe genitore per una serie di sottoclassi, ognuna specializzata nella rappresentazione di sistemi automobilistici distinti.
+Al centro della gerarchia dei sistemi si trova la classe base \texttt{System}. Questa classe funge da entità per la rappresentazione e la categorizzazione dei vari sistemi all'interno di un veicolo automobilistico. La classe \texttt{System} non definisce attributi specifici, ma invece costituisce la classe genitore per una serie di sottoclassi, ognuna specializzata nella rappresentazione di un sistema automobilistico specifico.
 
 \begin{figure}[H]
     \caption{Gerarchia dei sistemi}
@@ -89,9 +89,9 @@ Di seguito vengono elencate le sottoclassi della classe \texttt{Fuel}:
 
 \section{Classificazione delle Classi di Emissioni}
 
-La gerarchia delle classi di emissioni è un sistema di classificazione cruciale che  consente di rappresentare e categorizzare diverse normative sulle emissioni dei veicoli, concentrandosi in particolare sulle normative sulle emissioni dell'Unione Europea. Questa gerarchia aiuta a modellare l'impatto ambientale e la conformità dei veicoli rispetto alle loro emissioni.
+La gerarchia delle classi di emissioni è un sistema di classificazione che  consente di rappresentare e categorizzare diverse normative sulle emissioni dei veicoli, concentrandosi in particolare sulle normative sulle emissioni dell'Unione Europea. Questa gerarchia aiuta a modellare l'impatto ambientale e la conformità dei veicoli rispetto alle loro emissioni.
 
-Al radice della gerarchia si trova la classe base \texttt{EuroEmissionClass}. Questa classe funge da fondamento per la rappresentazione delle diverse normative sulle emissioni. Sebbene possa non definire attributi specifici, costituisce la classe principale per una serie di sottoclassi, ognuna delle quali rappresenta una specifica normativa sulle emissioni.
+Al radice della gerarchia si trova la classe \texttt{EuroEmissionClass}. Questa classe funge da fondamento per la rappresentazione delle diverse normative sulle emissioni. Sebbene possa non definire attributi specifici, costituisce la classe principale per una serie di sottoclassi, ognuna delle quali rappresenta una specifica normativa sulle emissioni.
 
 \begin{figure}[H]
     \caption{Gerarchia delle classi di emissioni}
@@ -109,7 +109,7 @@ In Carpedia, le \textit{object properties} svolgono un ruolo centrale nell'insta
     \label{fig:carpedia-object-properties}
 \end{figure}
 
-Le \textit{object properties} associate a \texttt{Component} e \texttt{System} sono fondamentali per comprendere come diverse parti di un veicolo automobilistico interagiscono. Queste relazioni sono cruciali per modellare la composizione e la struttura dei veicoli. Di seguito vengono dettagliate queste \textit{object properties}:
+Le \textit{object properties} associate a \texttt{Component} e \texttt{System} sono fondamentali per comprendere come diverse parti di un veicolo automobilistico interagiscono. Queste relazioni sono fondamentali per modellare la composizione e la struttura dei veicoli. Di seguito vengono dettagliate queste \textit{object properties}:
 
 \begin{itemize}
     \item \texttt{componentOf}: Questa proprietà stabilisce una connessione tra un \texttt{Component} e un \texttt{System}, indicando che un \texttt{Component} fa parte di un \texttt{System}. Al contrario, la classe \texttt{System} ha la proprietà inversa, \texttt{hasComponent}, che indica che un \texttt{System} può avere più \texttt{Component}. Questa relazione ci consente di rappresentare la struttura gerarchica dei sistemi automobilistici.
