@@ -1,7 +1,7 @@
 \chapter{Interrogazione dell'Ontologia}
 
 \section{SWRL}\label{sec:swrl}
-In questa sezione, esamineremo quattro regole SWRL implementate nell'ontologia carpedia.
+In questa sezione, verranno esaminate le regole SWRL implementate in Carpedia.
 Queste regole sono state create per derivare nuove informazioni o classificare istanze in base a determinate
 condizioni o vincoli specifici all'interno dell'ontologia.
 Ognuna di queste regole svolge un ruolo specifico nel processo di arricchimento delle conoscenze nell'ontologia.
@@ -16,14 +16,14 @@ carpedia:hasMechanicalComponent(?body, ?door3) ^
 differentFrom(?door1, ?door2) ^
 differentFrom(?door2, ?door3) ^
 differentFrom(?door1, ?door3) ->
-autogen0:DoorsBody(?body)
+carpedia:3DoorsBody(?body)
 \end{lstlisting}
 
 
-Questa regola e' stata creata per classificare una struttura del corpo dell'automobile come "DoorsBody" quando
-soddisfa le seguenti condizioni: ha esattamente 3 componenti meccanici distinti che rappresentano porte e ognuna
-di queste porte e' diversa dalle altre due.
-L'obiettivo e' quello di identificare correttamente il tipo di carrozzeria delle automobili con una
+Questa regola è stata creata per classificare la struttura del corpo dell'automobile come carrozzeria a tre porte quando
+soddisfa le seguenti condizioni: ha esattamente tre componenti meccanici distinti che rappresentano porte e ognuna
+di queste porte è diversa dalle altre due.
+L'obiettivo è quello di identificare correttamente il tipo di carrozzeria delle automobili con una
 specifica configurazione di porte, che potrebbe avere implicazioni su aspetti come la sicurezza o l'aerodinamica.
 
 \subsection{5DoorsBody}
@@ -45,14 +45,13 @@ differentFrom(?door2, ?door5) ^
 differentFrom(?door3, ?door4) ^
 differentFrom(?door3, ?door5) ^
 differentFrom(?door4, ?door5) ->
-autogen1:DoorsBody(?body)
+carpedia:5DoorsBody(?body)
 \end{lstlisting}
 
 
-Questa regola e simile a "3DoorsBody", ma e' stata creata per classificare una struttura del corpo dell'automobile
-come "DoorsBody" quando ha esattamente 5 componenti meccanici distinti che rappresentano porte.
-Questa regola puo' essere utile per distinguere tra automobili con configurazioni di porte diverse,
-come ad esempio quelle con 3 o 5 porte, influenzando il design e l'usabilita'.
+Questa regola e simile a \texttt{3DoorsBody}, ma è stata creata per classificare una struttura del corpo dell'automobile come carrozzeria a cinque porte quando ha esattamente cinque componenti meccanici distinti che rappresentano porte.
+Questa regola può essere utile per distinguere tra automobili con configurazioni di porte diverse,
+come ad esempio quelle con tre o cinque porte, influenzando il design e il tipo di utilizzo.
 
 \subsection{NewlyLicensedCar}
 
@@ -68,11 +67,9 @@ carpedia:NewlyLicensedCar(?c)
 \end{lstlisting}
 
 
-Questa regola e' stata creata per classificare un'automobile come "NewlyLicensedCar" quando soddisfa
-determinati criteri, tra cui una potenza dell'unita' motrice inferiore a 70 kW e un rapporto potenza/peso
-inferiore a 0,055.
-Questo potrebbe essere utile per identificare le automobili che potrebbero essere di interesse per i conducenti
-neo patentati o per chi e' alla ricerca di veicoli con prestazioni piu' moderate.
+Questa regola è stata creata per classificare un'automobile come adatta ai neopatentati quando soddisfa
+determinati criteri: la potenza dell'unità motrice deve essere inferiore a 70 kW e il rapporto peso/potenza
+deve essere inferiore a 0.055.
 
 \subsection{Supercar}
 
@@ -87,9 +84,9 @@ carpedia:Supercar(?c)
 \end{lstlisting}
 
 
-Questa regola e' stata creata per classificare un'automobile come "Supercar" quando soddisfa condizioni
-specifiche, tra cui una velocita' massima superiore a 290 km/h e una potenza dell'unita' motrice superiore a 297 kW.
-Questa regola puo' essere utile per identificare le automobili ad alte prestazioni all'interno dell'ontologia,
+Questa regola è stata creata per classificare un'automobile come /texttt{Supercar} quando soddisfa condizioni
+specifiche, tra cui una velocità massima superiore a 290 km/h e una potenza dell'unità motrice superiore a 297 kW.
+Questa regola può essere utile per identificare le automobili ad alte prestazioni all'interno dell'ontologia,
 distinguendole dalle automobili tradizionali.
 
 \subsection{Considerazioni}
@@ -101,8 +98,7 @@ dell'ontologia.
 
 \section{SPARQL}\label{sec:sparql}
 
-In questa sezione, esamineremo tre query SPARQL implementate nell'ontologia carpedia,
-sviluppate per ottenere informazioni significative sulla base di criteri specifici.
+In questa sezione, esamineremo le query SPARQL implementate in Carpedia, sviluppate per ottenere informazioni significative sulla base di criteri specifici.
 Queste interrogazioni sono state create per esplorare diverse caratteristiche delle automobili all'interno
 dell'ontologia e recuperare dati rilevanti in base a determinati requisiti.
 
@@ -120,13 +116,9 @@ WHERE {
 }
 \end{lstlisting}
 
-
-Questa query e' stata creata per identificare le automobili che sono adatte a circolare nei centri urbani,
-dove spesso vengono introdotte restrizioni sulle emissioni.
-Abbiamo selezionato tutte le automobili (?car) che sono istanze della classe carpedia:Car e che hanno una
-classe di emissione Euro 4, 5 o 6 (?euroEmissionClass).
-Questo ci permette di ottenere un elenco di automobili conformi alle normative Euro emission, che sono generalmente
-considerate idonee per la guida in aree urbane.
+Questa query è stata creata per identificare le automobili che sono adatte a circolare nei centri urbani, dove spesso vengono introdotte restrizioni sulle emissioni.
+Vengono selezionate tutte le automobili \texttt{?car} che sono istanze della classe \texttt{carpedia:Car} e che hanno una classe di emissione Euro 4, 5 o 6 \texttt{?euroEmissionClass}.
+Questo permette di ottenere un elenco di automobili conformi alle normative dell'Unione Europea e che quindi sono generalmente considerate idonee per la guida in aree urbane.
 
 \subsection{Automobili non adatte alla guida nei centri urbani}
 
@@ -142,12 +134,10 @@ WHERE {
 }
 \end{lstlisting}
 
-Questa query e' stata progettata per individuare le automobili che non sono adatte alla guida nei centri urbani,
-poiche' le loro emissioni possono superare i limiti consentiti.
-Abbiamo selezionato tutte le automobili (?car) che sono istanze della classe carpedia:Car e che hanno una
-classe di emissione Euro 0, 1, 2 o 3 (?euroEmissionClass).
-Queste classi di emissione rappresentano automobili con standard di emissione meno stringenti,
-che potrebbero non essere autorizzate nelle zone urbane piu' pulite.
+Questa query è stata progettata per individuare le automobili che non sono adatte alla guida nei centri urbani,
+poiché le loro emissioni possono superare i limiti consentiti.
+Vengono selezionate tutte le automobili \texttt{?car} che sono istanze della classe \texttt{carpedia:Car} e che hanno una classe di emissioni Euro 0, 1, 2 o 3 \texttt{?euroEmissionClass}.
+Queste classi di emissioni rappresentano automobili con standard di emissione meno stringenti, che quindi possono circolare nei centri urbani.
 
 \subsection{Automobili adatte alle famiglie}
 
@@ -164,10 +154,9 @@ WHERE {
 \end{lstlisting}
 
 
-Questa query e' stata formulata per identificare le automobili che sono adatte alle famiglie, in base al numero
-di posti a sedere. Abbiamo selezionato tutte le automobili (?car) che sono istanze della classe carpedia:Car e
-che hanno almeno 5 posti a sedere (?seats >= 5). Questo ci permette di individuare le automobili che possono
-ospitare comodamente famiglie numerose o gruppi di persone.
+Questa query è stata formulata per identificare le automobili che sono adatte alle famiglie, in base al numero
+di posti. Vengono selezionate tutte le automobili \texttt{?car} che sono istanze della classe \texttt{carpedia:Car} e
+che hanno almeno cinque posti a sedere (\texttt{?seats >= 5}). Questo permette di individuare le automobili che possono ospitare comodamente famiglie numerose o gruppi di persone.
 
 \subsection{Automobili a Benzina}
 
@@ -186,11 +175,8 @@ WHERE {
 \end{lstlisting}
 
 
-Questa query e' stata progettata per identificare tutte le automobili che utilizzano la benzina come carburante.
-Estrae le istanze della classe carpedia:Car che hanno un sistema di alimentazione (carpedia:hasSystem) associato,
-dove il tipo di carburante (carpedia:Gasoline) di quel sistema e' benzina.
-Questa query puo' essere utile per ottenere un elenco di automobili che utilizzano specificamente la benzina
-come carburante.
+Questa query è stata progettata per identificare tutte le automobili che utilizzano la benzina come carburante.
+Estrae le istanze della classe \texttt{carpedia:Car} che hanno un sistema di alimentazione (\texttt{carpedia:hasSystem}) associato, dove il tipo di carburante (\texttt{carpedia:Gasoline}) di quel sistema è la benzina.
 
 \subsection{Automobili che costano meno di 20000 euro}
 
@@ -206,10 +192,9 @@ WHERE {
 }
 \end{lstlisting}
 
-Questa query e' stata sviluppata per individuare le automobili che hanno un prezzo inferiore a una certa
-soglia (in questo caso, 20000). Estrae le istanze della classe carpedia:Car che hanno un attributo di prezzo
-(carpedia:hasPrice) inferiore alla soglia specificata. Puo' essere utilizzata per filtrare automobili in base
-al prezzo, consentendo agli utenti di trovare veicoli che rientrano nel loro budget.
+Questa query è stata sviluppata per individuare le automobili che hanno un prezzo inferiore a una certa
+soglia (in questo caso, 20000 Euro). Estrae le istanze della classe \texttt{carpedia:Car} che hanno un attributo di prezzo
+(\texttt{carpedia:hasPrice}) inferiore alla soglia specificata. Può essere utilizzata per filtrare automobili in base al prezzo, consentendo agli utenti di trovare veicoli che rientrano nel loro budget.
 
 \subsection{Automobili con meno di 100000 Chilometri percorsi}
 
@@ -227,9 +212,8 @@ WHERE {
 
 
 Questa query mira a individuare le automobili che hanno percorso meno di un certo numero di chilometri
-(in questo caso, 100000). Estrae le istanze della classe carpedia:Car che hanno un attributo di chilometraggio
-(carpedia:hasKilometers) inferiore alla soglia specificata.
-Puo' essere utilizzata per trovare automobili con una bassa usura o con un minor chilometraggio.
+(in questo caso, 100000). Estrae le istanze della classe \texttt{carpedia:Car} che hanno un chilometraggio
+(\texttt{carpedia:hasKilometers}) inferiore alla soglia specificata.
 
 \subsection{Automobili prodotte da Audi}
 
@@ -246,9 +230,9 @@ WHERE {
 \end{lstlisting}
 
 
-Questa query e' stata progettata per identificare le automobili prodotte da un produttore specifico
-(in questo caso, carpedia:Audi). Estrae le istanze della classe carpedia:Car che hanno un attributo di produttore
-(carpedia:hasManufacturer) uguale al produttore specificato. Puo' essere utilizzata per ottenere un elenco
+Questa query è stata progettata per identificare le automobili prodotte da un produttore specifico
+(in questo caso, \texttt{carpedia:Audi}). Estrae le istanze della classe \texttt{carpedia:Car} che hanno un produttore
+(\texttt{carpedia:hasManufacturer}) uguale al produttore specificato. Può essere utilizzata per ottenere un elenco
 di automobili prodotte da un marchio specifico.
 
 \subsection{Query 8: Automobili prodotte dopo il 2000}
@@ -266,13 +250,7 @@ WHERE {
 \end{lstlisting}
 
 
-Questa query estrae le automobili prodotte dopo un certo anno (in questo caso, il 2000).
-Estrae le istanze della classe carpedia:Car che hanno un attributo di anno di produzione (carpedia:hasProductionYear)
-superiore all'anno specificato.
-Puo' essere utilizzata per ottenere un elenco di automobili prodotte nel XXI secolo.
-
+Questa query ritorna le automobili prodotte dopo un certo anno (in questo caso, il 2000). Estrae le istanze della classe \texttt{carpedia:Car} che hanno un anno di produzione (\texttt{carpedia:hasProductionYear}) superiore all'anno specificato.
 
 \subsection{Considerazioni}
-Queste query SPARQL consentono di ottenere informazioni significative e rilevanti dalle ontologie delle automobili,
-offrendo un'ampia gamma di informazioni utili per diversi scopi, come la ricerca di automobili adatte all'ambiente
-urbano o alle esigenze delle famiglie.
+Queste query SPARQL consentono di ottenere informazioni significative e rilevanti da Carpedia, offrendo un'ampia gamma di informazioni utili per diversi scopi, come la ricerca di automobili adatte all'ambiente urbano o alle esigenze delle famiglie.
